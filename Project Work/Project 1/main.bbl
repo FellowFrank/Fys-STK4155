@@ -1,0 +1,24 @@
+\begin{thebibliography}{3}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Hjorth-Jensen}(2015)}]{compfys}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Hjorth-Jensen}}, \emph{\bibinfo{title}{Computational Physics Lecture Notes 2015}} (\bibinfo{publisher}{Department of Physics}, \bibinfo{address}{University of Oslo, Norway}, \bibinfo{year}{2015}), \urlprefix\url{https://github.com/CompPhysics/ComputationalPhysics/blob/master/doc/Lectures/lectures2015.pdf}.
+
+\bibitem[{\citenamefont{Hastie et~al.}(2009)\citenamefont{Hastie, R.Tibshirani, and J.Friedman}}]{hastie}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Hastie}}, \bibinfo{author}{\bibnamefont{R.Tibshirani}}, \bibnamefont{and} \bibinfo{author}{\bibnamefont{J.Friedman}}, \emph{\bibinfo{title}{The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second Edition. Springer Series in Statistics}} (\bibinfo{publisher}{Springer}, \bibinfo{address}{New York}, \bibinfo{year}{2009}), \urlprefix\url{https://link.springer.com/book/10.1007\%2F978-0-387-84858-7}.
+
+\bibitem[{\citenamefont{Buitinck et~al.}(2013)\citenamefont{Buitinck, Louppe, Blondel, Pedregosa, Mueller, Grisel, Niculae, Prettenhofer, Gramfort, Grobler et~al.}}]{sklearn_api}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Buitinck}}, \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Louppe}}, \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Blondel}}, \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Pedregosa}}, \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Mueller}}, \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Grisel}}, \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Niculae}}, \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Prettenhofer}}, \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Gramfort}}, \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Grobler}}, \bibnamefont{et~al.}, in \emph{\bibinfo{booktitle}{ECML PKDD Workshop: Languages for Data Mining and Machine Learning}} (\bibinfo{year}{2013}), pp. \bibinfo{pages}{108--122}.
+
+\end{thebibliography}

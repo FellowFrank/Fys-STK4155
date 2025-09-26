@@ -11,40 +11,64 @@
 \usepackage{xcolor}           % set colors
 \usepackage{hyperref}         % automagic cross-referencing 
 \usepackage{float}			  % force placement of tables and figures
+\usepackage{comment}
+%\usepackage[authoryear]{natbib}
+
 
 \begin{document}
-	
+
 \title{Report Template \\
     \normalsize FYS-STK3155 - Project X}
 \date{\today}               
-\author{Student}
+\author{
+    Anton Nicolay Torgersen 
+}
 \affiliation{University of Oslo}
 
-\newpage
-	
-\begin{abstract}
 
-A study of various regression methods, including OLS, Ridge and LASSO and how they fit Runge's function. We go through the theory and implementation of these methods and see how they compare on the function. In the end, we go through some resampling techniques on the simpler OLS-method to understand the bias-variance trade-off.
+\newpage
+    \begin{abstract}
+A study of various regression methods, including OLS, Ridge and LASSO and how they fit Runge's function. 
+We review the theory and implementation of these methods and see how they compare on this function.
+At the end, we discuss some resampling techniques on the simpler OLS-method to understand the bias-variance trade-off.
 \end{abstract}
 
-\maketitle
+
+    \maketitle
+    \thispagestyle{empty} % Removes page number from the title page
+
+    
+
+
 
 \section{Introduction}
 
-The fundamental challenge in machine learning and statistical modeling is to extract meaningful patterns from data to build models that can make accurate predictions on new, unseen data. A simple approach might fit the training data perfectly, yet fail spectacularly when facing new instances—a phenomenon known as overfitting. Conversely, a model that is too simple may fail to capture the underlying structure of the data, leading to underfitting. This delicate balance is often described by the bias-variance tradeoff, a central concept in statistical learning that quantifies this tension between model simplicity and complexity \cite{hastie}. Effectively navigating this tradeoff is paramount for developing robust and generalizable models. This project delves into this core problem through the lens of regression analysis, a cornerstone of supervised learning used to predict continuous outcomes \cite{compfys}.
+The fundamental problem in machine learning and statistics is to find meaningful patterns in data using models that make accurate predictions on unseen data.
+This is a difficult task, as a complex function might fit the training data perfectly, but fail spectacularly when facing new instances, a phenomenon known as overfitting.
+On the other hand a model that is too simple may fail to extract the patterns in the data and thus underfit the data.
+Therefore understanding of the bias-variance tradeoff on simpler models before the more complex ones is paramount to develop robust and generalizable models.
 
-To investigate these principles, this report presents a comparative study of three fundamental regression methods: Ordinary Least Squares (OLS), Ridge, and Least Absolute Shrinkage and Selection Operator (LASSO) regression. We apply these methods to a specific one-dimensional problem: fitting a polynomial model to Runge's function, $f(x)=1/(1+25x^2)$. This function is notoriously difficult for high-degree polynomial interpolation, making it an excellent candidate for demonstrating the pitfalls of overfitting and the benefits of regularization techniques like Ridge and LASSO \cite{hein}. By analyzing model performance through metrics like Mean Squared Error (MSE) and the R2 score, we explore how each method handles increasing model complexity. Furthermore, we implement and analyze resampling techniques—specifically bootstrap and k-fold cross-validation—to empirically study the bias-variance tradeoff in the context of our OLS models.
+Therefore, this paper will study the bias-variance tradeoff through the lens of regression models, that increase in complexity.
+We start with the simplest model, Ordinary Least Squares (OLS), where we have a fully analytical solution for the best fit parameters.
+Then we move on to Ridge regression, which is a regularized version of OLS, where we first introduce the tuning of a penalization parameter $\lambda$ to find a good balance between bias and variance.
+Finally we end with LASSO regression, which is another regularized version of OLS, but with a different penalization term.
 
-The report is structured as follows. Section 2 establishes the theoretical framework, detailing the mathematical formulations of OLS, Ridge, and LASSO regression. This section also includes a formal derivation of the bias-variance decomposition of the MSE. Section 3 outlines the computational methodology, including the generation of our dataset from Runge's function, the implementation of the regression algorithms, and the setup for the resampling procedures. Section 4 presents and discusses the results of our numerical experiments, comparing the performance of the different regression methods and visualizing the bias-variance tradeoff as a function of model complexity. Finally, Section 5 provides a summary of our findings and concluding remarks on the relative strengths and weaknesses of each approach.
+This analysis will closely follow the lecture notes from FYS-STK3155 \cite{compfys} and the book "The Elements of Statistical Learning" by Hastie, Tibshirani and Friedman \cite{hastie}.
+We will review the theory of the three regression methods and apply the methods to a one-dimensional problem, fitting a polynomial model to Runge's function, $f(x)=1/(1+25x^2)$.
+This function is notoriously difficult for high-degree polynomial interpolation and will therefore be a good demonstration of the pitfalls of overfitting and the benefits of regularized techniques like Ridge and LASSO.
+Together these three models will create a better understanding of the dynamics between bias and variance, how the dynamic shifts with model complexity and methods.
+The result is a better intuition for tuning models, when is the model inching towards the true function $y$ and when is it stuck in a well. 
 
 
+\begin{comment}
 When you write the introduction you should focus on the following aspects:
 \begin{itemize}
     \item Motivate the reader, the first part of the introduction gives always a motivation and tries to give the overarching ideas. Citing some central ideas or problems in the literature is a good idea here. \cite{compfys}\cite{eigenvalue}\cite{hein, hastie}
     \item What you have done, with a focus on choice of problem and method, and why these were chosen.
     \item The structure of the report, how it is organized. List the sections, and very briefly describe what is in them and how they fit together.
 \end{itemize}
-    
+\end{comment}
+
 \section{Methods}\label{section:methods}
 
 \subsection{Method 1/X}
@@ -62,15 +86,20 @@ When you write the introduction you should focus on the following aspects:
 \end{itemize}
 
 \subsection{Use of AI tools}
-	
+	AI has been used to format and proofread the report and to spot errors in the code.
 \begin{itemize}
     \item Describe how AI tools like ChatGPT were used in the production of the code and report.
 \end{itemize}
-	
+
+\newpage
+
 \section{Results and Discussion}\label{section:results} 
-Below you see a picture that describes the Bias-Variance Trade off, \ref{fig:BiasVariance1}. The trade off here is visualized by having a model of higher complexity molding more and more to the training set thereby having a better fit or bias, but a worse fit on the unseen data.
+Below you see a picture that describes the Bias-Variance trade off, \ref{fig:BiasVariance1}. 
+The trade off here is visualized by having a model of higher complexity molding more and more to the training set thereby having a better fit or bias, but a worse fit on the unseen data.
+Which then creates a higher variance.
 
-
+\begin{comment}
+When you write the results and discussion section you should focus on the following aspects:
 \begin{itemize}
     \item Present your results
     \item Give a critical discussion of your work and place it in the correct context.
@@ -78,6 +107,7 @@ Below you see a picture that describes the Bias-Variance Trade off, \ref{fig:Bia
     \item An eventual reader should be able to reproduce your calculations if she/he wants to do so. All input variables should be properly explained.
     \item Make sure that figures\ref{fig:BiasVariance1} and tables contain enough information in their captions, axis labels etc. so that an eventual reader can gain a good impression of your work by studying figures and tables only.
 \end{itemize}
+\end{comment}
 
 \begin{figure}[h]
     \centering
@@ -85,6 +115,7 @@ Below you see a picture that describes the Bias-Variance Trade off, \ref{fig:Bia
     \caption{Bias Variance Tradeoff}
     \label{fig:BiasVariance1}
 \end{figure}
+Cool reference to the scikit api, \cite{sklearn_api}.
 
 
 \begin{figure}[h]
@@ -93,8 +124,15 @@ Below you see a picture that describes the Bias-Variance Trade off, \ref{fig:Bia
     \caption{Degree and Regularization Heatmap}
     \label{fig:DegRegHeat}
 \end{figure}
-The following heatmap, \ref{fig:DegRegHeat}, implies that a polynomial degree of around 5-6 and a regularization value of about $10^{-2} \lambda$ would be the best parameters for trainign the model.
+The above heatmap, \ref{fig:DegRegHeat}, implies that a polynomial degree of 8 and a regularization value of slightly above $10^{-1} \lambda$ would be the best parameters for training the model.
+
+
+
+
 \section{Conclusion}\label{section:conclusion} 
+
+\begin{comment}
+When you write the conclusion section you should focus on the following aspects:
 \begin{itemize}
     \item State your main findings and interpretations
     \item Try to discuss the pros and cons of the methods and possible improvements
@@ -102,6 +140,10 @@ The following heatmap, \ref{fig:DegRegHeat}, implies that a polynomial degree of
     \item Try as far as possible to present perspectives for future work
 \end{itemize}
 
+\end{comment}
+
 \bibliography{biblio}
+
+
 
 \end{document}
