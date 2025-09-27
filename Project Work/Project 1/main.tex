@@ -27,6 +27,10 @@
 
 
 \newpage
+
+
+%Abstract: accurate and informative? Total number of possible points: 5
+
     \begin{abstract}
 A study of various regression methods, including OLS, Ridge and LASSO and how they fit Runge's function. 
 We review the theory and implementation of these methods and see how they compare on this function.
@@ -40,7 +44,7 @@ At the end, we discuss some resampling techniques on the simpler OLS-method to u
     
 
 
-
+% Introduction: status of problem and the major objectives. Total number of possible points: 10
 \section{Introduction}
 
 The fundamental problem in machine learning and statistics is to find meaningful patterns in data using models that make accurate predictions on unseen data.
@@ -70,20 +74,81 @@ When you write the introduction you should focus on the following aspects:
 \end{comment}
 
 \section{Methods}\label{section:methods}
+We will be assuming that the reader has some familiarity with linear algebra and multivariable calculus.
+For a more in-depth review of the methods and algorithms, including the motivation for using them and their applicability to the problem, please refer to the lecture notes \cite{compfys} and the book "The Elements of Statistical Learning" by Hastie, Tibshirani and Friedman \cite{hastie}.
+For the scoring measures Mean Squared Error (MSE) and R2, please refer to \cite{scoring1,scoring2,scoring3} for information or see the implementation in the code.
 
-\subsection{Method 1/X}
+\subsection{rungesfunction}
+Description of the function, why it is interesting to study.
+\subsection{Regression Methods}
 
+\subsubsection{Ordinary Least Squares (OLS)}
+
+algorithm, cost function
+\subsubsection*{Analytical solution}
+
+
+\subsubsection*{Gradient solution}
+
+\subsubsection{Ridge Regression}
+algorithm, cost function
+
+\subsubsection{LASSO Regression}
+part f, algorithm, cost function
+
+\subsection{Gradient Descent}
+
+\subsubsection{Stochastic Gradient Descent}
+part f, write about the theory?
+
+
+\subsection{Sampling methods}
+part g, write about the implementation of the bootstrap method as a resampling technique on the OLS method.
+part h, write about the implementation of the k-fold cross-validation algorithm as a resampling technique on the OLS, Ridge and LASSO methods.
+
+\begin{comment}
 \begin{itemize}
     \item Describe the methods and algorithms, including the motivation for using them and their applicability to the problem
     \item Derive central equations when appropriate, the text is the most important part, not the equations.
 \end{itemize}
-
+\end{comment}
 \subsection{Implementation}
 
+
+Implementation of the analytical solution of OLS regression using the numpy function pinv {citation???}.
+\subsubsection{Regression methods}
+
+perhaps simply a reference to the code for the implementation using numpy.
+And a test with the scikit library to see that the implementation is correct for these two.
+
+Maybe some extra for the Lasso implementation?
+
+\subsubsection{Gradient Descent}
+part c, write about how we implementation of the gradient descent algorithm for OLS and Ridge regression.
+Again squeez it tohether we the above section and reference the code and functions.
+
+\subsubsection*{Changing learning rate}
+part,d implementation of the changing learning rate algorithms: momentum, ADAgrad, RMSprop and Adam.
+Follows the implementations from the lecture notes from week 37 \cite{compfys} and is explained in the code.
+Function  bla bla bla
+
+
+\subsubsection*{Stochastic Gradient Descent}
+part f, write about the implementation of the stochastic gradient descent algorithm for OLS and Ridge regression.
+
+\subsubsection{Resampling techniques}
+part g, write about the implementation of the bootstrap method as a resampling technique on the OLS method.
+
+PROBABLY NOT.part h, write about the implementation of the k-fold cross-validation algorithm as a resampling technique on the OLS, Ridge and LASSO methods.
+
+
+\begin{comment}
 \begin{itemize}
     \item Explain how you implemented the methods and also say something about the structure of your algorithm and present very central parts of your code, not more than 10 lines
     \item You should plug in some calculations to demonstrate your code, such as selected runs used to validate and verify your results. A reader needs to understand that your code reproduces selected benchmarks and reproduces previous results, either numerical and/or well-known closed form expressions.
 \end{itemize}
+\end{comment}
+
 
 \subsection{Use of AI tools}
 	AI has been used to format and proofread the report and to spot errors in the code.
@@ -93,12 +158,54 @@ When you write the introduction you should focus on the following aspects:
 
 \newpage
 
-\section{Results and Discussion}\label{section:results} 
+\section{Results and Discussion}\label{section:results}
+
+Generation of the data set and why and how we scaled it. ( part a)
+We had a set with and without noise in a normal distribution to see how the methods performed on both.
+
+
+Analysis using the methods described in section \ref{section:methods}.
+
+\subsection{Regression methods}
+
+\subsubsection{Ordinary Least Squares (OLS)}
+\textit{part a}, study the analytical solution 
+
+\subsubsection{Ridge Regression}
+\textit{part b}, important to study the dependence on $\lambda$ the regularization parameter
+
+\subsection{Using Gradient Descent}
+
+\subsubsection{OLS and Ridge with gradient descent}
+\textit{part c},Study the results from the gradient descent algorithm for both OLS and Ridge regression and especially the dependence on the learning rate $\eta$ and the number of iterations.
+
+\subsubsection{LASSO Regression}
+part f, study the results from the stochastic gradient descent algorithm for both OLS and Ridge regression and especially the dependence on the learning rate $\eta$ and the number of iterations.
+
+\subsection{Changing learning rate algorithms}
+
+\subsubsection{Changing learning rate}
+\textit{part d}, study the effect of changing the learning rate $\eta$ as a function of the number of iterations. THe methods used for this are momentum, ADAgrad, RMSprop and Adam.
+ON all these three regression methods.
+
+\subsubsection{Stochastic Gradient Descent}
+Now drag them into the stochastic gradient descent algorithm too see how they develop here.
+
+
+\subsection{Resampling Techniques}
+
+\subsubsection{Bootstrap}
+part g, study the bias-variance tradeoff using the bootstrap method as a resampling technique on the OLS method.
+
+\subsubsection{Cross Validation}
+part h, k-fold cross-validation algorithm as a resampling technique on the OLS method. Compare the MSE you get from your cross-validation code with the one you got from your bootstrap code.
+Comment and interpret your results.
+
+\begin{comment}
 Below you see a picture that describes the Bias-Variance trade off, \ref{fig:BiasVariance1}. 
 The trade off here is visualized by having a model of higher complexity molding more and more to the training set thereby having a better fit or bias, but a worse fit on the unseen data.
 Which then creates a higher variance.
 
-\begin{comment}
 When you write the results and discussion section you should focus on the following aspects:
 \begin{itemize}
     \item Present your results
@@ -107,7 +214,7 @@ When you write the results and discussion section you should focus on the follow
     \item An eventual reader should be able to reproduce your calculations if she/he wants to do so. All input variables should be properly explained.
     \item Make sure that figures\ref{fig:BiasVariance1} and tables contain enough information in their captions, axis labels etc. so that an eventual reader can gain a good impression of your work by studying figures and tables only.
 \end{itemize}
-\end{comment}
+
 
 \begin{figure}[h]
     \centering
@@ -127,10 +234,14 @@ Cool reference to the scikit api, \cite{sklearn_api}.
 The above heatmap, \ref{fig:DegRegHeat}, implies that a polynomial degree of 8 and a regularization value of slightly above $10^{-1} \lambda$ would be the best parameters for training the model.
 
 
-
+\end{comment}
 
 \section{Conclusion}\label{section:conclusion} 
+ * State your main findings and interpretations
 
+ * Try as far as possible to present perspectives for future work
+
+ * Try to discuss the pros and cons of the methods and possible improvements
 \begin{comment}
 When you write the conclusion section you should focus on the following aspects:
 \begin{itemize}

@@ -1,16 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1758896340.53191 "main.aux" "main.bbl" "main" 1758896521.54925 0
+["bibtex main"] 1758993189.63424 "main.aux" "main.bbl" "main" 1758993191.85005 0
   "./biblio.bib" 1758798396 2077 b016949f128d01490d016da7e71ab037 ""
   "c:/texlive/2025/texmf-dist/bibtex/bst/revtex4/apsrev.bst" 1756400306 43844 78e58abfb2d07832103f1e2f30cf6375 ""
-  "main.aux" 1758896520 2312 e56c20e4f72e24193735ca372592292f "pdflatex"
+  "main.aux" 1758993190 5045 9fa473f5f3482055597f402fa6203f79 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1758896519.69389 "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 1/main.tex" "main.pdf" "main" 1758896521.54985 0
-  "Figures/bias_variance_tradeoff.pdf" 1758799297 71350 3f6fbd33ae3fa6942d714f91428f65cc ""
-  "Figures/ridge_heatmap.pdf" 1758799291 168968 16885527d0a806a0e8e5ea8fef7a9e81 ""
-  "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 1/main.tex" 1758896519 7371 dace2872cf9a8f0e46d596cb3d874835 ""
+["pdflatex"] 1758993190.02527 "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 1/main.tex" "main.pdf" "main" 1758993191.85099 0
+  "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 1/main.tex" 1758993187 12322 3f9e053b19ee141126464960401f8476 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1756393353 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1756394565 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1756394188 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -32,6 +30,7 @@
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr9.tfm" 1756393334 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1756393334 1116 933a60c408fc0a863a92debe84b2d294 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm" 1756393334 1116 25a7bf822c58caf309a702ef79f4afbb ""
+  "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1756393334 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti9.tfm" 1756393334 1476 cccc6cc4935c18ec3d5623b77ecb8b74 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmtt9.tfm" 1756393334 764 c98a2af25c99b73a368cf7336e255190 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1756392638 34811 78b52f49e893bcba91bd7581cdc144c0 ""
@@ -39,10 +38,9 @@
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb" 1756392638 32298 c6d25bb16d1eac01ebdc6d7084126a1e ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1756392638 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1756392638 35752 024fb6c41858982481f6968b5fc26508 ""
-  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1756392638 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1756392638 32762 7fee39e011c23b3589931effd97b9702 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1756392638 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
-  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1756392638 32716 08e384dc442464e7285e891af9f45947 ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1756392638 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb" 1756392638 36310 f5ddc6715cc60deb16d9db5ded6a9391 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb" 1756392638 29078 718ea4567ceff944262b0f5b0800e1d9 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1756393353 138258 6525c253f16cededa14c7fd0da7f67b2 ""
@@ -115,10 +113,10 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1756401881 5574045 c1864b6d576eca8ff04839113c3d8c41 ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1756402031 3605795 f215791cb7a8c2e83a36828a9428ff78 ""
   "c:/texlive/2025/texmf.cnf" 1756401861 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1758896520 2312 e56c20e4f72e24193735ca372592292f "pdflatex"
-  "main.bbl" 1758896340 2531 e90f4d510c905f7ee8fab8c928b177ff "bibtex main"
-  "main.out" 1758896520 900 a1c8ed8694d28ddeec63a75a563433e0 "pdflatex"
-  "main.tex" 1758896519 7371 dace2872cf9a8f0e46d596cb3d874835 ""
+  "main.aux" 1758993190 5045 9fa473f5f3482055597f402fa6203f79 "pdflatex"
+  "main.bbl" 1758993190 1579 eea9bcda7c52db6c15de8924894f3538 "bibtex main"
+  "main.out" 1758993190 5224 6c4584937f6fbe82bff8f971767a9a79 "pdflatex"
+  "main.tex" 1758993187 12322 3f9e053b19ee141126464960401f8476 ""
   (generated)
   "main.aux"
   "main.log"
