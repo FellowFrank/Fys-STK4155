@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.28)  27 SEP 2025 19:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.28)  28 SEP 2025 19:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -338,7 +338,11 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@floatcapt=\box66
 ) (c:/texlive/2025/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write3
- Excluding comment 'comment') (./main.aux)
+ Excluding comment 'comment') (./main.aux
+
+LaTeX Warning: Label `fig:OLSHeat' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -397,17 +401,59 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) Excluding 'comment' comment.
+) Excluding 'comment' comment. [1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] Excluding 'comment' comment.
+<Figures/Combined_Analysis_OLS.png, id=156, 1156.32pt x 722.7pt>
+File: Figures/Combined_Analysis_OLS.png Graphic file (type png)
+<use Figures/Combined_Analysis_OLS.png>
+Package pdftex.def Info: Figures/Combined_Analysis_OLS.png  used on input line 163.
+(pdftex.def)             Requested size: 484.49844pt x 302.80411pt.
+ [2] Excluding 'comment' comment. [3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.235 
+      {c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./Figures/Combined_Analysis_OLS.png>]
+<Figures/OLS_Heatmap.pdf, id=183, 433.62pt x 361.35pt>
+File: Figures/OLS_Heatmap.pdf Graphic file (type pdf)
+<use Figures/OLS_Heatmap.pdf>
+Package pdftex.def Info: Figures/OLS_Heatmap.pdf  used on input line 238.
+(pdftex.def)             Requested size: 233.69925pt x 194.75116pt.
+<Figures/MSE_RidgeOnly.png, id=185, 433.62pt x 361.35pt>
+File: Figures/MSE_RidgeOnly.png Graphic file (type png)
+<use Figures/MSE_RidgeOnly.png>
+Package pdftex.def Info: Figures/MSE_RidgeOnly.png  used on input line 252.
+(pdftex.def)             Requested size: 233.69925pt x 194.75116pt.
 
-Package natbib Warning: Citation `scoring1' on page 1 undefined on input line 79.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Package natbib Warning: Citation `scoring2' on page 1 undefined on input line 79.
+LaTeX Warning: Reference `fig::' on page 4 undefined on input line 257.
 
+<Figures/Ridge_Degree_Lambda_Heatmap.pdf, id=186, 578.16pt x 433.62pt>
+File: Figures/Ridge_Degree_Lambda_Heatmap.pdf Graphic file (type pdf)
+<use Figures/Ridge_Degree_Lambda_Heatmap.pdf>
+Package pdftex.def Info: Figures/Ridge_Degree_Lambda_Heatmap.pdf  used on input line 263.
+(pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
 
-Package natbib Warning: Citation `scoring3' on page 1 undefined on input line 79.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] Excluding 'comment' comment. Excluding 'comment' comment. [2{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] Excluding 'comment' comment. Excluding 'comment' comment. (./main.bbl
+[4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.283 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.283 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.283 
+       <./Figures/OLS_Heatmap.pdf> <./Figures/MSE_RidgeOnly.png> <./Figures/Ridge_Degree_Lambda_Heatmap.pdf>] Excluding 'comment' comment. Excluding 'comment' comment. (./main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
  []\OT1/cmr/m/n/9 M. Hjorth-Jensen, \OT1/cmr/m/it/9 Com-pu-ta-tional Physics Lec-
  []
@@ -427,31 +473,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
  \OT1/cmtt/m/n/9 / / github . com / CompPhysics / ComputationalPhysics /
  []
 
-)
-
-Package natbib Warning: There were undefined citations.
-
-[3] (./main.aux)
+) [5] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6C4584937F6FBE82BFF8F971767A9A79;5224.
+(rerunfilecheck)             Checksum: 1C217D72F3CFB374F9E41A9B37374B48;4799.
  ) 
 Here is how much of TeX's memory you used:
- 13584 strings out of 467800
- 202630 string characters out of 5436061
- 656919 words of memory out of 5000000
- 42016 multiletter control sequences out of 15000+600000
+ 13640 strings out of 467800
+ 204133 string characters out of 5436061
+ 662205 words of memory out of 5000000
+ 42061 multiletter control sequences out of 15000+600000
  634040 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,654b,480s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (3 pages, 159030 bytes).
+ 75i,8n,79p,678b,487s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (5 pages, 576448 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 208 compressed objects within 3 object streams
- 40 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 342 PDF objects out of 1000 (max. 8388607)
+ 288 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 269 words of extra memory for PDF output out of 10000 (max. 10000000)
 

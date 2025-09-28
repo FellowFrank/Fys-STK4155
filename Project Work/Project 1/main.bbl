@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{3}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -17,5 +17,8 @@
 
 \bibitem[{\citenamefont{Hastie et~al.}(2009)\citenamefont{Hastie, R.Tibshirani, and J.Friedman}}]{hastie}
 \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Hastie}}, \bibinfo{author}{\bibnamefont{R.Tibshirani}}, \bibnamefont{and} \bibinfo{author}{\bibnamefont{J.Friedman}}, \emph{\bibinfo{title}{The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second Edition. Springer Series in Statistics}} (\bibinfo{publisher}{Springer}, \bibinfo{address}{New York}, \bibinfo{year}{2009}), \urlprefix\url{https://link.springer.com/book/10.1007\%2F978-0-387-84858-7}.
+
+\bibitem[{\citenamefont{James et~al.}(2017)\citenamefont{James, Witten, Hastie, and Tibshirani}}]{scoring1}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{James}}, \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Witten}}, \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Hastie}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Tibshirani}}, \emph{\bibinfo{title}{An Introduction to Statistical Learning: with Applications in R}} (\bibinfo{publisher}{Springer}, \bibinfo{address}{New York}, \bibinfo{year}{2017}), \urlprefix\url{https://link.springer.com/book/10.1007/978-1-0716-1418-1}.
 
 \end{thebibliography}
