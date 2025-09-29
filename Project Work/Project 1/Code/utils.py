@@ -49,6 +49,18 @@ def OLS_parameters(X, y):
     # Ordinary Least Square analytical solution
     return np.linalg.pinv(X.T @ X) @ X.T @ y
 
+def Gradient_OLS(X, y,theta, eta=0.01, n=100):
+    return (2.0/n)*X.T @ (X @ theta-y)
+
 def Ridge_parameters(X, y, regularization=1.0):
     # Assumes X is scaled and has no intercept column
     return np.linalg.pinv(X.T @ X + regularization * np.identity(len(X.T))) @ X.T @ y
+
+def Gradient_Ridge(X, y, theta, eta=0.01, lambda_param=0.01,n=100):
+    return (2.0/n)*X.T @ (X @ theta-y) + 2*lambda_param*theta 
+
+def LassoIter(X, y, theta, eta=0.01, lambda_param=.01,n=100):
+    grad_OLS = Gradient_OLS(X, y, eta=eta,theta=theta, n=n) 
+    theta -= eta * grad_OLS
+    theta =  np.sign(theta) * np.maximum(0, np.abs(theta) - eta * lambda_param)
+    return theta
