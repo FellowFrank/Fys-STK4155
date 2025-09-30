@@ -1,23 +1,27 @@
 # Fdb version 4
-["bibtex main"] 1759172217.07933 "main.aux" "main.bbl" "main" 1759172219.65329 0
+["bibtex main"] 1759258200.31698 "main.aux" "main.bbl" "main" 1759258203.09009 0
   "./biblio.bib" 1759068297 2401 7eecadd5b7b78fe1b05df87cb360d66e ""
   "c:/texlive/2025/texmf-dist/bibtex/bst/revtex4/apsrev.bst" 1756400306 43844 78e58abfb2d07832103f1e2f30cf6375 ""
-  "main.aux" 1759172218 7125 9bb5b7361fce878c356c45fead776206 "pdflatex"
+  "main.aux" 1759258202 8686 e347683ea921bad73e1784ee9dda266b "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1759172217.4859 "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 1/main.tex" "main.pdf" "main" 1759172219.65391 0
-  "Figures/Combined_Analysis_OLS.png" 1759075394 182379 58ff321c0e750ded44b744edad2b47f7 ""
+["pdflatex"] 1759258200.73697 "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 1/main.tex" "main.pdf" "main" 1759258203.09076 0
+  "Figures/Bootstrap_Heatmap.pdf" 1759258028 171593 65607b9ada7ce748175289055e50b20f ""
+  "Figures/Bootstrap_performance.pdf" 1759257695 130341 cad55ff5f8c703e8759c0b059adf14ee ""
+  "Figures/Combined_Analysis_OLS.png" 1759253270 162973 bc9b1358e5ef0370bc8b1aa518672922 ""
   "Figures/Gradient_Comparison_OLS_Ridge_18.pdf" 1759171409 169327 0eaa2b49d4f2619d6bee6a4a6b9637a5 ""
   "Figures/Lasso_MSE.pdf" 1759171416 167109 362435bbd31ce017f12a22271a943757 ""
   "Figures/MSE_RidgeOnly.png" 1759158686 39680 c4b20fa5e88f73df68147f346d11f3b4 ""
   "Figures/OLS_Heatmap.pdf" 1759076669 143141 372839d838132a0fd60e48025103447a ""
+  "Figures/OLS_Ridge_ADAM.pdf" 1759249982 168974 a4364abb044d2699c252152e0fc16a83 ""
   "Figures/OLS_Ridge_AdaGrad.pdf" 1759171657 169460 72357cb246602bafc0ae52916d06c8d7 ""
   "Figures/OLS_Ridge_Momentum.pdf" 1759171426 169288 04f0ab6c0a4f483e33cea6f3d6761af3 ""
   "Figures/OLS_Ridge_RMSProp.pdf" 1759171896 169456 a882399aa579bfa6ec80f5d830cc43d4 ""
   "Figures/Ridge_Degree_Lambda_Heatmap.pdf" 1759079653 239938 1b2e2b7a5864250943f898fa82ff3df3 ""
-  "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 1/main.tex" 1759172214 22854 d52dfc4f5e11b8f719e3c338ffdcac99 ""
+  "Figures/StochasticDescent.pdf" 1759255763 170979 52f96e376d9986b4d3d8722cd18301e0 ""
+  "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 1/main.tex" 1759258197 32282 25e124572600ead77f556430a3ed2fd3 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1756393353 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1756394565 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1756394188 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -69,6 +73,7 @@
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1756392638 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb" 1756392638 36310 f5ddc6715cc60deb16d9db5ded6a9391 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb" 1756392638 29078 718ea4567ceff944262b0f5b0800e1d9 ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1756392638 34694 870c211f62cb72718a00e353f14f254d ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1756393353 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1756399273 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2025/texmf-dist/tex/generic/babel-english/english.ldf" 1756392811 7008 9ff5fdcc865b01beca2b0fe4a46231d4 ""
@@ -91,6 +96,7 @@
   "c:/texlive/2025/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty" 1756392613 26750 ce139c05a983e19ddca355b43e29c395 ""
   "c:/texlive/2025/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty" 1756392613 3457 d9077efe6b74c5a094199256af8d7d9a ""
   "c:/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty" 1756392614 3249 15763257e50278eef5db1952ccde229c ""
+  "c:/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty" 1756392634 12594 0d51ac3a545aaaa555021326ff22a6cc ""
   "c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1756392638 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
   "c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty" 1756392638 13829 94730e64147574077f8ecfea9bb69af4 ""
   "c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd" 1756392638 961 6518c6525a34feb5e8250ffa91731cff ""
@@ -143,10 +149,10 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1756401881 5574045 c1864b6d576eca8ff04839113c3d8c41 ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1756402031 3605795 f215791cb7a8c2e83a36828a9428ff78 ""
   "c:/texlive/2025/texmf.cnf" 1756401861 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1759172218 7125 9bb5b7361fce878c356c45fead776206 "pdflatex"
-  "main.bbl" 1759172217 2187 1f43f672b1a23594281e9840e5f2689e "bibtex main"
-  "main.out" 1759172218 4908 42c17f625976b552f6d1a09de9bd47b0 "pdflatex"
-  "main.tex" 1759172214 22854 d52dfc4f5e11b8f719e3c338ffdcac99 ""
+  "main.aux" 1759258202 8686 e347683ea921bad73e1784ee9dda266b "pdflatex"
+  "main.bbl" 1759258200 2187 1f43f672b1a23594281e9840e5f2689e "bibtex main"
+  "main.out" 1759258202 5575 f04a78bf3e46309346384867ed691add "pdflatex"
+  "main.tex" 1759258197 32282 25e124572600ead77f556430a3ed2fd3 ""
   (generated)
   "main.aux"
   "main.log"

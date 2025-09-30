@@ -14,7 +14,13 @@
 \usepackage{comment}
 %\usepackage[authoryear]{natbib}
 \usepackage{algorithm}
+\usepackage{amsthm}
 \usepackage{algpseudocode}
+
+
+
+\newtheorem{prop}{Proposition}[section]
+
 \begin{document}
 
 \title{Report Template \\
@@ -106,9 +112,9 @@ where $\eta$ is the learning rate that controls the step size in the parameter s
 
 \subsubsection{Ridge Regression}
 This is a regularized version of OLS, where we add a penalization term to the cost function to prevent overfitting.
-\begin{equation}
+$$
     C(\theta, \lambda) = \frac{1}{n} \sum_{i=1}^{n} (y_i - \tilde{y}_i)^2 + \lambda \sum_{j=1}^{p} \theta_j^2
-\end{equation}
+$$
 
 where $\lambda$ is the regularization parameter that controls the strength of the penalization and $p$ is the number of model parameters, in our case the degree of the polynomial.
 The analytical solution is given by:
@@ -118,15 +124,15 @@ The analytical solution is given by:
 where $I$ is the identity matrix.
 
 We also have a gradient descent solution to this problem by taking the derivative of the cost function with reagrds to $\theta$ and updating $\theta$ iteratively \cite{compfys}(week 36).
-\begin{align}
+\begin{align*}
 \nabla_{\theta_n} &= \frac{1}{n}2X^T(X\theta_n - y) + 2\lambda \theta_n \\
 \theta_{n+1} &= \theta_n - \eta \nabla_{\theta_n}
-\end{align}
+\end{align*}
 
 \subsubsection{LASSO Regression}
 Lasso is defined by minimizing the following cost function:
 $$
-C(X,\theta)=\frac{1}{n}\sum^n_{i=1}(y_i- \tilde{y_i})^2+\lambda \sum_{j=1}^p\vert \theta_j\vert
+C(\theta, \lambda)=\frac{1}{n}\sum^n_{i=1}(y_i- \tilde{y_i})^2+\lambda \sum_{j=1}^p\vert \theta_j\vert
 ,$$
 which is a also regularized version of OLS except using the norm on the parameter vector.
 The penalty term has the effect of driving some parameter estimates $\theta_j$ to exactly zero, which performs feature selection and results in a simpler, sparser model.
@@ -153,11 +159,115 @@ Where we take a soft cap on the parameters based on a regularization value\ref{a
 For more on these three methods see \cite{compfys} and \cite{hastie}.
 \subsection{Gradient Descent}
 
-\subsubsection{Stochastic Gradient Descent}
-part f, write about the theory?
+\subsubsection{Changing learning rate algorithms}
+\textbf{Momentum}
 
+It's a technique that helps accelerate gradient descent by adding a fraction of the previous update to the current update. This helps to smooth out the updates and can lead to faster convergence. The update rule becomes:
+\begin{align*}
+v_{t+1} &= \beta v_t + (1 - \beta) \nabla_{\theta} J(\theta_t) \\
+\theta_{t+1} &= \theta_t - \eta v_{t+1}
+\end{align*}
+where $v_t$ is the velocity (the exponentially weighted average of the gradients), $\beta$ is the momentum term (usually set to 0.9), and $\eta$ is the learning rate.
+\\
+
+\textbf{Adagrad}
+
+This technique adapts the learning rate for each parameter based on the historical sum of squared gradients. This means that parameters with larger gradients will have smaller learning rates, and vice versa. The update rule is:
+\begin{align*}
+\theta_{t+1} &= \theta_t - \frac{\eta}{\sqrt{G_t + \epsilon}} \odot \nabla_{\theta} J(\theta_t)
+\end{align*}
+where $G_t$ is the diagonal matrix of the sum of squared gradients up to time $t$, and $\epsilon$ is a small constant added for numerical stability.
+\\
+
+\textbf{RMSprop}
+
+This technique is similar to ADAgrad but uses a moving average of the squared gradients instead of the cumulative sum. This helps to prevent the learning rate from becoming too small. The update rule is:
+\begin{align*}
+\theta_{t+1} &= \theta_t - \frac{\eta}{\sqrt{E_t + \epsilon}} \odot \nabla_{\theta} J(\theta_t)
+\end{align*}
+where $E_t$ is the moving average of the squared gradients.
+\\
+
+\textbf{Adam}
+
+Adam (Adaptive Moment Estimation) combines the ideas of momentum and RMSprop. It maintains both a moving average of the gradients and a moving average of the squared gradients. The update rule is:
+\begin{align*}
+m_{t+1} &= \beta_1 m_t + (1 - \beta_1) \nabla_{\theta} J(\theta_t) \\
+v_{t+1} &= \beta_2 v_t + (1 - \beta_2) (\nabla_{\theta} J(\theta_t))^2 \\
+\theta_{t+1} &= \theta_t - \frac{\eta}{\sqrt{v_{t+1}}} \odot m_{t+1}
+\end{align*}
+where $m_t$ is the moving average of the gradients, $v_t$ is the moving average of the squared gradients, $\beta_1$ is usually set to 0.9, and $\beta_2$ is usually set to 0.999.
+
+\subsubsection{Stochastic Gradient Descent}
+Stochastic Gradient Descent (SGD) is a variant of gradient descent where the model is updated using only a single training example (or a small batch) at each iteration, rather than the entire dataset. This can lead to faster convergence, especially for large datasets, and can help to escape local minima.
+
+The update rule for SGD is similar to that of standard gradient descent:
+\begin{align*}
+\theta_{t+1} &= \theta_t - \eta \nabla_{\theta} J(\theta_t; x_i, y_i)
+\end{align*}
+where $(x_i, y_i)$ is a single training example.
+
+SGD introduces noise into the optimization process, which can be beneficial for escaping local minima but may also lead to instability in the convergence process. To mitigate this, techniques such as learning rate schedules and mini-batch training are often employed.
 
 \subsection{Sampling methods}
+
+Show that you can rewrite this in terms of a term which contains the variance of the model itself
+(the so-called variance term), a term which measures the deviation from the true data and the mean
+value of the model (the bias term) and finally the variance of the noise.
+
+\begin{prop}
+For a model $\tilde{y}$ that approximates the true function $y$, the expected mean squared error can be decomposed into three components: the variance of the model, the squared bias of the model, and the variance of the noise. Mathematically, this is expressed as:
+$$\mathbb{E}[(y-\tilde{y})^2] = \mathrm{bias}[\tilde{y}]^2 + \mathrm{var}[\tilde{y}] + \sigma^2$$
+where $\mathrm{bias}[\tilde{y}] = \mathbb{E}[\tilde{y}] - y$, $\mathrm{var}[\tilde{y}] = \mathbb{E}[(\tilde{y} - \mathbb{E}[\tilde{y}])^2]$, and $\sigma^2$ is the variance of the noise in the data.
+\end{prop}
+
+\begin{proof}
+
+First, write out what the terms are for the expectation value of $\mathbb{E}[(y-\tilde{y})^2]$:
+
+\begin{align*}
+\mathbb{E}[(y-\tilde{y})^2 ]&= \mathbb{E}[(y-\tilde{y}) (y-\tilde{y}) ] \\
+&= \mathbb{E}[(y^2-\tilde{y} y -y \tilde{y} +\tilde{y}^2)] \\
+&= \mathbb{E}[y^2] - 2 \mathbb{E}[\tilde{y} y] +\mathbb{E}[\tilde{y}^2] \\
+\end{align*}
+
+Looking into the function $\mathbb{E}[\tilde{y}^2]$ and using $\mathrm{var}[\tilde{y}] = \mathbb{E}[y^2] - \mu_y^2$ we see that this can be written as 
+$$
+\mathbb{E}[\tilde{y}^2] = \mathrm{var}[\tilde{y}] + \mathbb{E}[\tilde{y}]^2.
+$$
+
+Secondly looking closer at $\mathbb{E}[y^2]$ and writing the function $y$ as $f + \varepsilon$, where we assuming $f$ to be non stochastic and $\varepsilon \sim N(0, \sigma^2)$, we get:
+
+$$
+\mathbb{E}[(f+\varepsilon)^2] = \mathbb{E}[f^2] + 2 \mathbb{E}[f]\mathbb{E}[\varepsilon] + \mathbb{E}[\varepsilon^2] = \mathbb{E}[f^2] + \sigma^2 = f^2 + \sigma^2
+$$
+
+Lastly the term $\mathbb{E}[\tilde{y} y]$, becomes the following since $\tilde{y}$ and $\varepsilon$ are independent and we can distribute the expectation operation.
+
+$$
+\mathbb{E}[\tilde{y} (f + \varepsilon)] = \mathbb{E}[\tilde{y} f] + \mathbb{E}[\tilde{y} \varepsilon] = f \mathbb{E}[\tilde{y}] + 0
+$$
+
+Taking everything together we get:
+
+\begin{align*}
+&=\mathbb{E}[y^2] - 2 \mathbb{E}[\tilde{y} y] +\mathbb{E}[\tilde{y}^2] \\
+&= f^2 + \sigma^2 - 2 f \mathbb{E}[\tilde{y}] +\mathrm{var}[\tilde{y}] + \mathbb{E}[\tilde{y}]^2 \\
+&= f^2 - 2 f \mathbb{E}[\tilde{y}] + \mathbb{E}[\tilde{y}]^2 + \mathrm{var}[\tilde{y}] + \sigma^2 \\
+&= \mathbb{E}[ (f - \mathbb{E}[\tilde{y}])^2] + \mathrm{var}[\tilde{y}] + \sigma^2 \\
+&= \mathrm{bias}[\tilde{y}]  + \mathrm{var}[\tilde{y}] + \sigma^2 \
+\end{align*}
+
+Where we have approximated $f$ with $y$, in the last step in order to evaluate it as f is unknown
+\end{proof}
+
+
+\subsubsection{Bootstrap}
+
+
+\subsubsection{Cross Validation}
+
+
 part g, write about the implementation of the bootstrap method as a resampling technique on the OLS method.
 part h, write about the implementation of the k-fold cross-validation algorithm as a resampling technique on the OLS, Ridge and LASSO methods.
 
@@ -248,13 +358,16 @@ Description of the function, why it is interesting to study.
 Generation of the data set and why and how we scaled it. \textbf{part a)}
 We had a set with and without noise in a normal distribution to see how the methods performed on both.
 We scaled the data so that the higher polynomials don't take over the cost function making it skewed towards the higher once.
+Since most of our analysis will be around a sparse dataset we will be using the noiseless one for the main analysis.
+Looking at the figure \ref{fig:OLS1} one can see the function and the datapoints we are trying to fit towards.
+This will be the same for all graphs unless otherwise stated.
 
 \textbf{Run through the graphs on the noisey one also and have the comparison as an appendix if it doesn't give any useful information}
 
 
 Analysis using the methods described in section \ref{section:methods}.
 
-\subsection{Regression methods}
+\subsection{Analytical Regression methods}
 
 \subsubsection{Ordinary Least Squares (OLS)}
 
@@ -268,7 +381,7 @@ We first analyzed how OLS works on a small dataset as with more data the varianc
 Analyzing how the relationship between datapoints and training at figure\ref{fig:OLSHeat} we see, as we expect, along the borders where there is low training data or low complexity are the worst performing parts on the test data. The yellow spots in the heatmap are capped at 0.1, as these points are prone to explode just as the graph \ref{fig:OLS1} is beginning to do.
 A clear case of where the tradeoff between bias and variance goes towards high bias.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/OLS_Heatmap.pdf}
     \caption{Data size and Model Complexity}
@@ -277,7 +390,7 @@ A clear case of where the tradeoff between bias and variance goes towards high b
 
 \subsubsection{Ridge Regression}
 Doing the same training but using Ridge as our method we got some interesting results that elucidates the differences between these models.
-Both has there imporvements increasing as the complexity increases the differences are in the lows and the highs.
+Both has there improvements increasing as the complexity increases the differences are in the lows and the highs.
 Where the OLS method\ref{fig:OLS1} had a really low value at degree 10, it also begins to diverge a lot at degree 14.
 The Ridge method on the other hand stays remarkably consistent here as seen by the training value. 
 Implying that the regularization terms take over and keeps the model from fitting the training data to closely. 
@@ -289,7 +402,7 @@ Implying that the regularization terms take over and keeps the model from fittin
     \label{fig:RidgeMse}
 \end{figure}
 
-Now looking closer at the regularization performs with regards to the complexity \ref{fig::} we get that the regularization step cannot be to high as the model will then fail to learn anything and can struggle a bit at lower values when the model complexity increase with the training data.
+Now looking closer at the regularization performs with regards to the complexity \ref{fig:RidgeHeat} we get that the regularization step cannot be to high as the model will then fail to learn anything and can struggle a bit at lower values when the model complexity increase with the training data.
 The model will fit the data to well before the regularization strikes in, though there are some odd lines in this lower right area.
 
 When we generated an equivalent map as the one above see appendix we get the same results as once can infer from figure \ref{fig:RidgeMse}, lower regularization rates and higher sample sizes gives better models.
@@ -308,7 +421,7 @@ When we generated an equivalent map as the one above see appendix we get the sam
 
 \subsubsection{OLS and Ridge with gradient descent}
 
-Doing the calculation based on the gradient solution to the optimization problem, we see that it requires some iterations before one gets close to reaching a sort of minimum on the test set\ref{{fig:DescOLSRidge}}.
+Doing the calculation based on the gradient solution to the optimization problem, we see that it requires some iterations before one gets close to reaching a sort of minimum on the test set\ref{fig:DescOLSRidge}.
 The more complex models also struggle to beat the simplest model in performance, only the polynomial of degree 12 goes below it near the end.
 If we had changed the learning rate to be a higher number we would get a faster convergence to the minimum.
 But then we will also start to see that it can begin to switch in the other direction and jump as OLS-12 is doing.
@@ -331,7 +444,7 @@ We also see that only the simples Ridge model is plateauing and being dominated 
 
 
 \subsubsection{LASSO Regression}
-When we did the same analysis using Lasso regression but with the same parameters and dataset we see in figure \ref{} that OLS and Lasso are really similar in how the models improves.
+When we did the same analysis using Lasso regression but with the same parameters and dataset we see in figure \ref{fig:Lasso1} that OLS and Lasso are really similar in how the models improves.
 
 
 \begin{figure}[h]
@@ -342,13 +455,17 @@ When we did the same analysis using Lasso regression but with the same parameter
 \end{figure}
 
 
-part f, study the results from the stochastic gradient descent algorithm for both OLS and Ridge regression and especially the dependence on the learning rate $\eta$ and the number of iterations.
+part f, study the results from the stochastic gradient descent algorithm for both OLS, Ridge and Lasso regression and especially the dependence on the learning rate $\eta$ and the number of iterations.
 
-\subsection{Changing learning rate algorithms}
+\subsection{Learning Rate Algorithms}
 
-\subsubsection{Changing learning rate}
+For simplicity in implementation we will only be using the OLS and Ridge methods here as they are similar in their gradient descent implementation.
+We will use the same dataset as before with 18 points and a learning rate of 0.1 for the normal gradient descent.
+Where we will also keep the hyperparameters for the different methods the same throughout the images, to make it easier to compare the methods.
 
-\textbf{Momentum}
+?? include or not \textit{See appendix for analysis on different hyperparameters}
+
+\subsubsection{Momentum}
 
 The first method we tried when changing the learning rate was to implement a momentum term in the gradient descent algorithm.
 In our first we saw that the momentum term was to high for seeing the results we wanted as it was visible how it made the model slowed down.
@@ -364,9 +481,9 @@ When most of the models are beginning to plateau.
 \end{figure}
 
 
-\textbf{ADAgrad}
+\subsubsection{ADAgrad}
 
-Our results from the ADAgrad method are shown in figure \ref{fig:GradADAgrad}.
+Our results from the ADAgrad method are shown in figure\ref{fig:GradADAgrad}.
 Here we see that the model converges much slower and seems to struggle at the end to find a position compared to the momentum method or the normal gradient descent.
 This is due to the fact that the learningrate starts small and becomes much smaller through ADAgrad.
 \\
@@ -379,25 +496,82 @@ This is due to the fact that the learningrate starts small and becomes much smal
 \end{figure}
 
 
-\textbf{RMSprop}
+\subsubsection{RMSprop}
+
+When we look at our results are much more volatile as seen in figure \ref{fig:GradRMSprop}.
+The simpler models has smaller swings while the more complex models has larger swings with no clear convergence, except for OLS-12. 
+This is due to the fact that the learning rate is changing based on the gradient squared and the momentum of this.
+Since the learningrate is quite large 0.1 and the dataset is small the model can jump around a lot.
+\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.95 \linewidth]{Figures/OLS_Ridge_RMSprop.pdf}
+    \caption{Gradient descent with RMSprop (1e-2, 0.9)}
+    \label{fig:GradRMSprop}
+\end{figure}
+
+\subsubsection{Adam}
+
+Using the Adam method that combines the momentum and RMSprop methods on our dataset.
+We see that the figure \ref{fig:GradADAM} has lost much of it's volatility the iterations are less volatile in swings than with the other three methods.
+\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.95 \linewidth]{Figures/OLS_Ridge_ADAM.pdf}
+    \caption{Gradient descent with ADAM (1e-2, 0.9)}
+    \label{fig:GradADAM}
+\end{figure}
+
+
+\subsection{Stochastic Gradient Descent}
+Our results from the stochastic gradient descent method will not be as effiecnt here as we are dealing with a small dataset.
+Our batch size is 1/3 of the dataset, so 6 points.
+This means that the model will be updated 3 times per epoch.
+We see in figure \ref{fig:GradSGD} that the model is much more volatile than the other methods.
+This is due to the fact that the model is updated more frequently and with less data.
+This means that the model can jump around more and is more prone to overfitting the training data.
+
+The results we got when we decrease the learning rate to 0.01 is that the model becomes less volatile but also converges much slower.
+After 100000 iterations it is still not at a decided state except for the linear models.
+\\
 
 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=.95 \linewidth]{Figures/OLS_Ridge_RMSprop.pdf}
-    \caption{Gradient descent with RMSprop (1e-8, 0.9)}
-    \label{fig:GradRMSprop}
+    \includegraphics[width=.95 \linewidth]{Figures/StochasticDescent.pdf}
+    \caption{Stochastic Gradient Descent}
+    \label{fig:GradSGD}
+\end{figure}
+\subsection{Resampling Techniques}
+Here we try to increase the performance of the model by using resampling techniques, to make the model more robust and generalizable.
+In figure \ref{fig:OLS1} we see that the model is overfitting the training data and has a high variance in th more complex models.
+IF we look at the test point at $x=1$ we see that the models seem to avoid it, and even the linear model has learned some bias as it has a slight tilt upwards.
+Therefore we will see how the following two resampling techniques will act upon the model 
+
+
+\subsubsection{Bootstrap}
+Using bootstrap we do not see any improvements and instead it becomes remarkably worse on our small dataset.
+This is likely due to the fact that the model is already overfitting the training data, and adding more noise through bootstrapping only exacerbates this issue.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.95 \linewidth]{Figures/Bootstrap_performance.pdf}
+    \caption{Bootstrap Performance}
+    \label{fig:BootstrapPerformance}
 \end{figure}
 
 
-\subsubsection{Stochastic Gradient Descent}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.95 \linewidth]{Figures/Bootstrap_Heatmap.pdf}
+    \caption{Bootstrap Heatmap }
+    \label{fig:BootstrapHeatmap}
+\end{figure}
 
-
-\subsection{Resampling Techniques}
-
-\subsubsection{Bootstrap}
-part g, study the bias-variance tradeoff using the bootstrap method as a resampling technique on the OLS method.
 
 \subsubsection{Cross Validation}
 part h, k-fold cross-validation algorithm as a resampling technique on the OLS method. Compare the MSE you get from your cross-validation code with the one you got from your bootstrap code.
