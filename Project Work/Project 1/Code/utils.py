@@ -11,7 +11,7 @@ def dataset(n=100):
     x = np.linspace(-1,1,n)
     y = 1/(1+25*x**2) 
     y = y.reshape(n,1) 
-    y_noise = y + np.random.normal(0,0.1)
+    y_noise = y + np.random.normal(0,0.1,size=(n,1))
     return x, y, y_noise
 
 def polynomial_features(x, p, intercept=False):
@@ -52,7 +52,7 @@ def OLS_parameters(X, y):
 def Gradient_OLS(X, y,theta, eta=0.01, n=100):
     return (2.0/n)*X.T @ (X @ theta-y)
 
-def Ridge_parameters(X, y, regularization=1.0):
+def Ridge_parameters(X, y, regularization=.001):
     # Assumes X is scaled and has no intercept column
     return np.linalg.pinv(X.T @ X + regularization * np.identity(len(X.T))) @ X.T @ y
 
