@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.28)  4 OCT 2025 21:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.28)  4 OCT 2025 21:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -513,15 +513,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.393 
+l.389 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.393 
+l.389 
        <./Figures/MSE_RidgeOnly.png> <./Figures/Ridge_Degree_Lambda_Heatmap.pdf>]
 
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 393.
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 389.
 
 <Figures/Lasso_MSE.pdf, id=278, 578.16pt x 433.62pt>
 File: Figures/Lasso_MSE.pdf Graphic file (type pdf)
@@ -579,9 +579,6 @@ File: Figures/OLS_Ridge_RMSprop.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/OLS_Ridge_RMSprop.pdf  used on input line 465.
 (pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 472--476
 
  []
@@ -612,17 +609,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) ha
                                                   \__shipout_drop_firstpage_...
 l.488 
        <./Figures/OLS_Ridge_Momentum.pdf> <./Figures/OLS_Ridge_AdaGrad.pdf> <./Figures/OLS_Ridge_RMSProp.pdf> <./Figures/OLS_Ridge_ADAM.pdf>]
-<Figures/StochasticDescent.pdf, id=433, 578.16pt x 433.62pt>
+<Figures/StochasticDescent.pdf, id=434, 578.16pt x 433.62pt>
 File: Figures/StochasticDescent.pdf Graphic file (type pdf)
 <use Figures/StochasticDescent.pdf>
 Package pdftex.def Info: Figures/StochasticDescent.pdf  used on input line 497.
 (pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
-<Figures/bias_variance_tradeoff.pdf, id=435, 418.2142pt x 314.38293pt>
+<Figures/bias_variance_tradeoff.pdf, id=436, 418.2142pt x 314.38293pt>
 File: Figures/bias_variance_tradeoff.pdf Graphic file (type pdf)
 <use Figures/bias_variance_tradeoff.pdf>
 Package pdftex.def Info: Figures/bias_variance_tradeoff.pdf  used on input line 512.
 (pdftex.def)             Requested size: 233.69925pt x 175.67906pt.
-<Figures/Bootstrap_Heatmap.pdf, id=436, 578.16pt x 433.62pt>
+<Figures/Bootstrap_Heatmap.pdf, id=437, 578.16pt x 433.62pt>
 File: Figures/Bootstrap_Heatmap.pdf Graphic file (type pdf)
 <use Figures/Bootstrap_Heatmap.pdf>
 Package pdftex.def Info: Figures/Bootstrap_Heatmap.pdf  used on input line 521.
@@ -631,17 +628,17 @@ Package pdftex.def Info: Figures/Bootstrap_Heatmap.pdf  used on input line 521.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.534 
+l.530 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.534 
+l.530 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.534 
+l.530 
        <./Figures/StochasticDescent.pdf> <./Figures/bias_variance_tradeoff.pdf> <./Figures/Bootstrap_Heatmap.pdf>]
 <Figures/Bootstrap.pdf, id=506, 578.16pt x 433.62pt>
 File: Figures/Bootstrap.pdf Graphic file (type pdf)
@@ -702,18 +699,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: EB36743001411F75C484E0E7BD70C153;5185.
  ) 
 Here is how much of TeX's memory you used:
- 14501 strings out of 467800
- 219537 string characters out of 5436061
- 678438 words of memory out of 5000000
- 42885 multiletter control sequences out of 15000+600000
+ 14503 strings out of 467800
+ 219557 string characters out of 5436061
+ 678597 words of memory out of 5000000
+ 42887 multiletter control sequences out of 15000+600000
  634636 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,79p,975b,488s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (11 pages, 705671 bytes).
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (11 pages, 715404 bytes).
 PDF statistics:
- 644 PDF objects out of 1000 (max. 8388607)
- 525 compressed objects within 6 object streams
+ 649 PDF objects out of 1000 (max. 8388607)
+ 528 compressed objects within 6 object streams
  65 named destinations out of 1000 (max. 500000)
  356 words of extra memory for PDF output out of 10000 (max. 10000000)
 

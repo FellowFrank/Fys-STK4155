@@ -293,7 +293,7 @@ Looking at the github repository for this project one can see the commit history
 \begin{figure*}[t]
     \centering  
     \includegraphics[width=.95 \linewidth]{Figures/Combined_Analysis_OLS.png}
-    \caption{OLS and model complexity with $N=18$}
+    \caption{OLS and model complexity ($N=18$)}
     \label{fig:OLS1}
 \end{figure*}
 \section{Results and Discussion}\label{section:results}
@@ -319,7 +319,7 @@ An observation with regards to noise, i.e. more noise makes the model more prone
 \begin{figure}[H]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/OLS_Heatmap.pdf}
-    \caption{Data size and Model Complexity}
+    \caption{OLS data size and Model Complexity}
     \label{fig:OLSHeat}
 \end{figure}
 
@@ -344,7 +344,7 @@ Implying that the regularization terms take over and keeps the model from fittin
 \begin{figure}[h]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/MSE_RidgeOnly.png}
-    \caption{Ridge and model complexity}
+    \caption{Ridge and model complexity ($\lambda=0.01$)}
     \label{fig:RidgeMse}
 \end{figure}
 
@@ -381,7 +381,7 @@ Especially notable is OLS-12 which had an early minimum right before 1,000 itera
 \begin{figure}[h]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/Gradient_Comparison_OLS_Ridge_18.pdf}
-    \caption{Gradient descent for OLS and Ridge}
+    \caption{Gradient descent for OLS and Ridge ($\eta=.01, \lambda=.001$)}
     \label{fig:DescOLSRidge}
 \end{figure}
 Our analysis on the learning rate $\eta$ revealed that both excessively low and high values were detrimental to convergence.
@@ -404,7 +404,7 @@ Here we saw that Lasso 12 which in figure \ref{fig:Lasso1} will plateau slightly
 \begin{figure}[h]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/Lasso_MSE.pdf}
-    \caption{Lasso learning}
+    \caption{Lasso learning ($\eta=.01, \lambda=.001$)}
     \label{fig:Lasso1}
 \end{figure}
 
@@ -432,7 +432,7 @@ Though, it doesn't appear to improve on the performance at the end results of th
 \begin{figure}[h]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/OLS_Ridge_Momentum.pdf}
-    \caption{Gradient descent with momentum (0.6)}
+    \caption{Gradient descent with momentum ($\eta=.01, \lambda=.001, \beta=0.6$)}
     \label{fig:GradMomentum}
 \end{figure}
 
@@ -449,7 +449,7 @@ Remarkably enough even the linear models take a long time to converge here.
 \begin{figure}[h]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/OLS_Ridge_ADAgrad.pdf}
-    \caption{Gradient descent with ADAgrad (1e-8)}
+    \caption{Gradient descent with ADAgrad ($\eta=.01, \lambda=.001$)}
     \label{fig:GradADAgrad}
 \end{figure}
 
@@ -463,7 +463,7 @@ An other interesting observation is that we know see a much better performance o
 \begin{figure}[h]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/OLS_Ridge_RMSprop.pdf}
-    \caption{Gradient descent with RMSprop (1e-2, 0.9)}
+    \caption{Gradient descent with RMSprop ($\eta=.01, \lambda=.001, \beta=0.9$)}
     \label{fig:GradRMSprop}
 \end{figure}
 
@@ -477,7 +477,7 @@ Though in our case most of the models seems stuck at a plateau except for OLS-12
 \begin{figure}[h]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/OLS_Ridge_ADAM.pdf}
-    \caption{Gradient descent with ADAM (1e-2, 0.9)}
+    \caption{Gradient descent with ADAM ($\eta=.01, \lambda=.001, \beta=0.9,\beta_2=0.999$)}
     \label{fig:GradADAM}
 \end{figure}
 
@@ -495,7 +495,7 @@ The overall outcome highlights that for this sparse dataset, SGD, particularly f
 \begin{figure}[h]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/StochasticDescent.pdf}
-    \caption{Stochastic Gradient Descent}
+    \caption{Stochastic Gradient Descent ($\eta=.01, \lambda=.001, m=6$)}
     \label{fig:GradSGD}
 \end{figure}
 \subsection{Resampling Techniques}
@@ -519,7 +519,7 @@ Therefore we will see how the following two resampling techniques will act upon 
 \begin{figure}[h]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/Bootstrap_Heatmap.pdf}
-    \caption{Bootstrap Heatmap }
+    \caption{Bootstrap Heatmap}
     \label{fig:BootstrapHeatmap}
 \end{figure}
 
@@ -536,7 +536,7 @@ Lasso performs the best out of the three methods, likely due to the fact that it
 \begin{figure}[h]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/Bootstrap.pdf}
-    \caption{Bootstrap Performance}
+    \caption{Bootstrap Performance ($\lambda=.001$)}
     \label{fig:BootstrapPerformance}
 \end{figure}
 s
@@ -563,7 +563,7 @@ In contrast, the more stable, non-replacement folds of CV produce less collinear
 \begin{figure}[h]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/Cross_Validation.pdf}
-    \caption{5 fold Cross Validation}
+    \caption{5-fold Cross Validation ($\lambda=.001$)}
     \label{fig:CrossValidation}
 \end{figure}
 
