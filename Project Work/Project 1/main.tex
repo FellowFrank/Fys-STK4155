@@ -57,9 +57,9 @@ The study concludes that the key to achieving robust generalization on sparse da
 The fundamental problem in machine learning and statistics is to find meaningful patterns in data using models that make accurate predictions on unseen data.
 This is a difficult task, as a complex function might fit the training data perfectly, but fail spectacularly when facing new instances, a phenomenon known as overfitting.
 On the other hand a model that is too simple may fail to extract the patterns in the data and thus underfit the data.
-Therefore understanding of the bias-variance tradeoff on simpler models before the more complex ones is paramount to develop robust and generalizable models.
+Therefore, understanding the bias-variance tradeoff on simpler models before working on more complex ones is paramount to develop robust and generalizable models.
 
-Therefore, this paper will study the bias-variance tradeoff through the lens of regression models, that increase in complexity.
+This paper will study the bias-variance tradeoff through the lens of regression models, that increase in complexity.
 We start with the simplest model, Ordinary Least Squares (OLS), where we have a fully analytical solution for the best fit parameters.
 Then we move on to Ridge regression, which is a regularized version of OLS, where we first introduce the tuning of a penalization parameter $\lambda$ to find a good balance between bias and variance.
 Finally we end with LASSO regression, which is another regularized version of OLS, but with a different penalization term.
@@ -72,7 +72,7 @@ The result is a better intuition for tuning models, when is the model inching to
 
 To conduct this investigation, our analysis is structured in two main parts. 
 First, we will apply the regression models directly to the sparse dataset, beginning with the analytical solutions for OLS and Ridge before moving to iterative optimization methods like Gradient Descent for all three models. 
-Second, we will employ resampling techniques—specifically bootstrap and cross-validation—to empirically quantify the bias-variance tradeoff their performance on our dataset.
+Second, we will employ resampling techniques—specifically bootstrap and cross-validation—to empirically quantify the bias-variance tradeoff and their performance on our dataset.
 
 
 \section{Methods}\label{section:methods}
@@ -139,7 +139,7 @@ Because the L1 penalty term is not differentiable at $\theta_j=0$, an analytical
 This necessitates the use of iterative optimization techniques such as proximal gradient descent.
 This is done by first calculating the gradient for the OLS part of the cost function, and then applying a soft-thresholding operator to the parameters after each gradient step:
 $$\theta_{n+1} = S_{\lambda}(\theta_n - \eta \nabla_{\theta_n})$$
-where $S_{\lambda}$ is the soft-thresholding operator defined as:
+where $\eta > 0$ is the learning rate and $S_{\lambda}$ is the soft-thresholding operator defined as:
 $$S_{\lambda}(\theta_j) = \text{sign}(\theta_j) \max(|\theta_j| - \lambda, 0)$$
 
 For more on these three methods see chapter 2 in \cite{compfys} and Section 3.4.1-2 in \cite{hastie}.
@@ -149,7 +149,7 @@ Iterative optimization methods are employed, primarily Gradient Descent (GD), wh
 
 \subsubsection{Changing learning rate algorithms}
 Four advanced optimization algorithms were implemented to iteratively update the learning rate, primarily focusing on OLS and Ridge models due to similarities in their gradient formulation.
-These methods modify the standard gradient descent step, $\theta_{t+1}=\theta_t-\eta\nabla_{\theta} J(\theta_t)$, by adapting the step size ($\eta$) or the direction ($\nabla_{\theta} J(\theta_t)$).
+These methods modify the standard gradient descent step, $\theta_{t+1}=\theta_t-\eta\nabla_{\theta} J(\theta_t)$, by adapting the learning rate ($\eta$) or the direction ($\nabla_{\theta} J(\theta_t)$).
 \\ 
 
 \textbf{Momentum}
@@ -166,7 +166,7 @@ Where $v_t$ is the velocity term and $\beta$ is the momentum hyperparameter.
 
 Adapts the learning rate for each parameter by scaling it inversely proportional to the cumulative sum of all past squared gradients ($G_t$). This approach effectively shrinks the learning rate for frequently updated parameters:
 \begin{align*}
-\theta_{t+1} &= \theta_t - \frac{G_t + \epsilon}{\eta} \odot \nabla_{\theta} J(\theta_t)
+\theta_{t+1} &= \theta_t - \frac{\eta}{\sqrt{G_t + \epsilon}} \odot \nabla_{\theta} J(\theta_t)
 \end{align*}
 where $G_t$ is the diagonal matrix containing the sum of squared gradients up to time $t$, and $\epsilon$ is a small constant for numerical stability.
 \\
@@ -175,7 +175,7 @@ where $G_t$ is the diagonal matrix containing the sum of squared gradients up to
 
 Addresses the aggressive, monotonic decay of ADAgrad by using an exponentially decaying moving average of the squared gradients, $E_t$, which helps prevent the learning rate from diminishing too quickly in later iterations:
 \begin{align*}
-\theta_{t+1} &= \theta_t - \frac{E_t + \epsilon}{\eta} \odot \nabla_{\theta} J(\theta_t)
+\theta_{t+1} &= \theta_t - \frac{\eta}{\sqrt{E_t + \epsilon}} \odot \nabla_{\theta} J(\theta_t)
 \end{align*}
 where $E_t$ is the moving average of the squared gradients.
 \\
@@ -230,7 +230,7 @@ $$
 \mathbb{E}[\tilde{y}^2] = \mathrm{var}[\tilde{y}] + \mathbb{E}[\tilde{y}]^2.
 $$
 
-Secondly, replacing $y$ as $f + \varepsilon$ in $\mathbb{E}[y^2]$, where we assuming $f$ to be non stochastic and $\varepsilon \sim N(0, \sigma^2)$, we get:
+Secondly, replacing $y$ as $f + \varepsilon$ in $\mathbb{E}[y^2]$, where we are assuming $f$ to be non stochastic and $\varepsilon \sim N(0, \sigma^2)$, we get:
 $$
 \mathbb{E}[(f+\varepsilon)^2] = \mathbb{E}[f^2] + 2 \mathbb{E}[f]\mathbb{E}[\varepsilon] + \mathbb{E}[\varepsilon^2] =  f^2 + \sigma^2
 $$
@@ -246,7 +246,7 @@ Putting everything together we get:
 &= f^2 + \sigma^2 - 2 f \mathbb{E}[\tilde{y}] +\mathrm{var}[\tilde{y}] + \mathbb{E}[\tilde{y}]^2 \\
 &= f^2 - 2 f \mathbb{E}[\tilde{y}] + \mathbb{E}[\tilde{y}]^2 + \mathrm{var}[\tilde{y}] + \sigma^2 \\
 &= \mathbb{E}[ (f - \mathbb{E}[\tilde{y}])^2] + \mathrm{var}[\tilde{y}] + \sigma^2 \\
-&= \mathrm{bias}[\tilde{y}]  + \mathrm{var}[\tilde{y}] + \sigma^2 \
+&= \mathrm{Bias}[\tilde{y}]^2  + \mathrm{Var}[\tilde{y}] + \sigma^2 \
 \end{align*}
 
 Where we have approximated $f$ with the noisy $y$, in the last step in order to practically estimate the bias.
@@ -255,7 +255,7 @@ Where we have approximated $f$ with the noisy $y$, in the last step in order to 
 The following resampling techniques provide the necessary frameworks to estimate these components empirically.
 
 \subsubsection{Bootstrap}
-The Bootstrap method, using sampling with replacement, is employed here primarily to generate the multiple model realizations required to empirically calculate the bias and variance components, as depicted in Figure \ref{fig:biasvariance}. 
+The Bootstrap method, which means random sampling with replacement, is employed here primarily to generate the multiple model realizations required to empirically calculate the bias and variance components, as depicted in Figure \ref{fig:biasvariance}. 
 Although Bootstrap yields a theoretically low bias estimate because it trains models using samples of size N, the use of sampling with replacement can lead to higher variance in the error estimate, particularly when applied to small or sparse datasets, where the duplication of influential points heavily skews the resulting model parameters.
 
 \subsubsection{Cross Validation}
@@ -267,8 +267,8 @@ The final generalized MSE is calculated as the average of the test errors obtain
 The systematic nature of CV, which involves sampling without replacement, ensures that the test folds are entirely independent from the training sets. 
 This methodology typically results in a lower variance estimate of the test error compared to Bootstrap. 
 While training occurs on a slightly smaller effective dataset ($N(k-1)/k$), which might introduce a minimal increase in bias compared to training on the full dataset, this increase is often offset by the significant stability gained in the variance estimation. 
-This technique is applied across all three regression methods—OLS, Ridge, and LASSO—to provide a stable, comparable metric of generalization performance.
 
+These two techniques are applied across all three regression methods—OLS, Ridge, and LASSO—to provide a stable, comparable metric of generalization performance.
 For more information on bootstrap and cross-validation see section 7.10-11 in \citet{hastie} or chapter 3 in \citet{compfys}.
 
 
@@ -277,20 +277,20 @@ The code for this project was written in Python, utilizing libraries such as Num
 
 There are two main files, utils.py and ResultGeneration.ipynb.
 The utils.py file contains functions for generating data, creating polynomial features, and implementing the analytical regression methods (OLS and Ridge) as well as the calculation of the gradient.
-Though much of the code for the different optimization algorithms are written directly in the ResultGeneration.ipynb file, under the section it belongs in.
+Though much of the code for the different optimization algorithms are written directly in the ResultGeneration.ipynb file, under the section it belongs to.
 
 The ResultGeneration.ipynb file is a Jupyter notebook that is structured into different sections generating the results and plots for each part of this research paper.
-It is structured to allow modification of parameters such as the number of data points, polynomial degree, regularization strength, learning rate, and number of iterations.
+It is structured to allow modification of parameters such as the number of data points, polynomial degree, regularization strength, learning rate, and number of iterations. All results and plots are generated directly from this notebook with a fixed random seed ensuring reproducibility.
 
 
 
 \subsubsection{Testing and Comparison}
-To ensure correctness in the implementation of the analytical solutions for OLS and Ridge regression, the results were cross-validated against Scikit-learn's built-in functions.
+To ensure correctness in the implementation of the metrics and the analytical solutions for OLS and Ridge regression, the results were cross-validated against Scikit-learn's built-in functions.
 Here we saw that the results matched quite well for both the metrics MSE and R2 score, as well as the actual parameter values $\theta$ in the ridge and OLS methods.
-For MSE and R2 score the results were identical, while the parameters $\theta$ matched up to a precision of $10^{-14}$.
+For the MSE and R2 score the results were identical, while the parameters $\theta$ matched up to a precision of $10^{-14}$.
 See the GitHub repository \cite{rep} Code/ResultGeneration.ipynb for the comparison results.
 
-While the gradient results were not directly compared to Scikit-learn, the convergence behavior and final MSE values were monitored to ensure they aligned with theoretical expectations and the results from the analytical methods.
+When it comes to the gradient implementations, they were not directly compared to Scikit-learn, but the convergence behavior and final MSE values were monitored to ensure they aligned with theoretical expectations and the results from the analytical methods.
 
 \subsection{Use of AI tools}
 While working on generating the results for this project the auto-completion tool github copilot has been used in order to speed up the coding process.
@@ -299,7 +299,7 @@ Gemini has also been used in order to debug and find errors in the code.
 
 After having generated the results, we have used Gemini to help in assessing and improving the quality of the report.
 Reducing grammatical errors and improving the clarity and flow of the text.
-Looking at the github repository for this project one can see the commit history and when the different AI tools have been used.
+In the github repository for this project one can see the commit history and when the different AI tools have been used.
 \begin{figure*}[t]
     \centering  
     \includegraphics[width=.95 \linewidth]{Figures/Combined_Analysis_OLS.png}
@@ -316,8 +316,7 @@ But since our analysis will be around a sparse dataset we will be using the nois
 
 \subsubsection{Ordinary Least Squares (OLS)}
 
-
-The analysis began with OLS regression applied to the sparse dataset (N=18) generated from Runge’s function. 
+We first applied OLS regression to the sparse dataset (N=18) generated from Runge’s function. 
 This initial analysis, illustrated in \ref{fig:OLS1}, reveals the failure of OLS to generalize as model complexity (polynomial degree p) increases. 
 As we see that the higher lines perfectly hits the training points and ignores the underlying function, by jumping up and down near the test points.
 
@@ -335,31 +334,30 @@ An observation with regards to noise, i.e. more noise makes the model more prone
 
 
 The heatmap \ref{fig:OLSHeat} shows that the highest Mean Squared Error (MSE), occurs in the region characterized by high complexity (p) and low sample size (N). 
-This region, exhibiting yellow spots, demonstrates where the bias-variance trade-off tilts entirely towards d variance and numerical instability. 
+This region, exhibiting yellow spots, demonstrates where the bias-variance trade-off tilts entirely towards variance and numerical instability. 
 Conversely, increasing the sample size (moving up the x-axis) significantly stabilizes the MSE for higher polynomial degrees. 
 This confirms that adding more data intrinsically reduces the model's sensitivity to random fluctuations (variance) because the model has better information to distinguish between signal and noise, thereby allowing for the successful use of more complex models.
 
-Analyzing how the relationship between datapoints and training at figure\ref{fig:OLSHeat} we see, as we expect, along the borders where there is low training data or low complexity are the worst performing parts on the test data. 
-The yellow spots in the heatmap are the points where the training is prone to diverge just as the graph \ref{fig:OLS1} is beginning to do.
+Looking closer at figure\ref{fig:OLSHeat} we see, as we expect, along the borders where there is low training data or low complexity are the worst performing parts on the test data. 
+These yellow spots are especially pronounced as these are points where the training is prone to diverge just as the graph \ref{fig:OLS1} is beginning to do at $p=14$.
 Especially in the left corner we see a clear case of when the tradeoff between bias and variance goes towards low bias and high variance.
 
 
 \subsubsection{Ridge Regression}
 Doing the same training but using Ridge as our method we got some interesting results that elucidates the differences between these models.
-Both has there improvements increasing as the complexity increases the differences are in the lows and the highs.
-Where the OLS method\ref{fig:OLS1} had a really low value at degree 10, it also begins to diverge a lot at degree 14.
-The Ridge method on the other hand stays remarkably consistent here as seen by the training value. 
-Implying that the regularization terms take over and keeps the model from fitting the training data to closely. 
+Both has their improvements increasing as the complexity increases, but the differences are in the lows and the highs.
+Where the OLS method\ref{fig:OLS1} had a really low value at degree 10, it also begins to diverge more abruptly at degree 14.
+The Ridge method on the other hand doesn't have the same lows as OLS, but it also doesn't diverge as abruptly as OLS.
+Implying that the regularization terms is doing its job and keeps the model from fitting the training data to closely.
+
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/MSE_RidgeOnly.png}
-    \caption{Ridge and model complexity ($\lambda=0.01$)}
+    \caption{Ridge and model complexity ($\lambda=0.001$)}
     \label{fig:RidgeMse}
 \end{figure}
 
-Now looking closer at the regularization performs with regards to the complexity \ref{fig:RidgeHeat} we get that the regularization step cannot be to high as the model will then fail to learn anything and can struggle a bit at lower values when the model complexity increase with the training data.
-The model will fit the data to well before the regularization strikes in, though there are some odd lines in this lower right area.
 
 \begin{figure}[h]
     \centering
@@ -368,14 +366,16 @@ The model will fit the data to well before the regularization strikes in, though
     \label{fig:RidgeHeat}
 \end{figure}
 
+
 To better understand how regularization strength ($\lambda$) interacts with model complexity, we can examine the heatmap in Figure \ref{fig:RidgeHeat}. 
-This plot visualizes the test MSE across a range of polynomial degrees and $\lambda$ values.
+This plot visualizes the test MSE across a range of polynomial degrees and $\lambda$ values. 
+Where we see that when the model is too simple (low p) or the regularization is too strong (high $\lambda$), the model underfits, resulting in high bias and poor performance.
 
 The most insightful feature of the heatmap is the distinct arching pattern, which traces the "valley" of the optimal $\lambda$ for each polynomial degree.
 For any given polynomial degree, a $\lambda$ that is too small (below the valley) fails to control the model's high variance, leading to overfitting.
 Conversely, a $\lambda$ that is too large (above the valley) introduces excessive bias, causing the model to underfit by failing to capture the underlying patterns in the data.
 
-Ultimately, the position of these arches demonstrates a core principle of machine learning: as a model's intrinsic complexity increases (i.e., higher polynomial degree), a stronger regularization penalty (a larger $\lambda$) is required to achieve the best generalization performance.
+Ultimately, the position of these arches demonstrates a core principle of machine learning: that finetuning hyperparameters like $\lambda$ is crucial for balancing bias and variance, especially as model complexity increases.
 
 
 \subsection{Using Gradient Descent}
@@ -383,11 +383,13 @@ Ultimately, the position of these arches demonstrates a core principle of machin
 \subsubsection{OLS and Ridge with gradient descent}
 The first application of Gradient Descent with a fixed learning rate of $\eta=0.01$ for both Ordinary Least Squares (OLS) and Ridge regression confirmed that optimization required a substantial number of iterations before reaching a minimum\ref{fig:DescOLSRidge}.
 
-Where Ridge in comparison to OLS would reach a plateau or a stable point at $10^5$ iterations, while OLS still contains some development at this point. 
+Where Ridge in comparison to OLS would reach a plateau or begin to stabilize near the end, OLS will still contain some development at this point. 
 Some for the better and some for the worse.
 
 We also observed that the models had different iterations where MSE was minimized.
-Especially notable is OLS-12 which had an early minimum right before 1,000 iterations, then diverged where it looks like it might find a better minimum after $5 \times 10^4$ iterations.
+One notable instance is OLS-12 which had an early minimum right before 1,000 iterations, then decreased in performance, though it looks like it might find a better minimum after some more iterations.
+We also see that for most of the time the complex models are just as good as the linear ones implying that the models are struggling to learn the function.
+
 
 \begin{figure}[h]
     \centering
@@ -396,20 +398,20 @@ Especially notable is OLS-12 which had an early minimum right before 1,000 itera
     \label{fig:DescOLSRidge}
 \end{figure}
 Our analysis on the learning rate $\eta$ revealed that both excessively low and high values were detrimental to convergence.
-A learning rate much lower than 0.01 resulted in prohibitively slow convergence, while rates significantly at 0.1 led to instability in the training.
+A learning rate much lower than 0.01 resulted in prohibitively slow convergence, while rates at 0.1 and higher led to instability in the training.
 
 Therefore $\eta=0.01$ was ultimately selected as the hyperparameter for the remainder of the project's analysis. 
 This rate was chosen as a robust compromise between optimization speed and stability.
-Meaning that the rest of the graphs in this section will be using this learning rate.
+Meaning that the rest of the graphs in this paper will be using this learning rate for better visual comparisons.
 
 
 \subsubsection{LASSO Regression}
-The same analysis using Lasso regression with the same parameters and dataset we get some interesting results \ref{fig:Lasso1}.
+Utilizing Lasso regression with the same parameters and dataset we get some interesting results see figure \ref{fig:Lasso1}.
 In comparison to ridge and OLS, Lasso show a much more stable downwards trajectory on the same learning rate.
-Similarly to Ridge, Lasso will also begin to plateau at some point, but in our case it is much later than Ridge.
+Where it will, similarly to Ridge, also begin to plateau at some point, but in our case it was much later than Ridge.
 
-When we increase the learning rate to $0.1$ we saw that the model will begin to plateau more quickly but with a miniscule improvement on performance on the test set. 
-There we saw that Lasso 12 which in figure \ref{fig:Lasso1} will plateau slightly above Lasso-8, with a small minimum before the plateau.
+When we did the same training with a learning rate of $0.1$ we saw that the model will begin to plateau more quickly but with a miniscule improvement on the performance on the test set. 
+Here we saw that Lasso-12 in figure \ref{fig:Lasso1} will plateau slightly above Lasso-8, with a small minimum before the plateau.
 
 
 \begin{figure}[h]
@@ -436,9 +438,10 @@ The hyperparameters for the different methods were kept consistent across all fi
 Our initial approach to adaptive learning rates involved implementing a momentum term in the gradient descent algorithm. 
 In early trials, a high momentum term led to high volatility in the training process. 
 Reducing the momentum to $0.6$ yielded the results shown in Figure 7. 
-We observe that the momentum term generally aids models in converging faster to a minimum.
-A quick comparison between figure \ref{fig:DescOLSRidge} and figure \ref{fig:GradMomentum} shows that theses two figures are quite similar just that momentum is shifted left slightly.
-Though, it doesn't appear to improve on the performance at the end results of the plateau for the ridge models.
+We observe that the momentum term generally aids models in reaching their minimum faster.
+A quick comparison between figure \ref{fig:DescOLSRidge} and figure \ref{fig:GradMomentum} shows that theses two figures are quite similar just that the momentum one is shifted slightly left.
+It also improved on the performance at the end results of the plateau for the ridge models.
+While for the OLS-12 model we now see that the downward trajectory has continued and reached a new minimum after $10^5$ iterations.
 \\
 \begin{figure}[h]
     \centering
@@ -451,7 +454,7 @@ Though, it doesn't appear to improve on the performance at the end results of th
 \subsubsection{ADAgrad}
 
 The results from the ADAgrad method are displayed in Figure \ref{fig:GradADAgrad}. 
-Compared to the momentum method or basic gradient descent, ADAgrad exhibits notably slower convergence, though it is almost always in the direction of the minimum. 
+Compared to the momentum method or basic gradient descent, ADAgrad exhibits notably slower convergence, though it is almost always in a positive direction towards a better minimum. 
 This behavior is primarily attributed to ADAgrad's mechanism, where the learning rate starts relatively small and progressively diminishes with cumulative squared gradients.
 At the end of our training runs we see that the models are nearing a bottom, which is near what we got in momentum and normal gradient descent.
 Remarkably enough even the linear models take a long time to converge here.
@@ -466,8 +469,8 @@ Remarkably enough even the linear models take a long time to converge here.
 
 
 \subsubsection{RMSprop}
-When we look at our results are much more volatile as seen in figure \ref{fig:GradRMSprop}.
-Though there is a clear difference between OLS and Ridge here, where OLS swings a lot while Ridge seems to act more stable though revolving up and down.
+When we look at our results for RMSprop, they are much more volatile as seen in figure \ref{fig:GradRMSprop}.
+Though there is a clear difference between OLS and Ridge here, where OLS swings a lot while Ridge seems to act more stable though revolving up and down in a cyclic manner.
 An other interesting observation is that we know see a much better performance on the OLS-8 model, where we have the lowest MSE of all the models and the previous gradient methods.
 \\
 
@@ -483,6 +486,7 @@ An other interesting observation is that we know see a much better performance o
 The Adam optimization method, which combines the strengths of both momentum and RMSprop, exhibits a noticeable reduction in volatility compared to the other three adaptive methods, as illustrated in Figure \ref{fig:GradADAM}. 
 The oscillations in MSE scores are less pronounced, which could indicate a more stable optimization trajectory.
 Though in our case most of the models seems stuck at a plateau except for OLS-12 that now has reached a new lowest point after $10^5$ iterations, and if we where to run it longer it might have climbed down even further.
+What is interesting is that compared to RMSprop, Adam has OLS-12 as it's best performing model just as in the momentum method.
 \\
 
 \begin{figure}[h]
@@ -494,14 +498,13 @@ Though in our case most of the models seems stuck at a plateau except for OLS-12
 
 
 \subsection{Stochastic Gradient Descent}
-The results from the Stochastic Gradient Descent (SGD) method, as depicted in Figure \ref{fig:GradSGD}, show a surprisingly effective performance on our sparse $N=18$ dataset. 
-While one might intuitively expect increased volatility with a sparse dataset, the stochasticity appears to facilitate the discovery of lower minima for certain models.
 
-Specifically, the more complex polynomial models, such as OLS-12 and Ridge-12, achieve remarkably low minimum MSE scores, dipping to approximately $0.006$ and $0.007$ respectively, at around $5 \times 10^3$ iterations. 
-This performance for higher-degree polynomials is notably better than that of simpler models, and it suggests that the noise inherent in SGD's mini-batch updates helps these models to navigate the loss landscape and escape shallow local minima, leading to improved generalization.
+The results from the Stochastic Gradient Descent (SGD) method show a surprisingly effective performance on the sparse dataset. While one might intuitively expect increased volatility, the stochasticity appears to facilitate the discovery of lower error minima for certain models.
 
-In contrast, OLS-8 exhibits a slightly higher minimum MSE (around $0.012$ at approximately $2 \times 10^3$ iterations) compared to the even lower minima found by OLS-12 and Ridge-12. 
-The overall outcome highlights that for this sparse dataset, SGD, particularly for more complex models, can effectively find better solutions.
+Specifically, the more complex polynomial models, such as Ridge-12 and OLS-12, achieve remarkably low minimum Mean Squared Error scores. This performance for higher-degree polynomials is notably better than that of simpler models. This suggests that the noise inherent in SGD's updates helps these complex models navigate the loss landscape and escape shallow local minima, leading to improved generalization.
+
+In contrast, the OLS-8 model settles at a noticeably higher error compared to the lower minima found by the most complex models. 
+The overall outcome highlights that for this sparse dataset, SGD, particularly for more complex models like Ridge-12 and OLS-12, can effectively find better solutions, as it finds a lower performance better than the standard method.
 
 
 \begin{figure}[h]
@@ -511,13 +514,9 @@ The overall outcome highlights that for this sparse dataset, SGD, particularly f
     \label{fig:GradSGD}
 \end{figure}
 \subsection{Resampling Techniques}
-The preceding analyses confirmed that the Runge function, when fit with high-degree polynomials using Ordinary Least Squares (OLS) on a sparse dataset (N=18), rapidly enters a regime of extreme high variance (overfitting). 
-The following discussion focuses on quantifying this bias-variance conflict using resampling techniques and evaluating how regularization methods sustain stability under rigorous cross-validation.
-
-Here we try to increase the performance of the model by using resampling techniques, to make the model more robust and generalizable.
-When we look at the first figure \ref{fig:OLS1} we see that the model is overfitting the training data and has a high variance in the more complex models.
-If we look at the test point near $x=1$ we see that the models seem to avoid it, and even the linear model has learned some bias as it has a slight tilt upwards.
-Therefore we will see how the following two resampling techniques will act upon the model.
+The preceding analyses confirmed that fitting high-degree polynomials to the Runge function with Ordinary Least Squares (OLS) on a sparse dataset ($N=18$) leads to extreme high variance and overfitting. 
+This phenomenon is visually captured in Figure \ref{fig:OLS1}, where complex models diverge significantly, and even the linear model exhibits learned bias, particularly failing to capture test data near $x=1$. 
+To address this instability and better quantify the bias-variance trade-off, this section evaluates the use of resampling techniques to build a more robust and generalizable model.
 
 \begin{figure}[h]
     \centering
@@ -537,10 +536,11 @@ Therefore we will see how the following two resampling techniques will act upon 
 
 Using bootstrap we do not see any improvements and instead it becomes remarkably worse on our small dataset.
 This is likely due to the fact that the model is already overfitting the training data, and adding more noise through bootstrapping on a sparse dataset only exacerbates this issue.
-The weight and the training will drastically change from one side of the function to the other, as the model is so sensitive to changes in the data.
-This is seen in figure \ref{fig:BootstrapPerformance} where the MSE is much higher than the previous methods.
+Especially since bootstrapping uses sampling with replacement, meaning that some data points will be repeated multiple times in the training set.
+Which means that the weight of the training will drastically change from one side of the function to the other, as the model is so sensitive to changes in the data.
+We see this in figure \ref{fig:BootstrapPerformance} where the MSE is much higher than the previous methods.
 
-An interesting observation is that Ridge and Lasso performs remarkably better than OLS in this method.
+Though when we use bootstrapping on all three models we find that Ridge and Lasso performs remarkably better than OLS in this method.
 This is likely due to the fact that the regularization terms help to prevent overfitting, and therefore the model is less sensitive to changes in the data.
 Lasso performs the best out of the three methods, likely due to the fact that it can set some coefficients to zero, effectively performing feature selection and reducing model complexity.
 
@@ -551,7 +551,7 @@ Lasso performs the best out of the three methods, likely due to the fact that it
     \caption{Bootstrap Performance ($\lambda=.001$)}
     \label{fig:BootstrapPerformance}
 \end{figure}
-s
+
 If we where to look at the heatmap of the bootstrap results \ref{fig:BootstrapHeatmap} we see that the model is performing worst in the area where we are working in.
 Implying that this is a poor method for this dataset with variables close to the amount of data points.
 
