@@ -38,7 +38,10 @@
 %Abstract: accurate and informative? Total number of possible points: 5
 
     \begin{abstract}
-This study conducts an empirical investigation into the performance of Ordinary Least Squares (OLS), Ridge, and LASSO regression for fitting high-degree polynomial models to Runge's function on a sparse dataset. We analyze the implementation of these regression models alongside various optimization algorithms and resampling techniques to understand their effectiveness in mitigating overfitting. Our findings indicate that no single model is universally superior; instead, performance is highly dependent on a thorough hyperparameter search and the choice of evaluation methodology. The study concludes that the key to achieving robust generalization on sparse data lies not in the selection of a specific model, but in the rigorous process of tuning and validation required to effectively manage the bias-variance tradeoff.
+This study conducts an empirical investigation into the performance of Ordinary Least Squares (OLS), Ridge, and LASSO regression for fitting high-degree polynomial models to Runge's function on a sparse dataset. 
+We analyze the implementation of these regression models alongside various optimization algorithms and resampling techniques to understand their effectiveness in mitigating overfitting. 
+Our findings indicate that no single model is universally superior; instead, performance is highly dependent on a thorough hyperparameter search and the choice of evaluation methodology. 
+The study concludes that the key to achieving robust generalization on sparse data lies not in the selection of a specific model, but in the rigorous process of tuning and validation required to effectively manage the bias-variance tradeoff.
 \end{abstract}
 
 
@@ -189,7 +192,12 @@ v_{t+1} &= \beta_2 v_t + (1 - \beta_2) (\nabla_{\theta} J(\theta_t))^2 \\
 \theta_{t+1} &= \theta_t - \frac{\eta}{\sqrt{v_{t+1}}} \odot m_{t+1}
 \end{align*}
 where $\beta_1$ and $\beta_2$ are decay rates for the moments.
+\\
 
+The implementation of these methods on the OLS and Ridge methods followed a straightforward approach, with the gradients calculated as described earlier.
+See section E and the GitHub repository \cite{rep} for the exact implementation.
+
+For more on the theory around these methods see chapter 7 in \cite{compfys}.
 \subsubsection{Stochastic Gradient Descent}
 Stochastic Gradient Descent (SGD) is an optimization method that approximates the full batch gradient by utilizing a small, randomly sampled subset of the data, known as a mini-batch $B_t$ of size $m$, at each iteration. This introduces stochastic noise into the optimization path. 
 The parameter update relies on the mini-batch gradient $\nabla_{\theta_t}$, calculated here for OLS:
@@ -241,7 +249,7 @@ Putting everything together we get:
 &= \mathrm{bias}[\tilde{y}]  + \mathrm{var}[\tilde{y}] + \sigma^2 \
 \end{align*}
 
-Where we have approximated $f$ with $y$, in the last step in order to evaluate it as f is unknown
+Where we have approximated $f$ with the noisy $y$, in the last step in order to practically estimate the bias.
 \end{proof}
 
 The following resampling techniques provide the necessary frameworks to estimate these components empirically.
@@ -261,10 +269,10 @@ This methodology typically results in a lower variance estimate of the test erro
 While training occurs on a slightly smaller effective dataset ($N(k-1)/k$), which might introduce a minimal increase in bias compared to training on the full dataset, this increase is often offset by the significant stability gained in the variance estimation. 
 This technique is applied across all three regression methods—OLS, Ridge, and LASSO—to provide a stable, comparable metric of generalization performance.
 
-For more information on bootstrap and cross-validation see section 7.10-11 in \citet{hastie}.
+For more information on bootstrap and cross-validation see section 7.10-11 in \citet{hastie} or chapter 3 in \citet{compfys}.
 
 
-\subsection{Implementation}
+\subsection{Implementation and Code}
 The code for this project was written in Python, utilizing libraries such as NumPy for numerical computations, Matplotlib for plotting, and Scikit-learn for some machine learning functionalities.
 
 There are two main files, utils.py and ResultGeneration.ipynb.
@@ -275,10 +283,12 @@ The ResultGeneration.ipynb file is a Jupyter notebook that is structured into di
 It is structured to allow modification of parameters such as the number of data points, polynomial degree, regularization strength, learning rate, and number of iterations.
 
 
+
 \subsubsection{Testing and Comparison}
 To ensure correctness in the implementation of the analytical solutions for OLS and Ridge regression, the results were cross-validated against Scikit-learn's built-in functions.
 Here we saw that the results matched quite well for both the metrics MSE and R2 score, as well as the actual parameter values $\theta$ in the ridge and OLS methods.
 For MSE and R2 score the results were identical, while the parameters $\theta$ matched up to a precision of $10^{-14}$.
+See the GitHub repository \cite{rep} Code/ResultGeneration.ipynb for the comparison results.
 
 While the gradient results were not directly compared to Scikit-learn, the convergence behavior and final MSE values were monitored to ensure they aligned with theoretical expectations and the results from the analytical methods.
 
@@ -319,7 +329,7 @@ An observation with regards to noise, i.e. more noise makes the model more prone
 \begin{figure}[H]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/OLS_Heatmap.pdf}
-    \caption{OLS data size and Model Complexity}
+    \caption{OLS data size and model complexity}
     \label{fig:OLSHeat}
 \end{figure}
 
@@ -354,7 +364,7 @@ The model will fit the data to well before the regularization strikes in, though
 \begin{figure}[h]
     \centering
     \includegraphics[width=.95 \linewidth]{Figures/Ridge_Degree_Lambda_Heatmap.pdf}
-    \caption{Regularization and model complexity}
+    \caption{Ridge Regularization and model complexity}
     \label{fig:RidgeHeat}
 \end{figure}
 
@@ -366,6 +376,7 @@ For any given polynomial degree, a $\lambda$ that is too small (below the valley
 Conversely, a $\lambda$ that is too large (above the valley) introduces excessive bias, causing the model to underfit by failing to capture the underlying patterns in the data.
 
 Ultimately, the position of these arches demonstrates a core principle of machine learning: as a model's intrinsic complexity increases (i.e., higher polynomial degree), a stronger regularization penalty (a larger $\lambda$) is required to achieve the best generalization performance.
+
 
 \subsection{Using Gradient Descent}
 
@@ -398,7 +409,7 @@ In comparison to ridge and OLS, Lasso show a much more stable downwards trajecto
 Similarly to Ridge, Lasso will also begin to plateau at some point, but in our case it is much later than Ridge.
 
 When we increase the learning rate to $0.1$ we saw that the model will begin to plateau more quickly but with a miniscule improvement on performance on the test set. 
-Here we saw that Lasso 12 which in figure \ref{fig:Lasso1} will plateau slightly above Lasso-8, with a small minimum before the plateau.
+There we saw that Lasso 12 which in figure \ref{fig:Lasso1} will plateau slightly above Lasso-8, with a small minimum before the plateau.
 
 
 \begin{figure}[h]
@@ -486,7 +497,8 @@ Though in our case most of the models seems stuck at a plateau except for OLS-12
 The results from the Stochastic Gradient Descent (SGD) method, as depicted in Figure \ref{fig:GradSGD}, show a surprisingly effective performance on our sparse $N=18$ dataset. 
 While one might intuitively expect increased volatility with a sparse dataset, the stochasticity appears to facilitate the discovery of lower minima for certain models.
 
-Specifically, the more complex polynomial models, such as OLS-12 and Ridge-12, achieve remarkably low minimum MSE scores, dipping to approximately $0.006$ and $0.007$ respectively, at around $5 \times 10^3$ iterations. This performance for higher-degree polynomials is notably better than that of simpler models, and it suggests that the noise inherent in SGD's mini-batch updates helps these models to navigate the loss landscape and escape shallow local minima, leading to improved generalization.
+Specifically, the more complex polynomial models, such as OLS-12 and Ridge-12, achieve remarkably low minimum MSE scores, dipping to approximately $0.006$ and $0.007$ respectively, at around $5 \times 10^3$ iterations. 
+This performance for higher-degree polynomials is notably better than that of simpler models, and it suggests that the noise inherent in SGD's mini-batch updates helps these models to navigate the loss landscape and escape shallow local minima, leading to improved generalization.
 
 In contrast, OLS-8 exhibits a slightly higher minimum MSE (around $0.012$ at approximately $2 \times 10^3$ iterations) compared to the even lower minima found by OLS-12 and Ridge-12. 
 The overall outcome highlights that for this sparse dataset, SGD, particularly for more complex models, can effectively find better solutions.

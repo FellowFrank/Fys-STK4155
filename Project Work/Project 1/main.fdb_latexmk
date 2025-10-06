@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1759606573.23667 "main.aux" "main.bbl" "main" 1759606576.00521 0
-  "./biblio.bib" 1759068297 2401 7eecadd5b7b78fe1b05df87cb360d66e ""
+["bibtex main"] 1759659681.85504 "main.aux" "main.bbl" "main" 1759661966.66855 0
+  "./biblio.bib" 1759658742 2617 a1c0ccd773f3b3852b836d91d3bccfe8 ""
   "c:/texlive/2025/texmf-dist/bibtex/bst/revtex4/apsrev.bst" 1756400306 43844 78e58abfb2d07832103f1e2f30cf6375 ""
-  "main.aux" 1759606574 9003 769d75894974088a5097a9f075f62731 "pdflatex"
+  "main.aux" 1759661965 9134 b9f30c22dac48f1eb3321bc9b8613f9a "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1759606573.64174 "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 1/main.tex" "main.pdf" "main" 1759606576.00595 0
+["pdflatex"] 1759661964.24164 "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 1/main.tex" "main.pdf" "main" 1759661966.6692 0
   "Figures/Bootstrap.pdf" 1759598064 130272 0df31dcc8fd48be09acd0f356fccc17a ""
   "Figures/Bootstrap_Heatmap.pdf" 1759598093 203967 9810501bc423465f940116317e3456ca ""
   "Figures/Combined_Analysis_OLS.png" 1759597913 167306 c26a0f1f53999f13d598b5602dd19868 ""
@@ -23,7 +23,7 @@
   "Figures/Ridge_Degree_Lambda_Heatmap.pdf" 1759597917 269913 329a3541d9564e5e21db4ab4249ba6cd ""
   "Figures/StochasticDescent.pdf" 1759598011 171051 9ee02cff0700d5ca1b79e6a2bfcd58fa ""
   "Figures/bias_variance_tradeoff.pdf" 1759598020 130454 0e1d4755173ddd07eb6426ee99d215e4 ""
-  "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 1/main.tex" 1759606570 42252 c95ea1413b5987cf3b35aac84055a637 ""
+  "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 1/main.tex" 1759661962 42728 3e25300553d4ddff8da40bcda664adbc ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1756394565 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1756392638 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1756392638 996 a18840b13b499c08ac2de96a99eda4bc ""
@@ -145,10 +145,10 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1756401881 5574045 c1864b6d576eca8ff04839113c3d8c41 ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1756402031 3605795 f215791cb7a8c2e83a36828a9428ff78 ""
   "c:/texlive/2025/texmf.cnf" 1756401861 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1759606574 9003 769d75894974088a5097a9f075f62731 "pdflatex"
-  "main.bbl" 1759606573 1579 eea9bcda7c52db6c15de8924894f3538 "bibtex main"
-  "main.out" 1759606575 5185 eb36743001411f75c484e0e7bd70c153 "pdflatex"
-  "main.tex" 1759606570 42252 c95ea1413b5987cf3b35aac84055a637 ""
+  "main.aux" 1759661965 9134 b9f30c22dac48f1eb3321bc9b8613f9a "pdflatex"
+  "main.bbl" 1759659682 1861 1986470a1a3fe70649bbf9e7c5093011 "bibtex main"
+  "main.out" 1759661965 5236 39b241d8b37aeff597a18e85e9766ebd "pdflatex"
+  "main.tex" 1759661962 42728 3e25300553d4ddff8da40bcda664adbc ""
   (generated)
   "main.aux"
   "main.log"

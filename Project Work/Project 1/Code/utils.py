@@ -1,6 +1,5 @@
 import numpy as np
 
-
 #
 # Setup functions
 #
@@ -28,7 +27,6 @@ def polynomial_features(x, p, intercept=False):
         X[:, i + k-1] = x**i 
     return X
 
-
 #
 # Metrics
 #
@@ -45,22 +43,31 @@ def R2(y, y_pred):
 # Regression Functions
 #
 
+# Ordinary Least Squares 
 def OLS_parameters(X, y):
     # Ordinary Least Square analytical solution
     return np.linalg.pinv(X.T @ X) @ X.T @ y
 
 def Gradient_OLS(X, y,theta, eta=0.01, n=100):
+    # Gradient solution for OLS
     return (2.0/n)*X.T @ (X @ theta-y)
 
+
+# Ridge Regression
 def Ridge_parameters(X, y, regularization=.001):
-    # Assumes X is scaled and has no intercept column
+    # Analytical solution for Ridge regression
     return np.linalg.pinv(X.T @ X + regularization * np.identity(len(X.T))) @ X.T @ y
 
 def Gradient_Ridge(X, y, theta, eta=0.01, lambda_param=0.01,n=100):
+    # Gradient solution for Ridge regression
     return (2.0/n)*X.T @ (X @ theta-y) + 2*lambda_param*theta 
 
+
+# Lasso Regression
 def LassoIter(X, y, theta, eta=0.01, lambda_param=.01,n=100):
-    grad_OLS = Gradient_OLS(X, y, eta=eta,theta=theta, n=n) 
+    # Iterative solution for Lasso regression
+    grad_OLS = Gradient_OLS(X, y, eta=eta,theta=theta, n=n) # Finding the first part of cost function
     theta -= eta * grad_OLS
-    theta =  np.sign(theta) * np.maximum(0, np.abs(theta) - eta * lambda_param)
+    theta =  np.sign(theta) * np.maximum(0, np.abs(theta) - eta * lambda_param) # Applying the soft thresholding operator
     return theta
+
