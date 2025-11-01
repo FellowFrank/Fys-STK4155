@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.28)  1 NOV 2025 19:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.28)  1 NOV 2025 20:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 1/main.tex"
-(c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 1/main.tex
+**"c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 2/main.tex"
+(c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 2/main.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
 (c:/texlive/2025/texmf-dist/tex/latex/revtex4/revtex4.cls
@@ -433,326 +433,63 @@ Package hyperref Info: Link coloring OFF on input line 25.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
- (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
- (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \hbox (badness 2181) in paragraph at lines 62--66
-[]\OT1/cmr/m/n/10 This pa-per will study the bias-variance trade-off
- []
-
-[1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 151--154
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--164
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 170--173
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 179--182
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--196
-
- []
-
-[3]
-<Figures/Combined_Analysis_OLS.png, id=187, 1156.32pt x 722.7pt>
-File: Figures/Combined_Analysis_OLS.png Graphic file (type png)
-<use Figures/Combined_Analysis_OLS.png>
-Package pdftex.def Info: Figures/Combined_Analysis_OLS.png  used on input line 305.
-(pdftex.def)             Requested size: 484.49844pt x 302.80411pt.
- [4]
-<Figures/OLS_Heatmap.pdf, id=196, 578.16pt x 433.62pt>
-File: Figures/OLS_Heatmap.pdf Graphic file (type pdf)
-<use Figures/OLS_Heatmap.pdf>
-Package pdftex.def Info: Figures/OLS_Heatmap.pdf  used on input line 330.
+<Code/Heatmap.pdf, id=48, 578.16pt x 433.62pt>
+File: Code/Heatmap.pdf Graphic file (type pdf)
+<use Code/Heatmap.pdf>
+Package pdftex.def Info: Code/Heatmap.pdf  used on input line 57.
 (pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[5
+<Code/pretty.pdf, id=49, 449.48215pt x 445.33507pt>
+File: Code/pretty.pdf Graphic file (type pdf)
+<use Code/pretty.pdf>
+Package pdftex.def Info: Code/pretty.pdf  used on input line 66.
+(pdftex.def)             Requested size: 233.69925pt x 231.54837pt.
+ [1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.344 
-       <./Figures/Combined_Analysis_OLS.png>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 344.
-
-<Figures/MSE_RidgeOnly.png, id=209, 578.16pt x 433.62pt>
-File: Figures/MSE_RidgeOnly.png Graphic file (type png)
-<use Figures/MSE_RidgeOnly.png>
-Package pdftex.def Info: Figures/MSE_RidgeOnly.png  used on input line 356.
-(pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Figures/Ridge_Degree_Lambda_Heatmap.pdf, id=210, 578.16pt x 433.62pt>
-File: Figures/Ridge_Degree_Lambda_Heatmap.pdf Graphic file (type pdf)
-<use Figures/Ridge_Degree_Lambda_Heatmap.pdf>
-Package pdftex.def Info: Figures/Ridge_Degree_Lambda_Heatmap.pdf  used on input line 364.
-(pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6
+l.84 Runge's function, $$
+                         f(x)=1/(1+25x^2),$$ which is notoriously difficult ...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.392 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.392 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.392 
-       <./Figures/OLS_Heatmap.pdf> <./Figures/MSE_RidgeOnly.png> <./Figures/Ridge_Degree_Lambda_Heatmap.pdf>]
-<Figures/Gradient_Comparison_OLS_Ridge_18.pdf, id=279, 578.16pt x 433.62pt>
-File: Figures/Gradient_Comparison_OLS_Ridge_18.pdf Graphic file (type pdf)
-<use Figures/Gradient_Comparison_OLS_Ridge_18.pdf>
-Package pdftex.def Info: Figures/Gradient_Comparison_OLS_Ridge_18.pdf  used on input line 396.
-(pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
-<Figures/Lasso_MSE.pdf, id=282, 578.16pt x 433.62pt>
-File: Figures/Lasso_MSE.pdf Graphic file (type pdf)
-<use Figures/Lasso_MSE.pdf>
-Package pdftex.def Info: Figures/Lasso_MSE.pdf  used on input line 419.
-(pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
+l.84 Runge's function, $$
+                         f(x)=1/(1+25x^2),$$ which is notoriously difficult ... <./Code/Heatmap.pdf> <./Code/pretty.pdf>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
+ (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
+ (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 
+Package natbib Warning: Citation `rep' on page 2 undefined on input line 115.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+No file main.bbl.
 
-<Figures/OLS_Ridge_Momentum.pdf, id=287, 578.16pt x 433.62pt>
-File: Figures/OLS_Ridge_Momentum.pdf Graphic file (type pdf)
-<use Figures/OLS_Ridge_Momentum.pdf>
-Package pdftex.def Info: Figures/OLS_Ridge_Momentum.pdf  used on input line 448.
-(pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
-[7
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.452 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.452 
-       <./Figures/Gradient_Comparison_OLS_Ridge_18.pdf> <./Figures/Lasso_MSE.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 456--462
+Package natbib Warning: There were undefined citations.
 
- []
-
-<Figures/OLS_Ridge_ADAgrad.pdf, id=339, 578.16pt x 433.62pt>
-File: Figures/OLS_Ridge_ADAgrad.pdf Graphic file (type pdf)
-<use Figures/OLS_Ridge_ADAgrad.pdf>
-Package pdftex.def Info: Figures/OLS_Ridge_ADAgrad.pdf  used on input line 465.
-(pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 472--476
-
- []
-
-<Figures/OLS_Ridge_RMSprop.pdf, id=341, 578.16pt x 433.62pt>
-File: Figures/OLS_Ridge_RMSprop.pdf Graphic file (type pdf)
-<use Figures/OLS_Ridge_RMSprop.pdf>
-Package pdftex.def Info: Figures/OLS_Ridge_RMSprop.pdf  used on input line 479.
-(pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 1163) in paragraph at lines 486--491
-[]\OT1/cmr/m/n/10 The Adam op-ti-miza-tion method, which com-bines
- []
-
-
-Underfull \hbox (badness 1062) in paragraph at lines 486--491
-\OT1/cmr/m/n/10 hibits a no-tice-able re-duc-tion in volatil-ity com-pared
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 486--491
-
- []
-
-<Figures/OLS_Ridge_ADAM.pdf, id=343, 578.16pt x 433.62pt>
-File: Figures/OLS_Ridge_ADAM.pdf Graphic file (type pdf)
-<use Figures/OLS_Ridge_ADAM.pdf>
-Package pdftex.def Info: Figures/OLS_Ridge_ADAM.pdf  used on input line 494.
-(pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[8
-pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.503 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.503 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.503 
-       <./Figures/OLS_Ridge_Momentum.pdf> <./Figures/OLS_Ridge_AdaGrad.pdf> <./Figures/OLS_Ridge_RMSProp.pdf>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 503.
-
-<Figures/StochasticDescent.pdf, id=417, 578.16pt x 433.62pt>
-File: Figures/StochasticDescent.pdf Graphic file (type pdf)
-<use Figures/StochasticDescent.pdf>
-Package pdftex.def Info: Figures/StochasticDescent.pdf  used on input line 512.
-(pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Figures/bias_variance_tradeoff.pdf, id=419, 418.2142pt x 314.38293pt>
-File: Figures/bias_variance_tradeoff.pdf Graphic file (type pdf)
-<use Figures/bias_variance_tradeoff.pdf>
-Package pdftex.def Info: Figures/bias_variance_tradeoff.pdf  used on input line 523.
-(pdftex.def)             Requested size: 233.69925pt x 175.67906pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Figures/Bootstrap_Heatmap.pdf, id=420, 578.16pt x 433.62pt>
-File: Figures/Bootstrap_Heatmap.pdf Graphic file (type pdf)
-<use Figures/Bootstrap_Heatmap.pdf>
-Package pdftex.def Info: Figures/Bootstrap_Heatmap.pdf  used on input line 532.
-(pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[9
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.546 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.546 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.546 
-       <./Figures/OLS_Ridge_ADAM.pdf> <./Figures/StochasticDescent.pdf> <./Figures/bias_variance_tradeoff.pdf>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 546.
-
-<Figures/Bootstrap.pdf, id=486, 578.16pt x 433.62pt>
-File: Figures/Bootstrap.pdf Graphic file (type pdf)
-<use Figures/Bootstrap.pdf>
-Package pdftex.def Info: Figures/Bootstrap.pdf  used on input line 550.
-(pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
-<Figures/Cross_Validation.pdf, id=489, 578.16pt x 433.62pt>
-File: Figures/Cross_Validation.pdf Graphic file (type pdf)
-<use Figures/Cross_Validation.pdf>
-Package pdftex.def Info: Figures/Cross_Validation.pdf  used on input line 577.
-(pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 584--590
-
- []
-
-[10
-pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.590 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.590 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.590 
-       <./Figures/Bootstrap_Heatmap.pdf> <./Figures/Bootstrap.pdf> <./Figures/Cross_Validation.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 591--596
-
- []
-
-(./main.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
- []\OT1/cmr/m/n/9 M. Hjorth-Jensen, \OT1/cmr/m/it/9 Com-pu-ta-tional Physics Lec-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
- \OT1/cmr/m/it/9 ture Notes 2015 \OT1/cmr/m/n/9 (De-part-ment of Physics, Uni-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
- \OT1/cmr/m/n/9 ver-sity of Oslo, Nor-way, 2015), URL []$\OT1/cmtt/m/n/9 https :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
- \OT1/cmtt/m/n/9 / / github . com / CompPhysics / ComputationalPhysics /
- []
-
-
-Underfull \hbox (badness 4608) in paragraph at lines 22--23
- []\OT1/cmr/m/n/9 A. N. Torg-ersen, \OT1/cmr/m/it/9 Project 1 - fys-stk4155 \OT1/cmr/m/n/9 (2025),
- []
-
-
-Underfull \hbox (badness 5771) in paragraph at lines 22--23
- \OT1/cmr/m/n/9 URL []$\OT1/cmtt/m/n/9 https : / / github . com / FellowFrank / Fys-[]STK4155 /
- []
-
-) [11] (./main.aux)
+[2] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 39B241D8B37AEFF597A18E85E9766EBD;5236.
+(rerunfilecheck)             Checksum: 36B559B79ADBB24470E985AACD9195CE;1359.
  ) 
 Here is how much of TeX's memory you used:
- 14507 strings out of 467800
- 219596 string characters out of 5436061
- 675633 words of memory out of 5000000
- 42890 multiletter control sequences out of 15000+600000
- 634636 words of font info for 70 fonts, out of 8000000 for 9000
+ 14257 strings out of 467800
+ 213574 string characters out of 5436061
+ 669706 words of memory out of 5000000
+ 42703 multiletter control sequences out of 15000+600000
+ 630735 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,867b,547s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (11 pages, 719123 bytes).
+ 75i,7n,79p,660b,488s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on main.pdf (2 pages, 274073 bytes).
 PDF statistics:
- 654 PDF objects out of 1000 (max. 8388607)
- 533 compressed objects within 6 object streams
- 66 named destinations out of 1000 (max. 500000)
- 356 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 168 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
+ 16 named destinations out of 1000 (max. 500000)
+ 99 words of extra memory for PDF output out of 10000 (max. 10000000)
 
