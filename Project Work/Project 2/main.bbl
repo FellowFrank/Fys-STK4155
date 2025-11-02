@@ -1,0 +1,30 @@
+\begin{thebibliography}{5}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Torgersen}(2025{\natexlab{a}})}]{project1}
+\bibinfo{author}{\bibfnamefont{A.~N.} \bibnamefont{Torgersen}}, \emph{\bibinfo{title}{A study of regularization and resampling for high-degree polynomial regression on a sparse data set}} (\bibinfo{year}{2025}{\natexlab{a}}), \urlprefix\url{https://github.com/FellowFrank/Fys-STK4155/tree/main/Project%20Work/Project%202}.
+
+\bibitem[{\citenamefont{Hjorth-Jensen}(2015)}]{compfys}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Hjorth-Jensen}}, \emph{\bibinfo{title}{Computational Physics Lecture Notes 2015}} (\bibinfo{publisher}{Department of Physics}, \bibinfo{address}{University of Oslo, Norway}, \bibinfo{year}{2015}), \urlprefix\url{https://github.com/CompPhysics/ComputationalPhysics/blob/master/doc/Lectures/lectures2015.pdf}.
+
+\bibitem[{\citenamefont{Hastie et~al.}(2009)\citenamefont{Hastie, R.Tibshirani, and J.Friedman}}]{hastie}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Hastie}}, \bibinfo{author}{\bibnamefont{R.Tibshirani}}, \bibnamefont{and} \bibinfo{author}{\bibnamefont{J.Friedman}}, \emph{\bibinfo{title}{The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second Edition. Springer Series in Statistics}} (\bibinfo{publisher}{Springer}, \bibinfo{address}{New York}, \bibinfo{year}{2009}), \urlprefix\url{https://link.springer.com/book/10.1007\%2F978-0-387-84858-7}.
+
+\bibitem[{\citenamefont{Hein}(2018)}]{hein}
+\bibinfo{author}{\bibfnamefont{K.~B.} \bibnamefont{Hein}}, \emph{\bibinfo{title}{Data Analysis and Machine Learning: Using Neural networks to solve ODEs and PDEs}} (\bibinfo{publisher}{Department of Informatics}, \bibinfo{address}{University of Oslo, Norway}, \bibinfo{year}{2018}), \urlprefix\url{https://compphysics.github.io/MachineLearning/doc/pub/odenn/html/._odenn-bs000.html}.
+
+\bibitem[{\citenamefont{Torgersen}(2025{\natexlab{b}})}]{rep2}
+\bibinfo{author}{\bibfnamefont{A.~N.} \bibnamefont{Torgersen}}, \emph{\bibinfo{title}{Project 2 - fys-stk4155}} (\bibinfo{year}{2025}{\natexlab{b}}), \urlprefix\url{https://github.com/FellowFrank/Fys-STK4155/tree/main/Project%20Work/Project%202}.
+
+\end{thebibliography}

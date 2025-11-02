@@ -1,5 +1,5 @@
-import numpy as np
 import autograd.numpy as np 
+from autograd import grad # Import grad for autograd_gradient
 
 
 
@@ -31,25 +31,22 @@ def polynomial_features(x, p, intercept=False):
 
 
 # Activation functions and their derivatives
+def linear(z):
+    return z
+def der_linear(z):
+    return np.ones_like(z)
+
 def ReLU(z):
     return np.where(z > 0, z, 0)
 
-def ReLU_der(z):
+def der_ReLU(z):
     return np.where(z > 0, 1, 0)
-
 
 def sigmoid(z):
     return 1 / (1 + np.exp(-z))
 
-def sigmoid_der(z):
+def der_sigmoid(z):
     return sigmoid(z) * (1 - sigmoid(z))
-
-
-def mse(predict, target):
-    return np.mean((predict - target) ** 2)
-
-def der_mse(predict, target):
-    return 2 * (predict - target) / target.size
 
 
 def softmax(z):
@@ -67,10 +64,17 @@ def der_softmax(predict, target):
 def cross_entropy(predict, target):
     return np.sum(-target * np.log(predict))
 
+def mse(predict, target):
+    return np.mean((predict - target) ** 2)
 
-def cost_batch(layers, input, activation_funcs, target):
+def der_mse(predict, target):
+    return 2 * (predict - target) / target.size
+
+
+
+def cost_batch(layers, input, activation_funcs, target, costfunction=cross_entropy):
     _, _, predict = feed_forward_saver_batch(input, layers, activation_funcs)
-    return cross_entropy(predict, target)
+    return costfunction(predict, target)
 
 
 
@@ -117,9 +121,9 @@ def feed_forward_saver(input, layers, activation_funcs):
 
     return layer_inputs, zs, a
 
-def cost(layers, input, activation_funcs, target):
+def cost(layers, input, activation_funcs, target, costfunction):
     predict = feed_forward_saver(input, layers, activation_funcs)
-    return mse(predict, target)
+    return costfunction(predict, target)
 
 def backpropagation_batch(
     input, layers, activation_funcs, target, activation_ders, cost_der=der_mse
@@ -141,9 +145,137 @@ def backpropagation_batch(
             dC_da = dC_dz @ W.T
 
         dC_dz = dC_da * activation_der(z)
-        dC_dW = layer_input.T @ dC_dz 
-        dC_db = dC_dz
+        dC_dW = layer_input.T @ dC_dz
+        dC_db = np.sum(dC_dz, axis=0, keepdims=True) # had an error from earlier codes
 
         layer_grads[i] = (dC_dW, dC_db)
 
     return layer_grads
+
+
+
+
+
+class NeuralNetwork:
+    def __init__(
+        self,
+        network_input_size,
+        layer_output_sizes,
+        activation_funcs,
+        activation_ders,
+        cost_fun,
+        cost_der,
+        seed=42
+    ):
+        self.network_input_size = network_input_size
+        self.layer_output_sizes = layer_output_sizes
+        self.activation_funcs = activation_funcs
+        self.activation_ders = activation_ders
+        self.cost_fun = cost_fun
+        self.cost_der = cost_der
+        self.seed = seed
+        
+        self.layers = self._create_layers()
+
+    def _create_layers(self):
+        """
+        Initializes weights and biases for all layers.
+        """
+        np.random.seed(self.seed)
+        layers = []
+        i_size = self.network_input_size
+        for layer_output_size in self.layer_output_sizes:
+            W = np.random.normal(0, 1, (i_size, layer_output_size))
+            b = np.zeros((1, layer_output_size)) # Initialize biases to zero
+            layers.append((W, b))
+            i_size = layer_output_size
+        return layers
+
+    def predict(self, inputs):
+        a = inputs
+        for (W, b), activation_func in zip(self.layers, self.activation_funcs):
+            z = a @ W + b
+            a = activation_func(z)
+        return a
+    
+    def cost(self, inputs, targets):
+        return self.cost_fun(self.predict(inputs), targets)
+
+    def _feed_forward_saver(self, inputs):
+        layer_inputs = []
+        zs = []
+        a = inputs
+        for (W, b), activation_func in zip(self.layers, self.activation_funcs):
+            layer_inputs.append(a)
+            z = a @ W + b
+            a = activation_func(z)
+            zs.append(z)
+        return layer_inputs, zs, a
+
+    def compute_gradient(self, inputs, targets):
+        """
+        Performs backpropagation and computes gradients for a batch.
+        """
+        layer_inputs, zs, predict = self._feed_forward_saver(inputs)
+        layer_grads = [() for _ in self.layers]
+        dC_dz = None # Initialize dC_dz
+
+        # Loop over the layers, from the last to the first
+        for i in reversed(range(len(self.layers))):
+            layer_input, z = layer_inputs[i], zs[i]
+            activation_der = self.activation_ders[i]
+
+            if i == len(self.layers) - 1:
+                # For last layer, use cost derivative
+                dC_da = self.cost_der(predict, targets)
+            else:
+                # For hidden layers, build on the previous gradient
+                (W_next, b_next) = self.layers[i + 1]
+                dC_da = dC_dz @ W_next.T
+
+            dC_dz = dC_da * activation_der(z)
+            dC_dW = layer_input.T @ dC_dz
+            
+            # dC_db needs to be summed across the batch
+            dC_db = np.sum(dC_dz, axis=0, keepdims=True)
+
+            layer_grads[i] = (dC_dW, dC_db)
+
+        return layer_grads
+
+    def update_weights(self, layer_grads):
+        for i in range(len(self.layers)):
+            W, b = self.layers[i]
+            dC_dW, dC_db = layer_grads[i]
+            W -= dC_dW
+            b -= dC_db
+            self.layers[i] = (W, b)
+    
+    # These last two methods are not needed in the project, but they can be nice to have! The first one has a layers parameter so that you can use autograd on it
+    def autograd_compliant_predict(self, layers, inputs):
+        a = inputs
+        for (W, b), activation_func in zip(layers, self.activation_funcs):
+            z = a @ W + b
+            a = activation_func(z)
+        return a
+    
+    def autograd_gradient(self, inputs, targets):
+        """
+        Computes the gradient of the cost function w.r.t. the layers
+        using autograd.
+        """
+        
+        # Define a cost function that takes 'layers' as the first argument
+        def autograd_cost_for_grad(layers):
+            # Use the autograd-compliant predict function
+            predictions = self.autograd_compliant_predict(layers, inputs)
+            # Use the cost function stored in self
+            return self.cost_fun(predictions, targets)
+
+        # Create the gradient function using autograd.grad
+        # This function will differentiate autograd_cost_for_grad
+        # with respect to its first argument (layers).
+        gradient_calculator = grad(autograd_cost_for_grad)
+
+        # Calculate and return the gradient for the current layers
+        return gradient_calculator(self.layers)

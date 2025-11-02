@@ -38,7 +38,7 @@
 %Abstract: accurate and informative? Total number of possible points: 5
 
     \begin{abstract}
-Developing a neural network from scratch to perform regression and classification tasks to solve Runge's function and the MNIST dataset respectively. Comparing the results with analytical methods, scikit-learn implementations and earlier projects involving linear regression and logistic regression using gradient descent methods.
+This study details the implementation of a flexible feed-forward neural network (FFNN) from scratch, featuring configurable layers, nodes, and activation functions (Sigmoid, ReLU, Leaky ReLU). We implement backpropagation with optimization algorithms like RMSprop and ADAM. The FFNN is first benchmarked on a regression task (Runge's function, $f(x) = 1/(1+25x^2)$), comparing it to previous OLS, Ridge, and LASSO models. The network is then adapted for classification using a Softmax output and cross-entropy cost function, and its accuracy is evaluated on the MNIST dataset. We analyze the impact of network architecture and regularization, benchmarking our results against standard libraries.
 \end{abstract}
 
 
@@ -68,21 +68,43 @@ An okay plot:
     \label{fig:pretty}
 \end{figure}
 
+
+Figure \ref{fig:pretty} is lacking as it has text upon text, different colors and styles for the lines and markers that make it hard to read.
+The points that are interesting is also hard to read as the markers are too small and the lines clutter the plot.
+The height of the graphs is also not chosen to show what is happening.
+
+
 \section{Introduction}
 
-The study of labled data through regression and classification techniques contains some presumptions about the underlying data structure.
-Which may not always hold true, especially when dealing with complex functions or high-dimensional data.
-Where one might want to use a more flexible model, such as a neural network, to capture the underlying patterns in the data.
-These methods are particularly useful when dealing with non-linear relationships or complex decision boundaries that traditional methods may struggle to model effectively.
-They are a flexible method where we say we dont know but hope that a sufficiently complex model can learn the underlying patterns in the data.
-This loose some of the interpretability we get from traditional methods, but can often lead to better performance on complex tasks.
+The challenge of function approximation lies at the heart of machine learning, where the goal is to construct models that can accurately capture underlying patterns in data.
+In a previous study, we explored polynomial regression techniques, including Ordinary Least Squares (OLS), Ridge, and LASSO regression, to fit Runge's function, $f(x)=1/(1+25x^2)$.
+While polynomial regression provides a foundational approach to function approximation, it often struggles with issues such as overfitting, especially with high-degree polynomials, leading to poor generalisation on unseen data.
+It also faces the extra work of finding the right model to fit the data on, something which a FFNN can adapt to by itself.
 
+One technique that addresses these challenges is the use of FFNNs, which are capable of modelling complex, non-linear relationships through their layered architecture and non-linear activation functions.
+This method leverages multiple layers of interconnected nodes (neurons) to learn hierarchical representations of data, making them particularly well-suited for tasks that require capturing intricate patterns.
+It has been seen to have surprisingly good performance and adaptability to different problems. From large language models, image recognition and solving differential equations, to mention a few.
 
+Because of these advantages, having a solid understanding of the underlying workings of an FFNN is crucial for effectively applying them to various machine learning tasks.
+But also to understand one of the dominant methods of data analysis today, which is finding different uses in many different areas.
+\\
+
+This report documents the design and implementation of a flexible FFNN from scratch. The primary goal is to build and validate this model on two distinct tasks. First, we revisit the regression problem of fitting Runge's function, $f(x) = 1/(1+25x^2)$. This provides a direct benchmark against the performance of the OLS, Ridge, and LASSO models, allowing for a comparative analysis of their respective strengths in managing the bias-variance tradeoff on a familiar problem. We will investigate how network hyperparameters—such as the number of layers, nodes per layer, choice of activation function (Sigmoid vs. ReLU), and $L_1$/$L_2$ regularization—impact the network's ability to approximate the target function.
+
+Second, the FFNN framework is extended to a multiclass classification task. By substituting the mean-squared error cost function with cross-entropy and the linear output layer with Softmax, the same underlying architecture is applied to the MNIST handwritten digit dataset. This part of the study will focus on optimizing the network for classification accuracy and comparing its performance against both a simpler logistic regression model and standard library implementations.
+
+\textit{This report is structured as follows?}
 
 \section{Methods}\label{section:methods}
-This section details the regression, optimization, and resampling techniques employed to analyze 
+This section details the theory and methodology used in this project to implement a flexible FFNN from scratch.
+We will first describe the data preparation process, followed by the fundamental building blocks of the FFNN, including the architecture, activation functions, cost functions, and optimization algorithms.
+Finally, we will discuss the implementation details and code structure.
+The primary dataset used for regression tasks is
 Runge's function, $$f(x)=1/(1+25x^2),$$ which is notoriously difficult for high-degree polynomial interpolation. 
-We begin by describing data preparation, followed by the three regression methods and the gradient descent algorithms used for optimization.
+Which we will compare to our earlier results using OLS, Ridge and LASSO regression.
+For more information on these methods and the results from them, see \cite{project1}.
+
+For more information on the theory behind FFNNs see the lecture notes \cite{compfys}, or the books \cite{hastie} and \cite{hein}.
 
 \subsection{Data Preparation}
 The fundamental data for this study was generated from Runge's function, $f(x)=1/(1+25x^2)$, with $x$ values uniformly distributed in the interval $[-1,1]$. 
@@ -95,7 +117,10 @@ To ensure numerical stability and prevent coefficients corresponding to higher-d
 This preprocessing step is critical, especially when dealing with regularization techniques, as it prevents the scale differences between polynomial features (e.g., $x$ vs. $x^{15}$) from skewing the optimization process.
 
 
-\subsection{Methods}
+\subsection{Fundamental Building Blocks}
+
+
+
 
 
 \subsection{Implementation and Code}
@@ -112,7 +137,7 @@ It is structured to allow modification of parameters such as the number of data 
 To ensure correctness in the implementation of the metrics and the analytical solutions for OLS and Ridge regression, the results were cross-validated against Scikit-learn's built-in functions.
 Here we saw that the results matched quite well for both the metrics MSE and R2 score, as well as the actual parameter values $\theta$ in the ridge and OLS methods.
 For the MSE and R2 score the results were identical, while the parameters $\theta$ matched up to a precision of $10^{-14}$.
-See the GitHub repository \cite{rep} Code/ResultGeneration.ipynb for the comparison results.
+See the GitHub repository \cite{rep2} Code/ResultGeneration.ipynb for the comparison results.
 
 When it comes to the gradient implementations, they were not directly compared to Scikit-learn, but the convergence behavior and final MSE values were monitored to ensure they aligned with theoretical expectations and the results from the analytical methods.
 
