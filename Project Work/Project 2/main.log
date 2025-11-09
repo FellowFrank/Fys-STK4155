@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.28)  2 NOV 2025 15:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.28)  9 NOV 2025 12:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -7,69 +7,97 @@ entering extended mode
 (c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlæring/Eget Arbeid/Project Work/Project 2/main.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
-(c:/texlive/2025/texmf-dist/tex/latex/revtex4/revtex4.cls
-Document Class: revtex4 2020/09/30 v4.0a (http://publish.aps.org/revtex4/ for documentation)
- Copyright (c) 2001 The American Physical Society.
+(c:/texlive/2025/texmf-dist/tex/latex/revtex4-1/revtex4-1.cls
+Document Class: revtex4-1 2020/09/30 4.1s (http://publish.aps.org/revtex4/ for documentation)
+ Copyright (c) 2009 The American Physical Society.
  mailto:revtex@aps.org
  Licensed under the LPPL:
 http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
- Arthur Ogawa <ogawa@teleport.com>
- Based on work by David Carlisle <david@dcarlisle.demon.co.uk>.
-ltxutil: portions licensed from W. E. Baxter (web@superscript.com)
-Class revtex4 Info: Repairing broken LateX \@sect on input line 640.
+ Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
+ltxutil[2020/09/30 4.1s utilities package (portions licensed from W. E. Baxter web at superscript.com)]
+LaTeX Info: Redefining \@centercr on input line 346.
+Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfootnote on input line 471.
+Class revtex4-1 Info: Repairing broken LateX \@sect on input line 793.
 \intertabularlinepenalty=\count275
 \@tbpen=\count276
 \@arstrutbox@hline=\box53
-Class revtex4 Info: Repairing broken LaTeX \@xbitor on input line 1654.
-ltxgrid: portions licensed from W. E. Baxter (web@superscript.com)
-\c@linecount=\count277
-\output=\toks17
-\@protection@box=\box54
+Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1824.
+Class revtex4-1 Info: Making \typeout \long on input line 2089.
+ltxfront[2020/09/30 4.1s frontmatter package (AO,DPC)]
+\c@affil=\count277
+\c@collab=\count278
+\absbox=\box54
+ltxgrid[2020/09/30 4.1s page grid package (portions licensed from W. E. Baxter web at superscript.com)]
+\c@linecount=\count279
+\output@latex=\toks17
+\box@size@1=\box55
+\box@size@2=\box56
+\@protection@box=\box57
 \@topmark@saved=\toks18
-\footins@saved=\box55
-\pagesofar=\box56
-\footbox=\box57
-\pagegrid@col=\count278
-Class revtex4 Info: Incorporating package {textcase}  [1998/11/12 v0.06 Text only upper/lower case changing (DPC)]. on input line 3736.
-(c:/texlive/2025/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip17
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-\c@affil=\count279
-\absbox=\box58
-\c@part=\count280
-\c@section=\count281
-\c@subsection=\count282
-\c@subsubsection=\count283
-\c@paragraph=\count284
-\c@subparagraph=\count285
+\footins@saved=\box58
+\footins@recovered=\box59
+\column@recovered=\box60
+\pagesofar=\box61
+\footsofar=\box62
+\pagegrid@col=\count280
+Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and \\  on input line 5655.
+\c@part=\count281
+\c@section=\count282
+\c@subsection=\count283
+\c@subsubsection=\count284
+\c@paragraph=\count285
+\c@subparagraph=\count286
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\c@figure=\count286
-\c@table=\count287
- (c:/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty
+\c@figure=\count287
+\fbox@1=\box63
+\c@table=\count288
+\fbox@2=\box64
+\c@video=\count289
+\fbox@4=\box65
+\@bibdataout=\write3
+\widetext@top=\box66
+\widetext@bot=\box67
+Class revtex4-1 Info: Selecting society aps on input line 7616.
+(c:/texlive/2025/texmf-dist/tex/latex/revtex4-1/aps4-1.rtx
+File: aps4-1 2020/09/30 4.1s (http://publish.aps.org/revtex4/ for documentation)
+Class revtex4-1 Info: RevTeX society APS selected on input line 31.
+)
+
+Class revtex4-1 Warning: No journal specified, using default pra.
+
+Class revtex4-1 Info: APS journal PRA selected on input line 7619.
+
+Class revtex4-1 Warning: No type size specified, using default 10.
+
+(c:/texlive/2025/texmf-dist/tex/latex/revtex4-1/aps10pt4-1.rtx
+File: aps10pt4-1 2020/09/30 4.1s (http://publish.aps.org/revtex4/ for documentation)
+Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
+) (c:/texlive/2025/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2025/02/16 v1.05 Text only upper/lower case changing (DPC)
+Package textcase Info: Defining Legacy names on input line 20.
+) (c:/texlive/2025/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (c:/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip51
 \bibsep=\skip52
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count288
+\c@NAT@ctr=\count290
 )
-\widetext@top=\box59
-\widetext@bot=\box60
- (c:/texlive/2025/texmf-dist/tex/latex/revtex4/revsymb.sty
-Package: revsymb 2020/09/30 v4.0a (http://publish.aps.org/revtex4/ for documentation)
-LaTeX Info: Redefining \REV@mathfrak on input line 118.
-)) (c:/texlive/2025/texmf-dist/tex/latex/revtex4/aps.rtx
-File: aps.rtx 2020/09/30 v4.0a (http://publish.aps.org/revtex4/ for documentation)
-) (c:/texlive/2025/texmf-dist/tex/latex/revtex4/10pt.rtx
-File: 10pt.rtx 2020/09/30 v4.0a (http://publish.aps.org/revtex4/ for documentation)
-) (c:/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
+Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7623.
+ (c:/texlive/2025/texmf-dist/tex/latex/revtex4-1/revsymb4-1.sty
+Package: revsymb4-1 2020/09/30 4.1s (http://publish.aps.org/revtex4/ for documentation)
+LaTeX Info: Redefining \REV@mathfrak on input line 119.
+)) (c:/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks19
 \inpenc@posthook=\toks20
 ) (c:/texlive/2025/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2025/08/03 v25.12 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
-\babel@savecnt=\count289
+\babel@savecnt=\count291
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2045.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2047.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2049.
@@ -81,7 +109,7 @@ LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) o
 \l@unhyphenated=\language90
  (c:/texlive/2025/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count290
+\bbl@dirlevel=\count292
  (c:/texlive/2025/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
  (c:/texlive/2025/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
@@ -94,95 +122,21 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 (babel)             (\language22). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language22). Reported on input line 108.
-)) (c:/texlive/2025/texmf-dist/tex/latex/physics/physics.sty
-Package: physics 
- (c:/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2025-08-13 L3 programming layer (loader) 
- (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count291
+)) (c:/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks21
+\pgfutil@tempdima=\dimen149
+\pgfutil@tempdimb=\dimen150
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box68
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2025-08-14 v3.1.11 (3.1.11)
 ))
-Package: xparse 2024-08-16 L3 Experimental document command parser
-) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2025/06/16 v2.17y AMS math features
-\@mathmargin=\skip53
-
-For additional information on amsmath, use the `?' option.
-(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2024/11/17 v2.01 AMS text
- (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks21
-\ex@=\dimen149
-)) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen150
-) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2022/04/08 v2.04 operator names
-)
-\inf@bad=\count292
-LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count293
-\leftroot@=\count294
-LaTeX Info: Redefining \overline on input line 398.
-LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count295
-\DOTSCASE@=\count296
-LaTeX Info: Redefining \ldots on input line 495.
-LaTeX Info: Redefining \dots on input line 498.
-LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box61
-\strutbox@=\box62
-LaTeX Info: Redefining \big on input line 721.
-LaTeX Info: Redefining \Big on input line 722.
-LaTeX Info: Redefining \bigg on input line 723.
-LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen151
-LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count297
-LaTeX Info: Redefining \bmod on input line 904.
-LaTeX Info: Redefining \pmod on input line 909.
-LaTeX Info: Redefining \smash on input line 939.
-LaTeX Info: Redefining \relbar on input line 969.
-LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count298
-\dotsspace@=\muskip18
-\c@parentequation=\count299
-\dspbrk@lvl=\count300
-\tag@help=\toks22
-\row@=\count301
-\column@=\count302
-\maxfields@=\count303
-\andhelp@=\toks23
-\eqnshift@=\dimen152
-\alignsep@=\dimen153
-\tagshift@=\dimen154
-\tagwidth@=\dimen155
-\totwidth@=\dimen156
-\lineht@=\dimen157
-\@envbody=\toks24
-\multlinegap=\skip54
-\multlinetaggap=\skip55
-\mathdisplay@stack=\toks25
-LaTeX Info: Redefining \[ on input line 2949.
-LaTeX Info: Redefining \] on input line 2950.
-)) (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-LaTeX Info: Redefining \frak on input line 111.
-LaTeX Info: Redefining \Bbb on input line 113.
-)) (c:/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: pgf 2025-08-14 v3.1.11 (3.1.11)
+ (c:/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
  (c:/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks26
+\KV@toks@=\toks22
 ) (c:/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
  (c:/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
@@ -194,9 +148,51 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
  (c:/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen158
-\Gin@req@width=\dimen159
-) (c:/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+) (c:/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2025-08-14 v3.1.11 (3.1.11)
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks23
+\pgfkeys@temptoks=\toks24
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks25
+))
+\pgf@x=\dimen153
+\pgf@y=\dimen154
+\pgf@xa=\dimen155
+\pgf@ya=\dimen156
+\pgf@xb=\dimen157
+\pgf@yb=\dimen158
+\pgf@xc=\dimen159
+\pgf@yc=\dimen160
+\pgf@xd=\dimen161
+\pgf@yd=\dimen162
+\w@pgf@writea=\write4
+\r@pgf@reada=\read3
+\c@pgf@counta=\count293
+\c@pgf@countb=\count294
+\c@pgf@countc=\count295
+\c@pgf@countd=\count296
+\t@pgf@toka=\toks26
+\t@pgf@tokb=\toks27
+\t@pgf@tokc=\toks28
+\pgf@sys@id@count=\count297
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2025-08-14 v3.1.11 (3.1.11)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2025-08-14 v3.1.11 (3.1.11)
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-14 v3.1.11 (3.1.11)
+))) (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-14 v3.1.11 (3.1.11)
+\pgfsyssoftpath@smallbuffer@items=\count298
+\pgfsyssoftpath@bigbuffer@items=\count299
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-14 v3.1.11 (3.1.11)
+)) (c:/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
  (c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
@@ -212,21 +208,249 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (c:/texlive/2025/texmf-dist/tex/latex/colortbl/colortbl.sty
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2025-08-14 v3.1.11 (3.1.11)
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen163
+\pgfmath@count=\count300
+\pgfmath@box=\box69
+\pgfmath@toks=\toks29
+\pgfmath@stack@operand=\toks30
+\pgfmath@stack@operation=\toks31
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count301
+)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-14 v3.1.11 (3.1.11)
+\pgf@picminx=\dimen164
+\pgf@picmaxx=\dimen165
+\pgf@picminy=\dimen166
+\pgf@picmaxy=\dimen167
+\pgf@pathminx=\dimen168
+\pgf@pathmaxx=\dimen169
+\pgf@pathminy=\dimen170
+\pgf@pathmaxy=\dimen171
+\pgf@xx=\dimen172
+\pgf@xy=\dimen173
+\pgf@yx=\dimen174
+\pgf@yy=\dimen175
+\pgf@zx=\dimen176
+\pgf@zy=\dimen177
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-14 v3.1.11 (3.1.11)
+\pgf@path@lastx=\dimen178
+\pgf@path@lasty=\dimen179
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-14 v3.1.11 (3.1.11)
+\pgf@shorten@end@additional=\dimen180
+\pgf@shorten@start@additional=\dimen181
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-14 v3.1.11 (3.1.11)
+\pgfpic=\box70
+\pgf@hbox=\box71
+\pgf@layerbox@main=\box72
+\pgf@picture@serial@count=\count302
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-14 v3.1.11 (3.1.11)
+\pgflinewidth=\dimen182
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-14 v3.1.11 (3.1.11)
+\pgf@pt@x=\dimen183
+\pgf@pt@y=\dimen184
+\pgf@pt@temp=\dimen185
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2025-08-14 v3.1.11 (3.1.11)
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-14 v3.1.11 (3.1.11)
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-14 v3.1.11 (3.1.11)
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-14 v3.1.11 (3.1.11)
+\pgfarrowsep=\dimen186
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-14 v3.1.11 (3.1.11)
+\pgf@max=\dimen187
+\pgf@sys@shading@range@num=\count303
+\pgf@shadingcount=\count304
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-14 v3.1.11 (3.1.11)
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-14 v3.1.11 (3.1.11)
+\pgfexternal@startupbox=\box73
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-14 v3.1.11 (3.1.11)
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-14 v3.1.11 (3.1.11)
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-14 v3.1.11 (3.1.11)
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-14 v3.1.11 (3.1.11)
+))) (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-14 v3.1.11 (3.1.11)
+\pgfnodeparttextbox=\box74
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-14 v3.1.11 (3.1.11)
+) (c:/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-14 v3.1.11 (3.1.11)
+\pgf@nodesepstart=\dimen188
+\pgf@nodesepend=\dimen189
+) (c:/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-14 v3.1.11 (3.1.11)
+)) (c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2025-08-14 v3.1.11 (3.1.11)
+\pgffor@iter=\dimen190
+\pgffor@skip=\dimen191
+\pgffor@stack=\toks32
+\pgffor@toks=\toks33
+)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2025-08-14 v3.1.11 (3.1.11)
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-14 v3.1.11 (3.1.11)
+\pgf@plot@mark@count=\count305
+\pgfplotmarksize=\dimen192
+)
+\tikz@lastx=\dimen193
+\tikz@lasty=\dimen194
+\tikz@lastxsaved=\dimen195
+\tikz@lastysaved=\dimen196
+\tikz@lastmovetox=\dimen197
+\tikz@lastmovetoy=\dimen198
+\tikzleveldistance=\dimen199
+\tikzsiblingdistance=\dimen256
+\tikz@figbox=\box75
+\tikz@figbox@bg=\box76
+\tikz@tempbox=\box77
+\tikz@tempbox@bg=\box78
+\tikztreelevel=\count306
+\tikznumberofchildren=\count307
+\tikznumberofcurrentchild=\count308
+\tikz@fig@count=\count309
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-14 v3.1.11 (3.1.11)
+\pgfmatrixcurrentrow=\count310
+\pgfmatrixcurrentcolumn=\count311
+\pgf@matrix@numberofcolumns=\count312
+)
+\tikz@expandcount=\count313
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-14 v3.1.11 (3.1.11)
+))) (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-14 v3.1.11 (3.1.11)
+\pgfarrowinset=\dimen257
+\pgfarrowlength=\dimen258
+\pgfarrowwidth=\dimen259
+\pgfarrowlinewidth=\dimen260
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen261
+\pgfdecoratedremainingdistance=\dimen262
+\pgfdecoratedinputsegmentcompleteddistance=\dimen263
+\pgfdecoratedinputsegmentremainingdistance=\dimen264
+\pgf@decorate@distancetomove=\dimen265
+\pgf@decorate@repeatstate=\count314
+\pgfdecorationsegmentamplitude=\dimen266
+\pgfdecorationsegmentlength=\dimen267
+)
+\tikz@lib@dec@box=\box79
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (c:/texlive/2025/texmf-dist/tex/latex/physics/physics.sty
+Package: physics 
+ (c:/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-08-13 L3 programming layer (loader) 
+ (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count315
+))
+Package: xparse 2024-08-16 L3 Experimental document command parser
+) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/06/16 v2.17y AMS math features
+\@mathmargin=\skip53
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+ (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks34
+\ex@=\dimen268
+)
+LaTeX Info: Redefining \text on input line 28.
+) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen269
+) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count316
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count317
+\leftroot@=\count318
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count319
+\DOTSCASE@=\count320
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box80
+\strutbox@=\box81
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen270
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count321
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count322
+\dotsspace@=\muskip18
+\c@parentequation=\count323
+\dspbrk@lvl=\count324
+\tag@help=\toks35
+\row@=\count325
+\column@=\count326
+\maxfields@=\count327
+\andhelp@=\toks36
+\eqnshift@=\dimen271
+\alignsep@=\dimen272
+\tagshift@=\dimen273
+\tagwidth@=\dimen274
+\totwidth@=\dimen275
+\lineht@=\dimen276
+\@envbody=\toks37
+\multlinegap=\skip54
+\multlinetaggap=\skip55
+\mathdisplay@stack=\toks38
+LaTeX Info: Redefining \[ on input line 2949.
+LaTeX Info: Redefining \] on input line 2950.
+)) (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+LaTeX Info: Redefining \frak on input line 111.
+LaTeX Info: Redefining \Bbb on input line 113.
+)) (c:/texlive/2025/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
  (c:/texlive/2025/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
-\col@sep=\dimen160
-\ar@mcellbox=\box63
-\extrarowheight=\dimen161
-\NC@list=\toks27
+\col@sep=\dimen277
+\ar@mcellbox=\box82
+\extrarowheight=\dimen278
+\NC@list=\toks39
 \extratabsurround=\skip56
 \backup@length=\skip57
-\ar@cellbox=\box64
+\ar@cellbox=\box83
 )
-\everycr=\toks28
+\everycr=\toks40
 \minrowclearance=\skip58
-\rownum=\count304
+\rownum=\count328
 ) (c:/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
  (c:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
@@ -263,16 +487,16 @@ Package nameref Warning: The definition of \label has changed!
 (nameref)                Check your packages! 
 (nameref)                Replacing it with the kernel definition on input line 149.
 
-\c@section@level=\count305
+\c@section@level=\count329
 ) (c:/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count306
+\etb@tempcnta=\count330
 ) (c:/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen162
-\Hy@linkcounter=\count307
-\Hy@pagecounter=\count308
+\@linkdim=\dimen279
+\Hy@linkcounter=\count331
+\Hy@pagecounter=\count332
  (c:/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -280,7 +504,7 @@ Now handling font encoding PD1 ...
 ) (c:/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count309
+\Hy@SavedSpaceFactor=\count333
  (c:/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -293,17 +517,18 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count310
+LaTeX Info: Redefining \href on input line 4712.
+\c@Hy@tempcnt=\count334
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen163
+\XeTeXLinkMargin=\dimen280
  (c:/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (c:/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count311
-\Field@Width=\dimen164
-\Fld@charsize=\dimen165
+\Fld@menulength=\count335
+\Field@Width=\dimen281
+\Fld@charsize=\dimen282
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -311,15 +536,15 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count312
-\c@Item=\count313
-\c@Hfootnote=\count314
+\Hy@abspage=\count336
+\c@Item=\count337
+\c@Hfootnote=\count338
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (c:/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count315
-\c@bookmark@seq@number=\count316
+\Fld@listcount=\count339
+\c@bookmark@seq@number=\count340
  (c:/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
  (c:/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -330,198 +555,406 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip59
 ) (c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count317
-\float@exts=\toks29
-\float@box=\box65
-\@float@everytoks=\toks30
-\@floatcapt=\box66
+\c@float@type=\count341
+\float@exts=\toks41
+\float@box=\box84
+\@float@everytoks=\toks42
+\@floatcapt=\box85
 ) (c:/texlive/2025/texmf-dist/tex/latex/comment/comment.sty
-\CommentStream=\write3
+\CommentStream=\write5
  Excluding comment 'comment') (c:/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
  (c:/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-\@float@every@algorithm=\toks31
-\c@algorithm=\count318
+\@float@every@algorithm=\toks43
+\c@algorithm=\count342
 ) (c:/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks32
-\thm@bodyfont=\toks33
-\thm@headfont=\toks34
-\thm@notefont=\toks35
-\thm@headpunct=\toks36
+\thm@style=\toks44
+\thm@bodyfont=\toks45
+\thm@headfont=\toks46
+\thm@notefont=\toks47
+\thm@headpunct=\toks48
 \thm@preskip=\skip60
 \thm@postskip=\skip61
 \thm@headsep=\skip62
-\dth@everypar=\toks37
+\dth@everypar=\toks49
 ) (c:/texlive/2025/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
  (c:/texlive/2025/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count319
-\c@ALG@rem=\count320
-\c@ALG@nested=\count321
+\c@ALG@line=\count343
+\c@ALG@rem=\count344
+\c@ALG@nested=\count345
 \ALG@tlm=\skip63
 \ALG@thistlm=\skip64
-\c@ALG@Lnr=\count322
-\c@ALG@blocknr=\count323
-\c@ALG@storecount=\count324
-\c@ALG@tmpcounter=\count325
+\c@ALG@Lnr=\count346
+\c@ALG@blocknr=\count347
+\c@ALG@storecount=\count348
+\c@ALG@tmpcounter=\count349
 \ALG@tmplength=\skip65
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (c:/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip66
-\multirow@cntb=\count326
+\multirow@cntb=\count350
 \multirow@dima=\skip67
-\bigstrutjot=\dimen166
+\bigstrutjot=\dimen283
+) (c:/texlive/2025/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
+\@enLab=\toks50
 )
-\c@prop=\count327
- (./main.aux)
+\c@prop=\count351
+Class revtex4-1 Info: colortbl package is loaded. (Proceeding with fingers crossed.) on input line 29.
+
+
+Class revtex4-1 Warning: Repair the float package.
+
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 29.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 29.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 29.
+(./main.aux
+
+LaTeX Warning: Label `tab:hyperparameters' multiply defined.
+
+
+LaTeX Warning: Label `tab:hyperparameters' multiply defined.
+
+
+LaTeX Warning: Label `tab:hyperparameters' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-Class revtex4 Info: Unrecognized array package. Please update this document class! (Proceeding with fingers crossed.) on input line 25.
-Class revtex4 Info: cite was not loaded (OK!) on input line 25.
-Class revtex4 Info: multicol was not loaded (OK!) on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
  (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count328
-\scratchdimen=\dimen167
-\scratchbox=\box67
-\nofMPsegments=\count329
-\nofMParguments=\count330
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count331
-\MPscratchDim=\dimen168
-\MPnumerator=\count332
-\makeMPintoPDFobject=\count333
-\everyMPtoPDFconversion=\toks39
+\scratchcounter=\count352
+\scratchdimen=\dimen284
+\scratchbox=\box86
+\nofMPsegments=\count353
+\nofMParguments=\count354
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count355
+\MPscratchDim=\dimen285
+\MPnumerator=\count356
+\makeMPintoPDFobject=\count357
+\everyMPtoPDFconversion=\toks52
 ) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+Package hyperref Info: Link coloring OFF on input line 29.
+ (./main.out) (./main.out)
+\@outlinefile=\write6
+\openout6 = `main.out'.
 
-Package hyperref Warning: Height of page (\paperheight) is invalid (0.0pt),
-(hyperref)                using 11in.
+Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 29.
+\openout3 = `mainNotes.bib'.
 
-Package hyperref Info: Link coloring OFF on input line 25.
-(./main.out) (./main.out)
-\@outlinefile=\write4
-\openout4 = `main.out'.
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<Code/Heatmap.pdf, id=52, 578.16pt x 433.62pt>
-File: Code/Heatmap.pdf Graphic file (type pdf)
-<use Code/Heatmap.pdf>
-Package pdftex.def Info: Code/Heatmap.pdf  used on input line 57.
-(pdftex.def)             Requested size: 233.69925pt x 175.27107pt.
-<Code/pretty.pdf, id=53, 449.48215pt x 445.33507pt>
-File: Code/pretty.pdf Graphic file (type pdf)
-<use Code/pretty.pdf>
-Package pdftex.def Info: Code/pretty.pdf  used on input line 66.
-(pdftex.def)             Requested size: 233.69925pt x 231.54837pt.
- [1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+) [1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.83 
-     
+l.204 
+      ]
+Underfull \hbox (badness 1092) in paragraph at lines 233--236
+[]\OT1/cmr/m/n/10 We ex-tend this cost func-tion to in-clude $\OML/cmm/m/it/10 L[]$ \OT1/cmr/m/n/10 and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--249
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--266
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--282
+
+ []
+
+[3{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Underfull \hbox (badness 1681) in paragraph at lines 293--297
+\OT1/cmr/m/n/10 most im-por-tant where Stochas-tic Gra-di-ent De-scent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--303
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--314
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--338
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 345--349
+
+ []
+
+
+Underfull \hbox (badness 1337) in paragraph at lines 356--360
+\OT1/cmr/m/n/10 prob-a-bil-i-ties to the cor-rect classes while pe-nal-iz-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 356--360
+
+ []
+
+[4]
+Underfull \hbox (badness 1546) in paragraph at lines 381--382
+[]\OT1/cmr/m/n/10 The FFNN was im-ple-mented from scratch us-ing
+ []
+
+
+Underfull \hbox (badness 2941) in paragraph at lines 386--387
+ []\OT1/cmr/m/n/10 The op-ti-miza-tion al-go-rithm (SGD, RM-Sprop,
+ []
+
+[5]
+<figures/MSE_Heatmap_Layers_Nodes.png, id=224, 560.0925pt x 426.393pt>
+File: figures/MSE_Heatmap_Layers_Nodes.png Graphic file (type png)
+<use figures/MSE_Heatmap_Layers_Nodes.png>
+Package pdftex.def Info: figures/MSE_Heatmap_Layers_Nodes.png  used on input line 418.
+(pdftex.def)             Requested size: 246.0pt x 187.28168pt.
+<figures/Learning_Curve_2Layers_50Nodes.png, id=228, 578.16pt x 361.35pt>
+File: figures/Learning_Curve_2Layers_50Nodes.png Graphic file (type png)
+<use figures/Learning_Curve_2Layers_50Nodes.png>
+Package pdftex.def Info: figures/Learning_Curve_2Layers_50Nodes.png  used on input line 431.
+(pdftex.def)             Requested size: 246.0pt x 153.74539pt.
+<figures/OptimizationsAreImportant.png, id=229, 549.9747pt x 426.393pt>
+File: figures/OptimizationsAreImportant.png Graphic file (type png)
+<use figures/OptimizationsAreImportant.png>
+Package pdftex.def Info: figures/OptimizationsAreImportant.png  used on input line 441.
+(pdftex.def)             Requested size: 246.0pt x 190.72346pt.
+<figures/MSE for Different Activation Functions.png, id=231, 578.16pt x 433.62pt>
+File: figures/MSE for Different Activation Functions.png Graphic file (type png)
+<use figures/MSE for Different Activation Functions.png>
+Package pdftex.def Info: figures/MSE for Different Activation Functions.png  used on input line 454.
+(pdftex.def)             Requested size: 246.0pt x 184.49448pt.
+ [6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.83 
-      <./Code/Heatmap.pdf> <./Code/pretty.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 88--91
+l.469 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.469 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.469 
+       <./Figures/MSE_Heatmap_Layers_Nodes.png> <./Figures/Learning_Curve_2Layers_50Nodes.png> <./Figures/OptimizationsAreImportant.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 469.
+
+
+LaTeX Warning: Reference `tab:hyperparameters_l0' on page 7 undefined on input line 483.
+
+<figures/ffnn_fit_plot_L0.png, id=245, 578.16pt x 361.35pt>
+File: figures/ffnn_fit_plot_L0.png Graphic file (type png)
+<use figures/ffnn_fit_plot_L0.png>
+Package pdftex.def Info: figures/ffnn_fit_plot_L0.png  used on input line 513.
+(pdftex.def)             Requested size: 246.0pt x 153.74539pt.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 519.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 519.
+
+<figures/ffnn_fit_plot_L1.png, id=247, 578.16pt x 361.35pt>
+File: figures/ffnn_fit_plot_L1.png Graphic file (type png)
+<use figures/ffnn_fit_plot_L1.png>
+Package pdftex.def Info: figures/ffnn_fit_plot_L1.png  used on input line 551.
+(pdftex.def)             Requested size: 246.0pt x 153.74539pt.
+[7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.558 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.558 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.558 
+       <./Figures/MSE for Different Activation Functions.png> <./Figures/ffnn_fit_plot_L0.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 558.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 559.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 559.
+
+<figures/Comparison of Models on 100 Extra Data Points.png, id=261, 578.16pt x 433.62pt>
+File: figures/Comparison of Models on 100 Extra Data Points.png Graphic file (type png)
+<use figures/Comparison of Models on 100 Extra Data Points.png>
+Package pdftex.def Info: figures/Comparison of Models on 100 Extra Data Points.png  used on input line 593.
+(pdftex.def)             Requested size: 246.0pt x 184.49448pt.
+
+LaTeX Warning: Reference `fig:final-comparison' on page 8 undefined on input line 598.
+
+[8
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.616 \subsection
+                 {Image Classification}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.616 \subsection
+                 {Image Classification}
+pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.616 \subsection
+                 {Image Classification}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.616 \subsection
+                 {Image Classification} <./Figures/ffnn_fit_plot_L1.png> <./Figures/Comparison of Models on 100 Extra Data Points.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 641--658
 
  []
 
-[2] (./main.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
- []\OT1/cmr/m/n/9 M. Hjorth-Jensen, \OT1/cmr/m/it/9 Com-pu-ta-tional Physics Lec-
- []
+<figures/MNIST_Learning_Curve.png, id=272, 578.16pt x 361.35pt>
+File: figures/MNIST_Learning_Curve.png Graphic file (type png)
+<use figures/MNIST_Learning_Curve.png>
+Package pdftex.def Info: figures/MNIST_Learning_Curve.png  used on input line 665.
+(pdftex.def)             Requested size: 246.0pt x 153.74539pt.
+<figures/MNIST_Confusion_Matrix.png, id=275, 578.16pt x 578.16pt>
+File: figures/MNIST_Confusion_Matrix.png Graphic file (type png)
+<use figures/MNIST_Confusion_Matrix.png>
+Package pdftex.def Info: figures/MNIST_Confusion_Matrix.png  used on input line 678.
+(pdftex.def)             Requested size: 246.0pt x 245.99263pt.
+<figures/misclassified_5_as_3.png, id=276, 578.16pt x 289.08pt>
+File: figures/misclassified_5_as_3.png Graphic file (type png)
+<use figures/misclassified_5_as_3.png>
+Package pdftex.def Info: figures/misclassified_5_as_3.png  used on input line 689.
+(pdftex.def)             Requested size: 246.0pt x 122.9963pt.
+[9
+pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.701 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.701 
+       <./Figures/MNIST_Learning_Curve.png>]
 
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 701.
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
- \OT1/cmr/m/it/9 ture Notes 2015 \OT1/cmr/m/n/9 (De-part-ment of Physics, Uni-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
- \OT1/cmr/m/n/9 ver-sity of Oslo, Nor-way, 2015), URL []$\OT1/cmtt/m/n/9 https :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
- \OT1/cmtt/m/n/9 / / github . com / CompPhysics / ComputationalPhysics /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
- []$\OT1/cmtt/m/n/9 https : / / compphysics . github . io / MachineLearning /
- []
-
-
-Underfull \hbox (badness 4608) in paragraph at lines 28--29
- []\OT1/cmr/m/n/9 A. N. Torg-ersen, \OT1/cmr/m/it/9 Project 2 - fys-stk4155 \OT1/cmr/m/n/9 (2025),
- []
-
-
-Underfull \hbox (badness 5771) in paragraph at lines 28--29
- \OT1/cmr/m/n/9 URL []$\OT1/cmtt/m/n/9 https : / / github . com / FellowFrank / Fys-[]STK4155 /
- []
-
-) [3] (./main.aux)
+(./main.bbl [10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.58 ...es},\ and\ \citenamefont {Burges}}]{mnist}
+                                                  %
+pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.58 ...es},\ and\ \citenamefont {Burges}}]{mnist}
+                                                  % <./Figures/MNIST_Confusion_Matrix.png> <./Figures/misclassified_5_as_3.png>]) [11] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D3DE96FCF9475D6F8F7831EFBC94A30C;1561.
+(rerunfilecheck)             Checksum: 5A781F7AB0E117CBF55BF7E6B70F275D;5574.
  ) 
 Here is how much of TeX's memory you used:
- 14314 strings out of 467800
- 214296 string characters out of 5436061
- 668914 words of memory out of 5000000
- 42744 multiletter control sequences out of 15000+600000
- 633397 words of font info for 66 fonts, out of 8000000 for 9000
+ 25875 strings out of 467800
+ 472029 string characters out of 5436061
+ 886019 words of memory out of 5000000
+ 54010 multiletter control sequences out of 15000+600000
+ 641127 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,79p,896b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (3 pages, 310163 bytes).
+ 102i,10n,107p,2097b,784s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (11 pages, 968180 bytes).
 PDF statistics:
- 210 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 107 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 436 PDF objects out of 1000 (max. 8388607)
+ 354 compressed objects within 4 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 335 words of extra memory for PDF output out of 10000 (max. 10000000)
 
