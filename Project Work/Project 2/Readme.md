@@ -18,6 +18,35 @@ pip install -r requirements.txt
 ```
 
 
-#### Code folder notebook 1
+#### Code/Functions.py
 
-#### Code folder notebook 2
+Includes all the defined functions that we have created in this project separated into different sections:
+- Dataset Generation for Regression
+- Activation Functions & derivatives
+- Loss Functions & derivatives
+    - Cross_entropy uses der_softmax as its derivative, see methods in the paper.
+- Optimization Algorithms ( Adam and RMSprop)
+    - Gradient descent and Stochastic Gradient descent, is integrated into the Neural Network class and the run experiment function.
+- A Neural Network class with:
+    - Initiation of layers
+    - Predictions & Cost
+    - Gradients
+    - Update of layers
+    - Plus 2 tests to see if it's configured correctly
+- Two broad functions to run an experiment and to graph the heath map
+    - was created to reduce code
+
+#### Code/Verification.ipynb
+A document that verifies that the neural network has been correctly implemented.
+By calculating the gradients and doing a test run on the dataset.
+
+#### Code/GridSearchParameters.ipynb
+A document that does the three grid search written about in the text, are very computationally expensive.
+Was used to get a baseline for further tuning or analysis.
+
+#### Code/Workline.ipynb
+Not important.
+Is a notebook on how the project was executed and the different steps in order to answer the parts and components for this project.
+
+#### Figures/Figures.ipynb
+Generates all the figures used in the text. 

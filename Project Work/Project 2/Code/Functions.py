@@ -29,8 +29,10 @@ def polynomial_features(x, p, intercept=False):
 
 
 
-
+#
 # Activation functions and their derivatives
+#
+# Linear
 def linear(z):
     return z
 def der_linear(z):
@@ -91,11 +93,8 @@ def mse(predict, target):
 def der_mse(predict, target):
     return 2 * (predict - target) 
 
-#
+
 # Not relevant for this project
-#
-
-
 def log_loss(y_true, y_pred, regularization=None, weights=None, lambda_reg=0.01):
     """
     Combines binary cross-entropy loss with L1 or L2 regularization.
