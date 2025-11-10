@@ -413,14 +413,15 @@ While this is a standard approach for model selection, we will later discuss the
 \subsection{Training the FFNN for Regression}
 To begin our exploration of the FFNN's capabilities in regression, we first established a performance baseline with a "naive" model. This configuration used simple gradient descent, a fixed learning rate of $\eta=0.1$, and the Sigmoid activation function.
 
+
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\columnwidth]{figures/MSE_Heatmap_Layers_Nodes.png}
+    \includegraphics[width=\columnwidth]{figures/MSE for Different Architectures.png}
     \caption{Heatmap showing that the FFNN without any optimizations is struggling to learn anything useful after 1000 epochs of training.}
-    \label{fig:figure1}
+    \label{fig:Training_struggle}
 \end{figure}
 
-The results, shown in Figure \ref{fig:figure1}, demonstrate that this simple configuration fails to learn the underlying Runge function. 
+The results, shown in Figure \ref{fig:Training_struggle}, demonstrate that this simple configuration fails to learn the underlying Runge function. 
 The test MSE remains high across all tested architectures, with the best-performing (and simplest) model only achieving a score that is not significantly better than the others.  
 
 This failure is characteristic of the well-known vanishing gradient problem.
@@ -438,8 +439,8 @@ We first investigated the impact of replacing gradient descent with adaptive opt
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\columnwidth]{figures/OptimizationsAreImportant.png}
-    \caption{Heatmap showing that the choice of optimization algorithm has a significant impact on the FFNN's performance in learning.}
+    \includegraphics[width=\columnwidth]{figures/MSE for Different Optimizers.png}
+    \caption{Heatmap showing that the choice of optimization algorithm has a significant impact on the FFNN's performance in learning, trained on 1000 epochs.}
     \label{fig:optimization-importance}
 \end{figure}
 
@@ -486,7 +487,7 @@ This test score is significantly higher than the best analytical OLS solution fr
 
 \begin{table}[htbp]
     \caption{Best hyperparameters found for the FFNN regression task without regularization}
-    \label{tab:hyperparameters}
+    \label{tab:hyperparameters_l0}
     \begin{ruledtabular} % This replaces \centering and adds the lines
     \begin{tabular}{l r}
         % No \hline\hline needed - ruledtabular does it.
@@ -521,7 +522,7 @@ Echoing the same sentiment as earlier we did a grid search over several hyperpar
 The best result for the regularization $L1$ with a noisy dataset was:
 \begin{table}[htbp]
     \caption{Hyperparameters used for the neural network with $L1$ regularization}
-    \label{tab:hyperparameters}
+    \label{tab:hyperparameters_l1}
     \begin{ruledtabular} % This replaces \centering and adds the lines
     \begin{tabular}{l r}
         % No \hline\hline needed - ruledtabular does it.
@@ -561,7 +562,7 @@ Or at least not in a way that is visible from the test cost on new data.
 Best result for the regularization $L2$ with a noisy dataset:
 \begin{table}[htbp]
     \caption{Hyperparameters used for the neural network with $L2$ regularization}
-    \label{tab:hyperparameters}
+    \label{tab:hyperparameters_l2}
     \begin{ruledtabular} % This replaces \centering and adds the lines
     \begin{tabular}{l r}
         % No \hline\hline needed - ruledtabular does it.
@@ -595,7 +596,7 @@ This provides an unbiased measure of their true generalization.
     \label{fig:final-comparison-regression}
 \end{figure}
 
-The results of this benchmark figure \ref{fig:final-comparison} reveal the real story. 
+The results of this benchmark figure \ref{fig:final-comparison-regression} reveal the real story. 
 Where The L1-regularized FFNN is the clear winner, achieving the best generalization score of all models -1.82. 
 It outperforms not only the other FFNNs but also all analytical methods from our previous study.
 
@@ -618,25 +619,26 @@ Now we will use the methods we learned from the regression task to implement a F
 Especially the knowledge gleamed around overfitting, the need for regularization and that slow and steady learning is better than fast and unstable learning.
 
 To solve this, we will adapt the output layer to use the softmax activation function and the cross-entropy cost function.
-Where we in this case will have alot more data to train on and therefore escape the randomness contained in comparing sparse data sets.  
+Where we in this case will have more data to train on and therefore escape the randomness contained in comparing sparse data sets.  
 
 As we experience before finetuning the hyper parameters one by one does not create a network of complex results where the relationship between the two show the full picture of how they interact with each other.
-I.e. we will try on this larger set to se if our grid search can find some good suggestions for the best hyper parameters for the MNIST dataset.
+I.e. we will try on this larger set to find a good baseline to search the hyperparameter space for the best hyper parameters for the MNIST dataset.
 
-As the MNIST dataset is much larger than the sparse dataset we had for the regression task, we need to use a smaller grid search, fewer epochs.
+As the MNIST dataset is much larger than the sparse dataset, we needed to use a smaller grid search with fewer epochs.
 We are also not able to use the whole training dataset for each training run as it would be too computationally expensive.
-Therefore we use a subset of 1000 samples from the training set for each training run.
+Therefore we used a subset of 1000 samples from the training set for each training run.
 After running this code for a while we found a suggestion for what the optimal parameters where when trained for 5 epochs on each combination.
 
 
-Looking at the results that our naive grid search found and then training it for longer on these parameters. 
-We saw that we are optimizing for the parameters that give us the best results after 5 epochs, was a good starting point.
-Where we could then tune it further, by doing an educated guess that to use a lower learning rate and a larger batch size will improve the stability in learning.
-After having gone through this process a few times we found a good set of hyperparameters that gave us good results on the MNIST dataset.
+Looking at the results that our naive grid search found and then continuing the training run. 
+We saw that this give was a good starting point, but there was room for improvement as it had an accuracy of around 94\% and we where able to improve it further by making some adjustments.
+We therefore continued to tune the parameters further, by alternating some of these parameters to see how these changes develop on a longer training run.
+One specific change we saw was beneficial was a slightly lower learning rate and a larger batch size to improve the stability in learning.
+After having done this final fine-tuning we ended up with the following hyperparameters in table \ref{tab:hyperparameters_mnist}.
 
 \begin{table}[H]
     \caption{Hyperparameters used for the neural network training.}
-    \label{tab:hyperparameters}
+    \label{tab:hyperparameters_mnist}
     \begin{ruledtabular} % This replaces \centering and adds the lines
     \begin{tabular}{l r}
         % No \hline\hline needed - ruledtabular does it.
@@ -658,7 +660,6 @@ After having gone through this process a few times we found a good set of hyperp
 \end{table}
 
 As the final results was a bit off from our new findings, this implies the need for a better hyperparameter tuning method, one that perhaps tunes for training runs that has a consistent and steady improvement rather than finding the lowest cost after a few epochs, as running on the whole dataset for many epochs is computationally infeasible in practice.
-Even for this small set of hyperparameters it took a long time to run through all the combinations.
 
 \begin{figure}[htbp]
     \centering
@@ -671,7 +672,7 @@ Analyzing our training curve in fig. \ref{fig:mnist-accuracy-loss} we see that t
 Where we see that the training accuracy is still decreasing while the test accuracy begins to increase.
 
 If we now want to look at how the model is actually performing on this test set we can look at the confusion matrix in fig. \ref{fig:mnist-confusion-matrix}.
-Where we see that the model is performing quite well, with a high percentage of the predictions being on the diagonal, i.e. correctly classified.
+Where we see that the model is performing quite well, with a high percentage being correct predictions, i.e. the diagonal.
 
 \begin{figure}[htbp]
     \centering
@@ -680,7 +681,7 @@ Where we see that the model is performing quite well, with a high percentage of 
     \label{fig:mnist-confusion-matrix}
 \end{figure}
 
-We see that the mistakes of classifying 5 as a 3 is the most common mistake, which is interesting as they don't look that similar.
+One important observation from this matrix is the mistake of classifying 5 as a 3 is the most common mistake, which is interesting as they don't look that similar.
 We believe that this is in some part due to the way people write these digits and that the FFNN isn't necessarily trained to capture the same features as we look for.
 It might learn this through its neurons but it might also learn to classify it in other ways, e.g. the explainability of a prediction is what makes it hard to pinpoint why.
 
@@ -691,21 +692,24 @@ It might learn this through its neurons but it might also learn to classify it i
     \label{fig:mnist-misclassified-examples}
 \end{figure}
 Looking closer at  some of these mistakes in fig. \ref{fig:mnist-misclassified-examples} we see that there should be some room for improvement here.
-As all of these looks like 5s, perhaps the middle one can be seen as a 3, so a neural network that is better at capturing spatial hierarchies might help.
-In view of this there should be possible to make some more improvements to this classification. 
+As all of these looks like 5s, perhaps the middle one can be seen as a 3, and a neural network that is better at capturing spatial hierarchies might help.
+In view of this there is reason to believe that there is more room for improvements to this classification. 
 Perhaps by using a convolutional neural network (CNN) that is better suited for image data, as it can capture spatial hierarchies in images better than a FFNN.
 
 
-As a concluding remark we see that the FFNN model is able to perform quite well on the MNIST dataset out of the box in achieving an accuracy of 97.51\%.
+As a concluding remark, we acknowledge that despite of these remarks the FFNN model is able to perform quite well out of the box on the MNIST dataset with an accuracy of 97.51\%.
 Where it has shown clear capabilities and adaptability to learn complex functions from data.
 
 
 \section{further work}
-Some ideas for further work:
+Some problems that could use a closer study:
 \begin{enumerate}[a)]
-    \item Research on finding more cost efficient ways to do hyper parameter tuning.As the naive approach we used is very computationally expensive.There should be some clever way to do this that doesn't require as many training runs and uses statistics to find the best parameters faster.
-    \item How different architectures with regards to layers and nodes per layer affect the learning capabilities of the FFNN. Are triangles better than rectangles? Is it better to have one hidden activation function for all layers or to mix them? 
+    \item Finding more cost efficient ways to do hyper parameter tuning.As the naive approach we used is very computationally expensive.
+    \item How different architectures with regards to layers and nodes per layer affect the learning capabilities of the FFNN. 
+    Are triangles better than rectangles? 
+    Is it better to have one hidden activation function for all layers or to mix them? 
     \item How parallelization and GPU acceleration can speed up the training process for FFNNs implemented from scratch.
+    \item How Convolutional Neural Networks (CNNs) would perform in comparison to FFNNs on image classification tasks.
 \end{enumerate}
 
 
@@ -721,11 +725,11 @@ Showing the power of neural networks in adapting to complex functions.
 Though the real problem grasped from this project is the hyperparameter tuning.
 Where we found that the naive approach of freezing all but two hyperparameters and then plotting a heatmap to find the best combination was flawed.
 While doing an exhaustive grid search was computationally expensive and still didn't guarantee the best results.
-As we where measuring it along a few epochs and chose the one that had the best run out of these few epochs.
-A better approach would perhaps be to see how steady the improvement was over time rather than just looking at the best result after a few epochs.
+As the measurement was along a few epochs where the one that had the best run out of these few epochs was chosen.
+A better approach would perhaps be to see how steady the improvement was over time rather than just looking at the best result after a few epochs, perhaps by measuring slope and variance over time.
 
 We also found that the choice of optimization algorithm had a significant impact on the learning capabilities of the FFNN.
-Where Adam and RMSprop was needed in order to get good results, as plain SGD struggled to learn anything useful.
+Where Adam and RMSprop was needed in order to get good results, as plain GD and SGD struggled to learn anything useful.
 
 For specifically sparse datasets we found that when tuning the hyperparameters one will have a continuous struggle to find the best combination for the underlying dataset as each epoch will have a randomness where it might just inch closer to the test set and away from the training set.
 

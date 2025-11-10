@@ -426,18 +426,23 @@ def Heatmap_with_labels(plot_mse, x,y,
     ax.set_xticklabels(x)
     ax.set_yticklabels(y)
     
+    ax.tick_params(axis='both', which='major', labelsize=14)
+
     # Set labels and titles
-    ax.set_title(title, fontsize=14)
-    ax.set_xlabel(xlabel, fontsize=12)
-    ax.set_ylabel(ylabel, fontsize=12)
+    ax.set_title(title, fontsize=20)
+    ax.set_xlabel(xlabel, fontsize=18)
+    ax.set_ylabel(ylabel, fontsize=18)
 
     # Add color bar
+    vmin = np.nanmin(plot_mse)
+    vmax = np.nanmax(plot_mse)
     cbar = fig.colorbar(c, ax=ax)
-    cbar.ax.set_ylabel(barlabel, rotation=-90, va="bottom")
+    cbar.ax.set_ylabel(barlabel, rotation=-90, va="bottom", fontsize=18)
+    cbar.ax.tick_params(labelsize=16)
     
     # --- THIS IS THE CORRECTED ANNOTATION LOOP ---
     # Now (j, i) maps directly to the pixel coordinates
-    threshold = 1
+    threshold = (vmax + vmin) / 2.0
     for i in range(len(y)): # i = 0, 1 (rows, for nodes)
         for j in range(len(x)):   # j = 0, 1 (cols, for layers)
             val = plot_mse[i, j]
@@ -445,7 +450,7 @@ def Heatmap_with_labels(plot_mse, x,y,
                 color = "w" if val < threshold else "k" 
                 # Use j for x-coordinate, i for y-coordinate
                 text = ax.text(j, i, f"{val:.2f}",
-                               ha="center", va="center", color=color, fontsize=12)
-    plt.savefig(f'{title}.png', dpi=300)
+                               ha="center", va="center", color=color, fontsize=16)
     plt.tight_layout()
+    plt.savefig(f'{title}.png', dpi=300)
     plt.show()

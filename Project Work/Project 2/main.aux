@@ -58,11 +58,11 @@
 \newlabel{section:results}{{III}{5}{}{section*.24}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {A}Training the FFNN for Regression}{6}{section*.25}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Heatmap showing that the FFNN without any optimizations is struggling to learn anything useful after 1000 epochs of training.}}{6}{figure.2}\protected@file@percent }
-\newlabel{fig:figure1}{{2}{6}{Heatmap showing that the FFNN without any optimizations is struggling to learn anything useful after 1000 epochs of training}{figure.2}{}}
+\newlabel{fig:Training_struggle}{{2}{6}{Heatmap showing that the FFNN without any optimizations is struggling to learn anything useful after 1000 epochs of training}{figure.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Training and test MSE over 20000 epochs for a FFNN with 2 hidden layers and 50 nodes per layer using plain gradient descent with a learning rate of 0.1 and sigmoid activation function.}}{6}{figure.3}\protected@file@percent }
 \newlabel{fig:long-training}{{3}{6}{Training and test MSE over 20000 epochs for a FFNN with 2 hidden layers and 50 nodes per layer using plain gradient descent with a learning rate of 0.1 and sigmoid activation function}{figure.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Heatmap showing that the choice of optimization algorithm has a significant impact on the FFNN's performance in learning.}}{6}{figure.4}\protected@file@percent }
-\newlabel{fig:optimization-importance}{{4}{6}{Heatmap showing that the choice of optimization algorithm has a significant impact on the FFNN's performance in learning}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Heatmap showing that the choice of optimization algorithm has a significant impact on the FFNN's performance in learning, trained on 1000 epochs.}}{6}{figure.4}\protected@file@percent }
+\newlabel{fig:optimization-importance}{{4}{6}{Heatmap showing that the choice of optimization algorithm has a significant impact on the FFNN's performance in learning, trained on 1000 epochs}{figure.4}{}}
 \citation{project1}
 \citation{project1}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Heatmap showing that change in one hyperparameter can imply a change in the optimal value of another hyperparameter.}}{7}{figure.5}\protected@file@percent }
@@ -70,31 +70,31 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {B}A deceptive search tuning and regularization on sparse data}{7}{section*.26}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1}No Regularization}{7}{section*.27}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Best hyperparameters found for the FFNN regression task without regularization}}{7}{table.1}\protected@file@percent }
-\newlabel{tab:hyperparameters}{{I}{7}{Best hyperparameters found for the FFNN regression task without regularization}{table.1}{}}
+\newlabel{tab:hyperparameters_l0}{{I}{7}{Best hyperparameters found for the FFNN regression task without regularization}{table.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces FFNN regression results without regularization on noisy data.}}{7}{figure.6}\protected@file@percent }
 \newlabel{fig:ffnn-no-regularization}{{6}{7}{FFNN regression results without regularization on noisy data}{figure.6}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2}$L1$ Regularization}{7}{section*.28}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Hyperparameters used for the neural network with $L1$ regularization}}{8}{table.2}\protected@file@percent }
-\newlabel{tab:hyperparameters}{{II}{8}{Hyperparameters used for the neural network with $L1$ regularization}{table.2}{}}
+\newlabel{tab:hyperparameters_l1}{{II}{8}{Hyperparameters used for the neural network with $L1$ regularization}{table.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces FFNN regression results with L1 regularization on noisy data.}}{8}{figure.7}\protected@file@percent }
 \newlabel{fig:ffnn-l1-regularization}{{7}{8}{FFNN regression results with L1 regularization on noisy data}{figure.7}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3}$L2$ Regularization}{8}{section*.29}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Hyperparameters used for the neural network with $L2$ regularization}}{8}{table.3}\protected@file@percent }
-\newlabel{tab:hyperparameters}{{III}{8}{Hyperparameters used for the neural network with $L2$ regularization}{table.3}{}}
+\newlabel{tab:hyperparameters_l2}{{III}{8}{Hyperparameters used for the neural network with $L2$ regularization}{table.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Final comparison of the three FFNN regression models on new data.}}{8}{figure.8}\protected@file@percent }
 \newlabel{fig:final-comparison-regression}{{8}{8}{Final comparison of the three FFNN regression models on new data}{figure.8}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4}Final Comparison regression}{8}{section*.30}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {C}Image Classification}{9}{section*.31}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Hyperparameters used for the neural network training.}}{9}{table.4}\protected@file@percent }
-\newlabel{tab:hyperparameters}{{IV}{9}{Hyperparameters used for the neural network training}{table.4}{}}
+\newlabel{tab:hyperparameters_mnist}{{IV}{9}{Hyperparameters used for the neural network training}{table.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The training and test accuracy and loss for our MNIST classification model}}{9}{figure.9}\protected@file@percent }
 \newlabel{fig:mnist-accuracy-loss}{{9}{9}{The training and test accuracy and loss for our MNIST classification model}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Heatmap of the confusion matrix for our MNIST classification model}}{9}{figure.10}\protected@file@percent }
+\newlabel{fig:mnist-confusion-matrix}{{10}{9}{Heatmap of the confusion matrix for our MNIST classification model}{figure.10}{}}
 \citation{project1}
 \bibdata{mainNotes,biblio}
 \bibcite{rep2}{{1}{2025{}}{{Torgersen}}{{}}}
 \bibcite{project1}{{2}{2025{}}{{Torgersen}}{{}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Heatmap of the confusion matrix for our MNIST classification model}}{10}{figure.10}\protected@file@percent }
-\newlabel{fig:mnist-confusion-matrix}{{10}{10}{Heatmap of the confusion matrix for our MNIST classification model}{figure.10}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Misclassified 5 as 3 from the MNIST test set}}{10}{figure.11}\protected@file@percent }
 \newlabel{fig:mnist-misclassified-examples}{{11}{10}{Misclassified 5 as 3 from the MNIST test set}{figure.11}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}further work}{10}{section*.32}\protected@file@percent }

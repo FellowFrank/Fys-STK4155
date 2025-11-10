@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.28)  9 NOV 2025 12:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.28)  10 NOV 2025 15:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -617,17 +617,7 @@ Class revtex4-1 Warning: Repair the float package.
 Class revtex4-1 Info: cite was not loaded (OK!) on input line 29.
 Class revtex4-1 Info: mcite was not loaded (OK!) on input line 29.
 Class revtex4-1 Info: multicol was not loaded (OK!) on input line 29.
-(./main.aux
-
-LaTeX Warning: Label `tab:hyperparameters' multiply defined.
-
-
-LaTeX Warning: Label `tab:hyperparameters' multiply defined.
-
-
-LaTeX Warning: Label `tab:hyperparameters' multiply defined.
-
-)
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -768,193 +758,177 @@ Underfull \hbox (badness 2941) in paragraph at lines 386--387
  []
 
 [5]
-<figures/MSE_Heatmap_Layers_Nodes.png, id=224, 560.0925pt x 426.393pt>
-File: figures/MSE_Heatmap_Layers_Nodes.png Graphic file (type png)
-<use figures/MSE_Heatmap_Layers_Nodes.png>
-Package pdftex.def Info: figures/MSE_Heatmap_Layers_Nodes.png  used on input line 418.
-(pdftex.def)             Requested size: 246.0pt x 187.28168pt.
-<figures/Learning_Curve_2Layers_50Nodes.png, id=228, 578.16pt x 361.35pt>
+<figures/MSE for Different Architectures.png, id=224, 578.16pt x 433.62pt>
+File: figures/MSE for Different Architectures.png Graphic file (type png)
+<use figures/MSE for Different Architectures.png>
+Package pdftex.def Info: figures/MSE for Different Architectures.png  used on input line 419.
+(pdftex.def)             Requested size: 246.0pt x 184.49448pt.
+<figures/Learning_Curve_2Layers_50Nodes.png, id=228, 650.43pt x 361.35pt>
 File: figures/Learning_Curve_2Layers_50Nodes.png Graphic file (type png)
 <use figures/Learning_Curve_2Layers_50Nodes.png>
-Package pdftex.def Info: figures/Learning_Curve_2Layers_50Nodes.png  used on input line 431.
-(pdftex.def)             Requested size: 246.0pt x 153.74539pt.
-<figures/OptimizationsAreImportant.png, id=229, 549.9747pt x 426.393pt>
-File: figures/OptimizationsAreImportant.png Graphic file (type png)
-<use figures/OptimizationsAreImportant.png>
-Package pdftex.def Info: figures/OptimizationsAreImportant.png  used on input line 441.
-(pdftex.def)             Requested size: 246.0pt x 190.72346pt.
+Package pdftex.def Info: figures/Learning_Curve_2Layers_50Nodes.png  used on input line 432.
+(pdftex.def)             Requested size: 246.0pt x 136.6638pt.
+<figures/MSE for Different Optimizers.png, id=229, 578.16pt x 433.62pt>
+File: figures/MSE for Different Optimizers.png Graphic file (type png)
+<use figures/MSE for Different Optimizers.png>
+Package pdftex.def Info: figures/MSE for Different Optimizers.png  used on input line 442.
+(pdftex.def)             Requested size: 246.0pt x 184.49448pt.
 <figures/MSE for Different Activation Functions.png, id=231, 578.16pt x 433.62pt>
 File: figures/MSE for Different Activation Functions.png Graphic file (type png)
 <use figures/MSE for Different Activation Functions.png>
-Package pdftex.def Info: figures/MSE for Different Activation Functions.png  used on input line 454.
+Package pdftex.def Info: figures/MSE for Different Activation Functions.png  used on input line 455.
 (pdftex.def)             Requested size: 246.0pt x 184.49448pt.
  [6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.469 
+l.470 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.469 
+l.470 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.469 
-       <./Figures/MSE_Heatmap_Layers_Nodes.png> <./Figures/Learning_Curve_2Layers_50Nodes.png> <./Figures/OptimizationsAreImportant.png>]
+l.470 
+       <./Figures/MSE for Different Architectures.png> <./Figures/Learning_Curve_2Layers_50Nodes.png> <./Figures/MSE for Different Optimizers.png>]
 
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 469.
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 470.
 
-
-LaTeX Warning: Reference `tab:hyperparameters_l0' on page 7 undefined on input line 483.
-
-<figures/ffnn_fit_plot_L0.png, id=245, 578.16pt x 361.35pt>
+<figures/ffnn_fit_plot_L0.png, id=246, 650.43pt x 361.35pt>
 File: figures/ffnn_fit_plot_L0.png Graphic file (type png)
 <use figures/ffnn_fit_plot_L0.png>
-Package pdftex.def Info: figures/ffnn_fit_plot_L0.png  used on input line 513.
-(pdftex.def)             Requested size: 246.0pt x 153.74539pt.
+Package pdftex.def Info: figures/ffnn_fit_plot_L0.png  used on input line 514.
+(pdftex.def)             Requested size: 246.0pt x 136.6638pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 519.
+(hyperref)                removing `math shift' on input line 520.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 519.
+(hyperref)                removing `math shift' on input line 520.
 
-<figures/ffnn_fit_plot_L1.png, id=247, 578.16pt x 361.35pt>
+<figures/ffnn_fit_plot_L1.png, id=248, 650.43pt x 361.35pt>
 File: figures/ffnn_fit_plot_L1.png Graphic file (type png)
 <use figures/ffnn_fit_plot_L1.png>
-Package pdftex.def Info: figures/ffnn_fit_plot_L1.png  used on input line 551.
-(pdftex.def)             Requested size: 246.0pt x 153.74539pt.
+Package pdftex.def Info: figures/ffnn_fit_plot_L1.png  used on input line 552.
+(pdftex.def)             Requested size: 246.0pt x 136.6638pt.
 [7
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.558 
+l.559 
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.558 
+l.559 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.558 
+l.559 
        <./Figures/MSE for Different Activation Functions.png> <./Figures/ffnn_fit_plot_L0.png>]
 
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 558.
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 559.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 559.
+(hyperref)                removing `math shift' on input line 560.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 559.
+(hyperref)                removing `math shift' on input line 560.
 
-<figures/Comparison of Models on 100 Extra Data Points.png, id=261, 578.16pt x 433.62pt>
+<figures/Comparison of Models on 100 Extra Data Points.png, id=262, 578.16pt x 433.62pt>
 File: figures/Comparison of Models on 100 Extra Data Points.png Graphic file (type png)
 <use figures/Comparison of Models on 100 Extra Data Points.png>
-Package pdftex.def Info: figures/Comparison of Models on 100 Extra Data Points.png  used on input line 593.
+Package pdftex.def Info: figures/Comparison of Models on 100 Extra Data Points.png  used on input line 594.
 (pdftex.def)             Requested size: 246.0pt x 184.49448pt.
-
-LaTeX Warning: Reference `fig:final-comparison' on page 8 undefined on input line 598.
-
 [8
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.616 \subsection
-                 {Image Classification}
+l.620 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.616 \subsection
-                 {Image Classification}
+l.620 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.616 \subsection
-                 {Image Classification}
+l.620 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.616 \subsection
-                 {Image Classification} <./Figures/ffnn_fit_plot_L1.png> <./Figures/Comparison of Models on 100 Extra Data Points.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 641--658
+l.620 
+       <./Figures/ffnn_fit_plot_L1.png> <./Figures/Comparison of Models on 100 Extra Data Points.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 643--660
 
  []
 
-<figures/MNIST_Learning_Curve.png, id=272, 578.16pt x 361.35pt>
+<figures/MNIST_Learning_Curve.png, id=275, 650.43pt x 361.35pt>
 File: figures/MNIST_Learning_Curve.png Graphic file (type png)
 <use figures/MNIST_Learning_Curve.png>
-Package pdftex.def Info: figures/MNIST_Learning_Curve.png  used on input line 665.
-(pdftex.def)             Requested size: 246.0pt x 153.74539pt.
-<figures/MNIST_Confusion_Matrix.png, id=275, 578.16pt x 578.16pt>
+Package pdftex.def Info: figures/MNIST_Learning_Curve.png  used on input line 666.
+(pdftex.def)             Requested size: 246.0pt x 136.6638pt.
+<figures/MNIST_Confusion_Matrix.png, id=278, 578.16pt x 578.16pt>
 File: figures/MNIST_Confusion_Matrix.png Graphic file (type png)
 <use figures/MNIST_Confusion_Matrix.png>
-Package pdftex.def Info: figures/MNIST_Confusion_Matrix.png  used on input line 678.
+Package pdftex.def Info: figures/MNIST_Confusion_Matrix.png  used on input line 679.
 (pdftex.def)             Requested size: 246.0pt x 245.99263pt.
-<figures/misclassified_5_as_3.png, id=276, 578.16pt x 289.08pt>
-File: figures/misclassified_5_as_3.png Graphic file (type png)
-<use figures/misclassified_5_as_3.png>
-Package pdftex.def Info: figures/misclassified_5_as_3.png  used on input line 689.
-(pdftex.def)             Requested size: 246.0pt x 122.9963pt.
 [9
 pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.701 
+l.687 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.701 
-       <./Figures/MNIST_Learning_Curve.png>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 701.
-
-(./main.bbl [10
+l.687 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.58 ...es},\ and\ \citenamefont {Burges}}]{mnist}
-                                                  %
+l.687 
+       <./Figures/MNIST_Learning_Curve.png> <./Figures/MNIST_Confusion_Matrix.png>]
+<figures/misclassified_5_as_3.png, id=288, 578.16pt x 289.08pt>
+File: figures/misclassified_5_as_3.png Graphic file (type png)
+<use figures/misclassified_5_as_3.png>
+Package pdftex.def Info: figures/misclassified_5_as_3.png  used on input line 690.
+(pdftex.def)             Requested size: 246.0pt x 122.9963pt.
+ (./main.bbl [10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.58 ...es},\ and\ \citenamefont {Burges}}]{mnist}
-                                                  % <./Figures/MNIST_Confusion_Matrix.png> <./Figures/misclassified_5_as_3.png>]) [11] (./main.aux)
+                                                  % <./Figures/misclassified_5_as_3.png>]) [11] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 5A781F7AB0E117CBF55BF7E6B70F275D;5574.
  ) 
 Here is how much of TeX's memory you used:
- 25875 strings out of 467800
- 472029 string characters out of 5436061
- 886019 words of memory out of 5000000
- 54010 multiletter control sequences out of 15000+600000
+ 25877 strings out of 467800
+ 472147 string characters out of 5436061
+ 888283 words of memory out of 5000000
+ 54011 multiletter control sequences out of 15000+600000
  641127 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,10n,107p,2097b,784s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (11 pages, 968180 bytes).
+Output written on main.pdf (11 pages, 1374191 bytes).
 PDF statistics:
- 436 PDF objects out of 1000 (max. 8388607)
- 354 compressed objects within 4 object streams
- 79 named destinations out of 1000 (max. 500000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 358 compressed objects within 4 object streams
+ 80 named destinations out of 1000 (max. 500000)
  335 words of extra memory for PDF output out of 10000 (max. 10000000)
 

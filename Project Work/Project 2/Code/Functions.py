@@ -431,14 +431,11 @@ def run_training_experiment(X_train, y_train, X_test, y_test,
 
 import matplotlib.pyplot as plt
 
+
 def Heatmap_with_labels(plot_mse, x,y,
             title='Heatmap', xlabel='Hidden Layers', ylabel='Nodes per Layer',
             barlabel='Test Mean Squared Error (log10)',
             resolution=100):
-    """
-    Plots a heatmap with annotated values for the given 2D data.
-    """
-
     fig, ax = plt.subplots(figsize=(8,6))
     
     # Use default indexing for imshow, don't set extent
@@ -463,7 +460,7 @@ def Heatmap_with_labels(plot_mse, x,y,
     
     # --- THIS IS THE CORRECTED ANNOTATION LOOP ---
     # Now (j, i) maps directly to the pixel coordinates
-    threshold = np.nanmean(plot_mse) 
+    threshold = 1
     for i in range(len(y)): # i = 0, 1 (rows, for nodes)
         for j in range(len(x)):   # j = 0, 1 (cols, for layers)
             val = plot_mse[i, j]
@@ -472,6 +469,5 @@ def Heatmap_with_labels(plot_mse, x,y,
                 # Use j for x-coordinate, i for y-coordinate
                 text = ax.text(j, i, f"{val:.2f}",
                                ha="center", va="center", color=color, fontsize=12)
-    
     plt.tight_layout()
     plt.show()
