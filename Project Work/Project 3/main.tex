@@ -9,8 +9,8 @@
 
 \usepackage{physics,amssymb}  % mathematical symbols (physics imports amsmath)
 \usepackage{graphicx}         % include graphics such as plots
-\usepackage[table]{xcolor}
-\usepackage{xcolor}           % set colors
+%\usepackage[table]{xcolor}
+%\usepackage{xcolor}           % set colors
 \usepackage{hyperref}         % automagic cross-referencing 
 \usepackage{float}			  % force placement of tables and figures
 \usepackage{comment}
@@ -70,14 +70,35 @@ Following this, we detail the fundamental building blocks of the FFNN, including
 Finally, we will discuss the implementation details and code structure.
 
 \subsection{Data Preparation}
-location of the dataset.
+Location of the dataset.
 How it is structured.
 Resizing images to smaller sizes using numpy, but with consistent down scaling interms of whole numbers.
 How we standardized the data and split it into training and test sets.
 Usage og RGB and greyscale images.
 
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\linewidth]{Figures/ExampleImages.png}
+    \caption{Four examples of images in the data set}
+    \label{fig:Training_struggle}
+\end{figure*}
+
+
+
+
 \subsubsection{generating more data}
 Transforming the data with rotations, flips, crops etc to generate more data for training the NN.
+
+How it looks and the data augmentations
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\linewidth]{Figures/ExampleAugmentation.png}
+    \caption{How each Image in the training set was augmented to increase training size}
+    \label{fig:Training_struggle}
+\end{figure*}
+
+
 
 \subsection{Logistic Regression}
 
