@@ -1,0 +1,341 @@
+\documentclass[aspectratio=169]{beamer}
+
+%--- Theme & Colors ---
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+
+%--- Packages ---
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{physics} % For bra-ket notation \ket{}, \bra{}
+\usepackage{graphicx}
+\usepackage{booktabs} % For nice tables
+\usepackage{tikz}     % For drawing diagrams
+\usetikzlibrary{shapes,arrows,positioning}
+
+%--- Meta Data ---
+\title[Many-Body Methods]{computational Many-Body Methods in Physics}
+\subtitle{}
+\author{Anton N. Torgersen}
+\institute[UiO]{University of Oslo \\ FYS4480}
+\date{\today}
+
+\begin{document}
+
+%=== Title Slide ===
+\begin{frame}
+    \titlepage
+\end{frame}
+
+%=== Outline ===
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+%===========================================================
+\section{Introduction and Formalism}
+%===========================================================
+
+\begin{frame}{Introduction: The Many-Body Problem}
+    \textbf{Goal:} Solve the Schrödinger equation for $N$ interacting particles.
+    $$ \hat{H} \ket{\Psi} = E \ket{\Psi} $$
+    \textbf{The Challenge:} The Hilbert space grows factorially with $N$.\\
+    $\implies$ Exact diagonalization (FCI) is impossible for large systems.
+    
+    \vspace{0.5cm}
+
+
+\end{frame}
+
+\begin{frame}
+    \textbf{The Model System: Lipkin-Meshkov-Glick (LMG)}
+    We will use the following Hamiltonian, to analyse the HF method.
+    $$ \hat{H} = \hat{H}_0 + \hat{H}_1 + \hat{H}_2 $$
+    Defined using quasi-spin operators $\hat{J}_+, \hat{J}_-, \hat{J}_z$:
+    $$ \hat{H} = \epsilon \hat{J}_z - \frac{1}{2}V(\hat{J}_+^2 + \hat{J}_-^2) - \frac{1}{2}W(\hat{J}_+\hat{J}_- + \hat{J}_-\hat{J}_+ - \hat{N}) $$
+\end{frame}
+
+\begin{frame}
+    \textbf{The Model System: Pairing Model}
+    This model will be used for a full comparison of FCI, HF and MBPT.
+    $$ \hat{H} = \hat{H}_0 + \hat{H}_I $$
+    Where
+    $$\hat{H}_0 = \sum_{p,\omega} (p-1) \hat{a}_{p \omega}^{\dagger} \hat{a}_{p \omega}$$
+    and
+    $$\hat{H}_I = -\frac{1}{2} g \sum_{p,q} \hat{P}_p^{+} \hat{P}_q^{-}.$$
+
+
+\end{frame}
+
+
+\begin{frame}{Second Quantization}
+    \textbf{Second Quantization}
+    Is a formalism which greatly simplifies many-body calculations, especially when combined with Wick's theorem.
+    Where we know work in the Fock space of occupation numbers.
+
+    \begin{itemize}
+        \item Basis of creation ($a^\dagger_p$) and annihilation ($a_p$) operators.
+        \item Anti-commutation relations for fermions: $\{a_p, a_q^\dagger\} = \delta_{pq}$. (Pauli exclusion principle built-in)
+    \end{itemize}
+
+    \textbf{Ground State Reference} 
+     $\ket{\Phi_0}$ is defined as the Slater determinant where all the $N$-lowest energy states (states below the fermi level) are filled.
+     $$ \ket{\Phi_0} = \prod_{i \le F} a_i^\dagger \ket{0} $$
+\end{frame}
+
+\begin{frame}{Wick's Theorem}
+    \textbf{Wick's Theorem}
+    Allows us to evaluate vacuum expectation values of long operator strings.
+    $$
+    \hat{A}\hat{B}\hat{C}\dots = \{\hat{A}\hat{B}\hat{C}\dots\} + \sum \text{all contractions}
+    $$
+    \begin{itemize}
+        \item \textbf{Midterm 1 Application:} We used Wick's theorem to evaluate matrix elements like $\bra{\Phi_0} \hat{H} \ket{\Phi_0}$ and check commutation relations $[\hat{H}, \hat{J}^2] = 0$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Diagramatic Representation}
+
+\end{frame}
+
+%===========================================================
+\section{Full Configuration Interaction (FCI)}
+%===========================================================
+
+\begin{frame}{Full Configuration Interaction (FCI)}
+    \textbf{The Exact Solution}
+    \begin{itemize}
+        \item Expands $\Psi$ in the full basis of all possible Slater Determinants.
+        \item $\ket{\Psi_{FCI}} = c_0 \ket{\Phi_0} + \sum_{ia} c_i^a \ket{\Phi_i^a} + \sum_{ijab} c_{ij}^{ab} \ket{\Phi_{ij}^{ab}} + \dots$
+    \end{itemize}
+    
+    Diagonalization
+
+\end{frame}
+
+\begin{frame}{How it Scales}
+    Is Exact but scales to the power of N!
+\end{frame}
+
+\begin{frame}{FCI Results}
+    \textbf{Results from Midterm (Lipkin Model)}
+    Exact diagonalization of the Hamiltonian matrix for $N=4$ particles.
+    
+    \begin{table}[]
+        \centering
+        \begin{tabular}{c c c}
+        \toprule
+        Coupling $g$ & $E_{FCI}$ (Ground State) & Character \\
+        \midrule
+        -1.0 & 2.7799 & Repulsive \\
+        0.0 & 2.0000 & Non-interacting \\
+        0.5 & 1.4168 & Attractive \\
+        1.0 & 0.6355 & Strong Coupling \\
+        \bottomrule
+        \end{tabular}
+        \caption{Exact eigenvalues computed via \texttt{numpy.linalg.eigh} (from Calculations.ipynb).}
+    \end{table}
+\end{frame}
+
+\begin{frame}{FCI Results}
+    \textbf{Results from Midterm (Pairing Model)}
+    Exact diagonalization of the Hamiltonian matrix for $N=4$ particles.
+    
+    \begin{table}[]
+        \centering
+        \begin{tabular}{c c c}
+        \toprule
+        Coupling $g$ & $E_{FCI}$ (Ground State) & Character \\
+        \midrule
+        -1.0 & 2.7799 & Repulsive \\
+        0.0 & 2.0000 & Non-interacting \\
+        0.5 & 1.4168 & Attractive \\
+        1.0 & 0.6355 & Strong Coupling \\
+        \bottomrule
+        \end{tabular}
+        \caption{Exact eigenvalues computed via \texttt{numpy.linalg.eigh} (from Calculations.ipynb).}
+    \end{table}
+\end{frame}
+
+
+
+%===========================================================
+\section{Hartree-Fock Theory}
+%===========================================================
+
+\begin{frame}{Mean Field Ansatz}
+    Explination of the mean field ansatz
+    
+\end{frame}
+
+
+\begin{frame}{Hartree-Fock (HF)}
+    Hartee Fock Equation.
+
+\end{frame}
+
+
+\begin{frame}{HF Stability Analysis}
+    \textbf{Stability Condition (Midterm 1)}
+    We derived the stability of the HF solution against particle-hole mixing coefficients $C_{\alpha \pm}$.
+    $$ \frac{\epsilon}{3} > -(V+W) $$
+    \begin{itemize}
+        \item If this holds: The non-interacting ground state is stable.
+        \item If violated: A "mixed" state (deformed solution) lowers the energy.
+        \item For parameter set (2) ($V=-4/3, W=-1$), we found a lower energy mixed state $E \approx -7.57$, significantly better than the standard reference.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Hartree-Fock Results}
+    Lower energy for mixed state compared to non-interacting.
+\end{frame}
+
+
+%===========================================================
+\section{Many-Body Perturbation Theory (MBPT)}
+%===========================================================
+
+\begin{frame}{Many-Body Perturbation Theory (MBPT)}
+ Formalism of MBPT.
+\end{frame}
+
+\begin{frame}{Diagramatic Representation}
+    
+\end{frame}
+
+\begin{frame}{linked Diagram Theorem}
+    
+\end{frame}
+
+\begin{frame}{Third order Corrections}
+    \textbf{Second Midterm}
+
+\end{frame}
+
+\begin{frame}{Benchmarking MBPT With FCI}
+\end{frame}
+
+
+\begin{frame}{MBPT vs FCI Results}
+    \textbf{Convergence Analysis (from Calculations.ipynb)}
+    
+    \begin{table}[]
+        \small
+        \centering
+        \begin{tabular}{l c c c c}
+        \toprule
+        Method & $g = -1.0$ & $g = 0.5$ & $g = 1.0$ \\
+        \midrule
+        $E_{FCI}$ (Exact) & \textbf{2.7799} & \textbf{1.4168} & \textbf{0.6355} \\
+        \hline
+        $E^{(0+1)}$ (HF) & 3.0000 & 1.5000 & 1.0000 \\
+        $E^{(2)}$ & -0.4667 & -0.0624 & -0.2190 \\
+        $E^{(3)}$ & +0.5156 & -0.0165 & -0.1005 \\
+        $E^{(4)}$ & -0.7527 & -0.0056 & -0.0588 \\
+        \hline
+        $E_{Total}$ (order 4) & 2.2962 & \textbf{1.4155} & \textbf{0.6217} \\
+        \bottomrule
+        \end{tabular}
+        \caption{Comparison of Perturbation theory orders vs Exact result.}
+    \end{table}
+
+    \textbf{Observation:} 
+    \begin{itemize}
+        \item Excellent agreement for $g=0.5$ (weak coupling).
+        \item Divergence/oscillations start appearing at strong coupling ($g=-1.0$ or $g=1.0$).
+    \end{itemize}
+\end{frame}
+
+
+
+%===========================================================
+\section{Density Functional Theory (DFT)}
+%===========================================================
+
+\begin{frame}{Motivation for DFT.}
+    
+\end{frame}
+
+\begin{frame}{The Hohenberg-Kohn Theorems}
+    
+\end{frame}
+
+\begin{frame}{The Kohn-Sham Equations}
+    
+\end{frame}
+
+\begin{frame}{The Exchange-Correlation Functional}
+    
+\end{frame}
+
+%===========================================================
+\section{Coupled Cluster Theory}
+%===========================================================
+
+\begin{frame}{The exponentail ansatz}
+    
+\end{frame}
+
+\begin{frame}{Coupled Cluster Theory (CC)}
+    
+    \vspace{0.3cm}
+    \textbf{Approximations}
+    \begin{itemize}
+        \item \textbf{CCD (Doubles):} $\hat{T} \approx \hat{T}_2 = \frac{1}{4} \sum t_{ij}^{ab} a_a^\dagger a_b^\dagger a_j a_i$. Relevant for Lipkin model since Hamiltonian connects states by 2p-2h excitations.
+        \item \textbf{CCSD (Singles + Doubles):} $\hat{T} \approx \hat{T}_1 + \hat{T}_2$. The "gold standard" for chemical accuracy ($O(N^6)$ scaling).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{CC Equations}
+    \textbf{Energy Equation}
+    $$ E_{CC} = \bra{\Phi_0} \bar{H} \ket{\Phi_0} = \bra{\Phi_0} e^{-\hat{T}} \hat{H} e^{\hat{T}} \ket{\Phi_0} $$
+    
+    \textbf{Amplitude Equations (for $t$-amplitudes)}
+    We project onto excited determinants to solve for amplitudes:
+    $$ \bra{\Phi_{ij}^{ab}} \bar{H} \ket{\Phi_0} = 0 $$
+
+\end{frame}
+
+\begin{frame}{Comparison}
+        \textit{Comparison note:} While MBPT(4) failed for strong coupling in our previous slide, CCD typically remains robust and closer to FCI in the strong coupling regime because it sums the diagrams to infinite order.
+\end{frame}
+
+%===========================================================
+\section{Summary}
+%===========================================================
+
+\begin{frame}{Summary and Comparison}
+    \begin{table}[]
+        \centering
+        \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Method} & \textbf{Pros} & \textbf{Cons} \\
+        \hline
+        \textbf{FCI} & Exact. & Exponential cost ($N!$). Tiny systems only. \\
+        \hline
+        \textbf{Hartree-Fock} & Simple, defines orbitals. & No correlation ($E_{corr}=0$). \\
+        \hline
+        \textbf{MBPT} & Systematically improvable. & Diverges for strong interaction ($g=1$). \\
+        \hline
+        \textbf{Coupled Cluster} & High accuracy (Gold Standard). & High cost ($O(N^6)$), complex to implement. \\
+        \hline
+        \textbf{DFT} & Efficient ($O(N^3)$), includes correlation. & Approx. functional ($V_{xc}$), no hierarchy. \\
+        \hline
+        \end{tabular}
+    \end{table}
+
+    \vspace{0.5cm}
+    \textbf{Conclusion from our work:}
+    For the Lipkin model, MBPT works excellently at weak coupling ($g=0.5$) but breaks down at strong coupling ($g=1.0$), necessitating non-perturbative methods like Coupled Cluster or FCI.
+\end{frame}
+
+\begin{frame}
+    \centering
+    \Huge Thank You!
+    
+    \vspace{1cm}
+    \large Questions?
+\end{frame}
+
+\end{document}

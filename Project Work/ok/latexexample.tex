@@ -1,243 +1,97 @@
+\documentclass[11pt, a4paper]{article}
 
-\documentclass[aps,rmp,reprint,amsmath,amssymb,graphicx,longbibliography]{revtex4-1}
-
-\usepackage{bm}
-\usepackage{graphicx}
-\usepackage{epstopdf}
-\usepackage{wrapfig}
-\usepackage{array} 
-\usepackage{listings}
-\usepackage[para,online,flushleft]{threeparttablex}
-\usepackage{booktabs,dcolumn}
-\usepackage{color}
- 
-
-\usepackage{textpos}
-\usepackage{booktabs}
-\usepackage{multirow,bigdelim}
-\usepackage{float}
-
-\usepackage{upgreek} %upalpha in Saxena2021 Reference
-
+% --- Packages ---
 \usepackage[utf8]{inputenc}
-\usepackage{hyperref}
-\hypersetup{breaklinks=true,colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=magenta,urlcolor=blue}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}       % Controls margins
+\usepackage{enumitem}       % Custom lists for the timeline
+\usepackage{hyperref}       % Hyperlinks
+\usepackage{parskip}        % Adds space between paragraphs instead of indenting
+\usepackage{amsmath}
 
+% --- Formatting Setup ---
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
 
-
-
-\usepackage{xcolor}
-%\newcommand{\contrib}[1]{\textcolor{red}{#1}}
-%\newcommand{\comment}[1]{\textcolor{blue}{#1}}
-
-%\newcommand{\WN}[1]{{\color{red} #1}}
-
-\makeatletter
-\def\@bibdataout@aps{%
-\immediate\write\@bibdataout{%
-@CONTROL{%
-apsrev41Control%
-\longbibliography@sw{%
-    ,author="08",editor="1",pages="1",title="0",year="1"%
-    }{%
-    ,author="08",editor="1",pages="1",title="",year="1"%
-    }%
-  }%
-}%
-\if@filesw \immediate \write \@auxout {\string \citation {apsrev41Control}}\fi
-}
-\makeatother
-
-
-%\usepackage[left]{lineno}
-%\linenumbers
-
+% --- Document Info ---
+\title{Thesis Proposal: Quantum Algorithms for Partial Differential Equations}
+\author{
+    \textbf{Student:} Anton N. Torgersen\\
+    \textbf{Supervisor:} Franz Georg Fuchs\\
+    \textbf{Internal Supervisor:} Morten Hjorth-Jensen} % Replace with your name
+\date{\today}
 
 \begin{document}
-%\pagenumbering{gobble} 
-
-\title{Artificial Intelligence and Machine Learning for Nuclear Physics}
-
-\author{Morten Hjorth-Jensen and many other}
-\affiliation{Facility for Rare Isotope Beams and Department of Physics and Astronomy, Michigan State University, MI 48824, USA}
-\affiliation{Department of Physics and Center for Computing in Science Education, University of Oslo, N-0316 Oslo, Norway}
-
-
-\begin{abstract}
-    Advances in artificial intelligence/machine learning methods provide tools that have broad applicability in scientific research.  These techniques are being applied across the diversity of nuclear physics research topics, leading to advances that will facilitate scientific discoveries and societal applications. 
-    This review provides a snapshot of nuclear physics research  which has been transformed by  artificial intelligence and machine learning techniques. 
-\end{abstract}
 
 \maketitle
 
-\tableofcontents
+% --- Thesis Statement ---
+\section*{Thesis Statement}
+This thesis investigates the computational complexity and practical implementation of high-precision quantum algorithms for solving linear partial differential equations (PDEs). Specifically, it aims to benchmark the exponential improvements in error dependence ($\text{polylog}(1/\epsilon)$) proposed by modern spectral methods against standard classical solvers.
+
+% --- Background Section (Incorporating Sources) ---
+\section*{Background \& Motivation}
+Partial differential equations are ubiquitous in physics and engineering, but classical grid-based methods suffer from the "curse of dimensionality." While early quantum approaches (such as the HHL algorithm) offered potential speedups, they were limited by a polynomial dependence on the inverse error, denoted as $O(\text{poly}(1/\epsilon))$. This made high-precision solutions prohibitively expensive for near-term applications.
+
+Recent literature, including the work of Childs et al. (2020) \cite{childs2020} and extensive analysis from the University of Waterloo \cite{waterloo_thesis}, introduces a new class of algorithms utilizing spectral methods and Hamiltonian simulation. These methods theoretically allow for time evolution where the complexity scales logarithmically with the inverse error, $O(\text{polylog}(1/\epsilon))$. This project seeks to verify these bounds and explore the feasibility of these algorithms using current quantum simulation tools.
+
+% --- Methodology ---
+\section*{Methodology}
+The project will be conducted through a combination of theoretical analysis and numerical simulation:
+\begin{itemize}
+    \item \textbf{Literature Review:} A comparative study of classical finite difference methods versus quantum spectral methods, specifically focusing on the complexity proofs provided in \cite{childs2020}.
+    \item \textbf{Implementation:} Implementation of toy-model PDEs (e.g., heat or wave equation) using quantum SDKs such as Qiskit or PennyLane to simulate Hamiltonian evolution.
+    \item \textbf{Benchmarking:} Assessing the gate depth and resource requirements of the quantum approach relative to the desired precision $\epsilon$.
+\end{itemize}
 
 
-\section{Introduction} 
+\section*{Progression Plan \& Milestones}
 
-This Review represents an up-to-date summary of  work in the application of artificial intelligence (AI) and machine learning (ML)
-in nuclear science, covering topics in nuclear theory, experimental methods, accelerator technology, and nuclear data.
+\emph{Note: Weekly meetings between supervisor and student will be held from the start of Autumn 2026 until the thesis is finished. With some preliminary meetings in Spring 2026.}
 
+\begin{description}[style=multiline, leftmargin=4cm, font=\bfseries]
 
-Nuclear physics is a well-established field, with more than a century of fundamental discoveries covering a huge span of degrees of freedom, energy scales and length scales, ranging from our basic understanding of  fundamental constituents of matter  to the structure of stars and the synthesis of the elements in the Cosmos. Experiments 
-produce data volumes that range in complexity and heterogeneity, thereby posing enormous challenges to their 
- design,  their execution, and
-the statistical data analysis.
- 
- Theoretical modeling of nuclear properties is, in most physical cases
- of interest, limited by the large amount of degrees of freedom in
- quantum-mechanical calculations. The analysis of experimental data
- and the theoretical modeling of nuclear systems aims, as is the case
- in all fields of physics, at uncovering the basic laws of motion in
- order to make predictions and estimations, as well as finding
- correlations and causations for strongly interacting matter. The
- broad aims of nuclear physics as a field correspond to a highly
- distributed scientific enterprise. Experimental efforts utilize many
- laboratories worldwide, each with unique operation, data acquisition,
- and analysis methods. Similarly, the scales of focus spanned in
- theoretical nuclear physics lead to broad needs for algorithmic
- methods and uncertainty quantification. These efforts, utilizing
- arrays of data types across size and energy scales, create a perfect
- environment for applications of AI/ML methods.
+    \item[Spring 2026] 
+    \textbf{Preparation Phase} \\
+    Completion of coursework (MAT 4430 and FYS 4415). Initial meetings regarding the topic and discussion of relevant research papers.
 
+    \item[Autumn 2026 (Q3)] 
+    \textbf{Theoretical Exploration} \\
+    Theoretical exploration of PDEs and Quantum algorithms, specifically analyzing their strengths and weaknesses.
 
+    \item[Autumn 2026 (Q4)] 
+    \textbf{Specialisation \& Computation} \\
+    Specialisation of the research to a specific result or area within the theory. Execution of numerical computations and comparisons.
 
+    \item[Spring 2027 (Q1)] 
+    \textbf{Deep Dive} \\
+    Finishing the deep dive in the specific area and resolving theoretical loose ends.
 
-\section{Artificial Intelligence and Machine Learning for nuclear physics in broad strokes}
+    \item[Spring 2027 (Q2)] 
+    \textbf{Writing \& Compilation} \\
+    Compiling and rewriting the results derived from the previous three quarters into a consistent whole.
 
-
- Statistics, data science, and AI/ML form important fields of research
- in modern science. They describe how to learn and make predictions
- from data, and enable the extraction of key information about
- physical processes and the underlying scientific laws based on large
- datasets. As such, recent advances in AI capabilities are being
- applied to advance scientific discoveries in the physical sciences.
-
-
-
-
-Ideally, AI represents the science of building models to perform a
-task without being explicitly programmed. ML tasks fall under the
-broader AI umbrella. We will henceforth refer to the methods discussed
-as ``AI/ML''. The idea is that there exist generic algorithms which
-can be used to find patterns in a broad class of datasets without
-having to write code specifically for each problem. The algorithm
-builds its own logic based on the data. The attentive reader should
-however always keep in mind that machines and algorithms are to a
-large extent developed by humans. The choice of a specific AI/ML
-algorithm is governed by the insights and knowledge about a specific
-system.
-
-
-
-There exist many AI/ML approaches; they are often split into two main
-categories, supervised and unsupervised. In supervised learning, data
-are labeled and one lets a specific ML algorithm learn and deduce
-patterns in the datasets. This allows one to make predictions about
-future events and/or data not included in the training set.  On the
-other hand, unsupervised learning is a method for finding patterns and
-relationship in datasets without any prior knowledge of the
-system. Many researchers also operate with a third category, dubbed
-reinforcement learning. This is a paradigm of learning inspired by
-behavioral psychology, where actions are learned to maximize reward.
-One may encounter reinforcement learning being accompanied by
-supervised deep learning methods. Furthermore, what is often referred
-to as semi-supervised learning, entails developing algorithms that aim
-at learning from a dataset that includes both labeled and unlabeled
-data.
-
-
-Another way to categorize AI/ML tasks is to consider the desired output of a system. Some of the most common tasks are:
-\makeatletter
-\renewenvironment{description}%
-               {\list{}{\leftmargin=10pt % <------- Adjust this length
-                        \labelwidth\z@ \itemindent-\leftmargin
-                        \let\makelabel\descriptionlabel}}%
-               {\endlist}
-\makeatother
-\begin{description}
-    \item[Classification] Outputs are divided into two or more classes. The goal is to produce a model that assigns inputs into one of these classes. An example is to identify digits based on pictures of hand-written numbers. 
-\item[Regression] Finding a functional relationship between an input dataset and a reference dataset. The goal is to construct a function that maps input data into continuous output values.
-\item[Clustering] Data are divided into groups with certain common traits, without knowing the different groups beforehand. This AI/ML task falls  under the category of unsupervised learning.
-\item[Generation] Building a model to generate data that are akin to a training dataset in both examples and distributions of examples. Most generative models are types of unsupervised learning.
 \end{description}
-In Table\,\ref{tab:acronyms} we list many of the methods encountered in this work, with their respective abbreviations.
-\begin{table*}[!htb]
- \caption{Table of AI/ML with indication on the main type of learning (S: supervised,  U: unsupervised,  Semi-S: semi-supervised).
- }
-    \label{tab:acronyms}
-\begin{ruledtabular}
-    \begin{tabular}{cll} 
-    Acronym & Method & Type of Learning \\ \hline 
-    AE & Autoencoders & U \\
-    ANN     & Artificial Neural Networks & S  \\ 
-  BED & Bayesian Experimental Design   & S \\
-        BM & Boltzmann Machines & U \\
-    BMA & Bayesian Model Averaging & S \\
-    BMM & Bayesian Model Mixing & Semi-S \\
-    BO & Bayesian Optimization & S \\
-    BNN & Bayesian Neural Networks & S \\
-%  CL & Clustering Methods & U \\ %MPK none found in text 
-    CNN & Convolutional Neural Networks & S \\
-     EMB  & Ensemble Methods  and Boosting, including Decision Trees and Random Forests & S \\
-  %  FFNN & Feed Forward Neural Network & S \\  %MPK changed in text
-    GAN & Generative Adversarial Networks  & U \\
-    GP & Gaussian Processes  & Semi-S \\
-    KNN & $k$-nearest neighbors & U \\
-    KR & Kernel Regression & S \\
-    LR & Logistic Regression & S\\ 
-    LSTM & Long short-term memory & S\\
-%    MLP & Multilayer Perceptron & S\\ %MPK changed in text
-    PCA & Principal Component Analysis \& Dimensionality Reduction & U \\
-    REG    & Linear Regression  & S \\
-    RL & Reinforcement Learning & Neither S nor U \\
-    RNN & Recurrent Neural Networks & S \\
-    SVM & Support Vector Machines & S \\
-    VAE & Variational Auto Encoders & U 
-     \end{tabular}
- \end{ruledtabular}  
-\end{table*}
+
+\section*{Relevant Curriculum}
+\begin{itemize}
+    \item \textbf{MAT 4430} -- Quantum Information Theory
+    \item \textbf{FYS 4415} -- Quantum Computing and Quantum Information
+\end{itemize}
+
+\begin{thebibliography}{9}
+
+\bibitem{childs2020}
+A. M. Childs, J. P. Liu, and A. Ostrander, 
+``High-precision quantum algorithms for partial differential equations,'' 
+\textit{Quantum}, vol. 5, p. 574, 2021. [Online]. Available: arXiv:2002.07868.
+
+\bibitem{waterloo_thesis}
+D. An, 
+``Quantum algorithms for partial differential equations,'' 
+Ph.D. dissertation, Univ. Waterloo, Waterloo, ON, Canada, 2022. [Online]. Available: UWSpace.
+
+\end{thebibliography}
 
 
-The methods we cover here have three central elements in common,
-irrespective of whether we deal with supervised, unsupervised, or
-semi-supervised learning. The first element is some dataset (which can
-be subdivided into training, validation, and test data), the second
-element is a model, which is normally a function of some parameters to
-be determined by the chosen optimization process. The model reflects
-our prior knowledge of the system (or lack thereof). As an example, if
-we know that our data show a behavior similar to what would be
-predicted by a polynomial, fitting the data to a polynomial of some
-degree would determine our model.  The last element is a so-called
-cost (or loss, error, penalty, or risk) function which allows us to
-present an estimate on how good our model is in reproducing the data
-it is supposed to train. This is the function which is optimized in
-order to obtain the best prediction for the data under study. The
-simplest cost function in a regression analysis (fitting a continuous
-function to the data) is the so-called mean squared error function
-while for a binary classification problem, the so-called cross entropy
-is widely used, see, e.g., \cite{Murphy2012,Bishop2006,Hastie2009} for
-more details. We will henceforth refer to this element as the
-assessment of a given method.
-
-
- 
-Traditionally, the field of AI/ML has had its main focus on
-predictions and correlations.  In AI/ML and prediction-based tasks, we
-are often interested in developing algorithms that are capable of
-learning patterns from existing data in an automated fashion, and then
-using these learned patterns to make predictions or assessments of new
-data. In some cases, our primary concern is the quality of the
-predictions or assessments, with perhaps less focus on the underlying
-patterns (and probability distributions) that were learned in order to
-make these predictions.  However, in many nuclear physics studies, we
-are equally interested in being able to estimate errors and find
-causations.  In this Colloquium, we emphasize the role of predictions
-and correlations as well as error estimation and causations in
-statistical learning and ML.  For general references on these topics
-and discussions of frequentist and Bayesian methodologies, see, e.g.,
-\cite{Bishop2006, Goodfellow2016, Murphy2012, Hastie2009}.
-
-
-\bibliography{References} % add  references to this file
 \end{document}

@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Introduction and Formalism}{3}{0}{1}
+\beamer@sectionintoc {2}{Full Configuration Interaction (FCI)}{9}{0}{2}
+\beamer@sectionintoc {3}{Hartree-Fock Theory}{13}{0}{3}
+\beamer@sectionintoc {4}{Many-Body Perturbation Theory (MBPT)}{17}{0}{4}
+\beamer@sectionintoc {5}{Density Functional Theory (DFT)}{23}{0}{5}
+\beamer@sectionintoc {6}{Coupled Cluster Theory}{27}{0}{6}
+\beamer@sectionintoc {7}{Summary}{31}{0}{7}

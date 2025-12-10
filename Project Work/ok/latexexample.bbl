@@ -30,8 +30,7 @@
 \providecommand \href [0]{\begingroup \@sanitize@url \@href}%
 \providecommand \@href[1]{\@@startlink{#1}\@@href}%
 \providecommand \@@href[1]{\endgroup#1\@@endlink}%
-\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
-  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
 \providecommand \@@startlink[1]{}%
 \providecommand \@@endlink[0]{}%
 \providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
@@ -52,33 +51,14 @@
 %</preamble>
 \bibitem [{\citenamefont {Bishop}(2006)}]{Bishop2006}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~M.}\ \bibnamefont
-  {Bishop}}} (\bibinfo {year} {2006}),\ \href@noop {} {\emph {\bibinfo {title}
-  {Pattern Recognition and Machine Learning}}}\ (\bibinfo  {publisher}
-  {Springer Verlag, Berlin})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Goodfellow}\ \emph {et~al.}(2016)\citenamefont
-  {Goodfellow}, \citenamefont {Bengio},\ and\ \citenamefont
-  {Courville}}]{Goodfellow2016}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~M.}\ \bibnamefont {Bishop}}} (\bibinfo {year} {2006}),\ \href@noop {} {\emph {\bibinfo {title} {Pattern Recognition and Machine Learning}}}\ (\bibinfo  {publisher} {Springer Verlag, Berlin})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Goodfellow}\ \emph {et~al.}(2016)\citenamefont {Goodfellow}, \citenamefont {Bengio},\ and\ \citenamefont {Courville}}]{Goodfellow2016}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
-  {Goodfellow}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Bengio}},
-  \ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Courville}}}
-  (\bibinfo {year} {2016}),\ \href@noop {} {\emph {\bibinfo {title} {Deep
-  Learning}}}\ (\bibinfo  {publisher} {The MIT Press, Cambridge,
-  Massachusetts})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Hastie}\ \emph {et~al.}(2009)\citenamefont {Hastie},
-  \citenamefont {Tibshirani},\ and\ \citenamefont {Friedman}}]{Hastie2009}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont {Goodfellow}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Bengio}}, \ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Courville}}} (\bibinfo {year} {2016}),\ \href@noop {} {\emph {\bibinfo {title} {Deep Learning}}}\ (\bibinfo  {publisher} {The MIT Press, Cambridge, Massachusetts})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hastie}\ \emph {et~al.}(2009)\citenamefont {Hastie}, \citenamefont {Tibshirani},\ and\ \citenamefont {Friedman}}]{Hastie2009}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
-  {Hastie}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Tibshirani}},
-  \ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Friedman}}}
-  (\bibinfo {year} {2009}),\ \href@noop {} {\emph {\bibinfo {title} {The
-  Elements of Statistical Learning: Data Mining, Inference and Prediction}}}\
-  (\bibinfo  {publisher} {Springer Verlag, Berlin})\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Hastie}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Tibshirani}}, \ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Friedman}}} (\bibinfo {year} {2009}),\ \href@noop {} {\emph {\bibinfo {title} {The Elements of Statistical Learning: Data Mining, Inference and Prediction}}}\ (\bibinfo  {publisher} {Springer Verlag, Berlin})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Murphy}(2012)}]{Murphy2012}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.~P.}\ \bibnamefont
-  {Murphy}}} (\bibinfo {year} {2012}),\ \href@noop {} {\emph {\bibinfo {title}
-  {Machine Learning: A Probabilistic Perspective}}}\ (\bibinfo  {publisher}
-  {The MIT Press, Cambdridge, Massachusetts})\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.~P.}\ \bibnamefont {Murphy}}} (\bibinfo {year} {2012}),\ \href@noop {} {\emph {\bibinfo {title} {Machine Learning: A Probabilistic Perspective}}}\ (\bibinfo  {publisher} {The MIT Press, Cambdridge, Massachusetts})\BibitemShut {NoStop}%
 \end{thebibliography}%

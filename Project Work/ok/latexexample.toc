@@ -1,8 +1,0 @@
-\contentsline {title}{Artificial Intelligence and Machine Learning for Nuclear Physics}{1}{section*.2}%
-\contentsline {abstract}{Abstract}{1}{section*.1}%
-\tocdepth@munge 
-\contentsline {section}{\numberline {}Contents}{1}{section*.3}%
-\tocdepth@restore 
-\contentsline {section}{\numberline {I}Introduction}{1}{section*.4}%
-\contentsline {section}{\numberline {II}Artificial Intelligence and Machine Learning for nuclear physics in broad strokes}{1}{section*.5}%
-\contentsline {section}{\numberline {}References}{2}{section*.6}%
