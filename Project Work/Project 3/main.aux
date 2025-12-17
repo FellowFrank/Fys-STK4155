@@ -70,8 +70,8 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {7}Qualitative Failure Modes}{7}{section*.34}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Confusion Matrix for FFNN (RGB + PCA). Note the distinct asymmetry: the model performs well on classes with unique colors (Vegetation) but fails on classes defined by texture (Textile, Misc Trash).}}{8}{figure.6}\protected@file@percent }
 \newlabel{fig:FFNN_Confusion}{{6}{8}{Confusion Matrix for FFNN (RGB + PCA). Note the distinct asymmetry: the model performs well on classes with unique colors (Vegetation) but fails on classes defined by texture (Textile, Misc Trash)}{figure.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Sample misclassifications by the FFNN with PCA 95\%. The model frequently misclassifies textile as metal due to chromatic similarities.}}{8}{figure.7}\protected@file@percent }
-\newlabel{fig:FFNN_Failures}{{7}{8}{Sample misclassifications by the FFNN with PCA 95\%. The model frequently misclassifies textile as metal due to chromatic similarities}{figure.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Sample misclassifications by the FFNN with PCA 95\%. The model frequently misclassifies textile as metal due to chromatic similarities and asymmetry in training size.}}{8}{figure.7}\protected@file@percent }
+\newlabel{fig:FFNN_Failures}{{7}{8}{Sample misclassifications by the FFNN with PCA 95\%. The model frequently misclassifies textile as metal due to chromatic similarities and asymmetry in training size}{figure.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {C}Convolutional Neural Network (CNN) Results}{8}{section*.35}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Impact of Data Augmentation}{8}{section*.36}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2}CNN Spectral Analysis (RGB vs. Grayscale)}{9}{section*.37}\protected@file@percent }
@@ -82,15 +82,15 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Analysis of False Positives. The model misclassifies a translucent plastic bottle as metal (Right). This error illustrates the reliance on specular reflection cues; the geometric shape of plastic mimics the crushed metallic surfaces, overriding the spectral features.}}{10}{figure.9}\protected@file@percent }
 \newlabel{fig:CNN_Failures}{{9}{10}{Analysis of False Positives. The model misclassifies a translucent plastic bottle as metal (Right). This error illustrates the reliance on specular reflection cues; the geometric shape of plastic mimics the crushed metallic surfaces, overriding the spectral features}{figure.9}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {D}Comparison of Methods}{10}{section*.40}\protected@file@percent }
-\citation{realwaste_paper}
 \@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Summary of Test Set Performance across architectures.}}{11}{table.3}\protected@file@percent }
 \newlabel{tab:MethodComparison}{{III}{11}{Summary of Test Set Performance across architectures}{table.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Comparative Prediction Analysis. The CNN correctly identifies the paper sample based on edge geometry. The FFNN (PCA) misclassifies it as plastic, as the dimensionality reduction blurred the fibrous texture into a smooth statistical manifold.}}{11}{figure.10}\protected@file@percent }
-\newlabel{fig:ModelComparisonBar}{{10}{11}{Comparative Prediction Analysis. The CNN correctly identifies the paper sample based on edge geometry. The FFNN (PCA) misclassifies it as plastic, as the dimensionality reduction blurred the fibrous texture into a smooth statistical manifold}{figure.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Comparative Prediction Analysis. The CNN correctly identifies the paper sample by leveraging spatial edge geometry. In contrast, the FFNN (PCA) might misclassify the object as the reduction is blurring the distinct straight edges.}}{11}{figure.10}\protected@file@percent }
+\newlabel{fig:ModelComparisonBar}{{10}{11}{Comparative Prediction Analysis. The CNN correctly identifies the paper sample by leveraging spatial edge geometry. In contrast, the FFNN (PCA) might misclassify the object as the reduction is blurring the distinct straight edges}{figure.10}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Future Work}{11}{section*.41}\protected@file@percent }
 \newlabel{section:futurework}{{IV}{11}{}{section*.41}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{11}{section*.42}\protected@file@percent }
 \newlabel{section:conclusion}{{V}{11}{}{section*.42}{}}
+\citation{realwaste_paper}
 \bibdata{mainNotes,biblio}
 \bibcite{realwaste_paper}{{1}{2023{}}{{Single\ \emph  {et~al.}}}{{Single, Iranmanesh,\ and\ Raad}}}
 \bibcite{realwaste_uci}{{2}{2023{}}{{Single\ \emph  {et~al.}}}{{Single, Iranmanesh,\ and\ Raad}}}

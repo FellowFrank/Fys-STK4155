@@ -3,8 +3,8 @@ READ ME
 *Group Members*: Anton Nicolay Torgersen
 
 ## Description
-Delivered as a second project to the get a grade in the subject FYS-4155 at the University of Oslo autumn 2025. This is project 2 of 3, where the task in this project is to create a scientific report where the student writes there one neural network code and compares the results after training with what was found in project 1.
-The second part is using the same methods developed in part 1 in doing a classification analysis of the MNIST problem classifying the different handwritten images of numbers to the correct number.
+This is project 3 of 3, where the task in this project is to create a scientific report where the task was to analyze a dataset from https://www.kaggle.com/ using the some of the techniques learned through this course.
+The dataset chosen for this project was the real waste dataset, https://archive.ics.uci.edu/dataset/908/realwaste, and was analyzed using these two methods FFNN and CNN.  
 
 
 
@@ -18,35 +18,21 @@ pip install -r requirements.txt
 ```
 
 
+
 #### Code/Functions.py
 
-Includes all the defined functions that we have created in this project separated into different sections:
-- Dataset Generation for Regression
-- Activation Functions & derivatives
-- Loss Functions & derivatives
-    - Cross_entropy uses der_softmax as its derivative, see methods in the paper.
-- Optimization Algorithms ( Adam and RMSprop)
-    - Gradient descent and Stochastic Gradient descent, is integrated into the Neural Network class and the run experiment function.
-- A Neural Network class with:
-    - Initiation of layers
-    - Predictions & Cost
-    - Gradients
-    - Update of layers
-    - Plus 2 tests to see if it's configured correctly
-- Two broad functions to run an experiment and to graph the heath map
-    - was created to reduce code
-
-#### Code/Verification.ipynb
-A document that verifies that the neural network has been correctly implemented.
-By calculating the gradients and doing a test run on the dataset.
-
-#### Code/GridSearchParameters.ipynb
-A document that does the three grid search written about in the text, are very computationally expensive.
-Was used to get a baseline for further tuning or analysis.
+Includes all the defined functions that we have utilized in this project:
+- Dataset Retrieval
+- Dataset Augmentation
+- The Optimal CNN model found through the parameter search
+- The Optimal FFNN model found through the parameter search on PCA 95%
 
 #### Code/Workline.ipynb
-Not important.
-Is a notebook on how the project was executed and the different steps in order to answer the parts and components for this project.
+The main execution pipeline (notebook) for the project. It details the step-by-step workflow used to obtain the results and final models utilized in the figures.ipynb.
+- Data preprocessing and dimensionality reduction (PCA).
+- Hyperparameter tuning experiments.
+- Training loops for the FFNN and CNN models.
 
-#### Figures/Figures.ipynb
-Generates all the figures used in the text. 
+#### Code/Figures.ipynb
+Generates all the figures used in the text.
+It is created as a readable file where one can see the different training runs for the models and the extra figures not utilized, like the confusion diagrams.  

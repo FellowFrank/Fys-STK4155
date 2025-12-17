@@ -424,6 +424,7 @@ This confirms the model's reliance on prior probabilities. As noted in Table \re
 When the feature signal is ambiguous—as is often the case given the information loss from PCA—the network minimizes global loss by defaulting to these majority classes.
 
 Second, the frequent misclassification of \textit{Textile Trash} as \textit{Metal} (10.9\%) highlights the failure of the reduced feature space to capture material properties.
+As visually demonstrated in Figure \ref{fig:FFNN_Failures}, the network struggles to distinguish the matte, woven texture of fabric from the surface of dirty metal.
 Without the high-frequency spatial data removed by PCA, the network cannot distinguish the matte, woven texture of fabric from the surface of dirty metal.
 Consequently, it defaults to the statistically more probable label (\textit{Metal}).
 This confirms that while PCA allows for convergence, it destroys the fine-grained variances required to distinguish minority classes from the dataset priors.
@@ -431,7 +432,7 @@ This confirms that while PCA allows for convergence, it destroys the fine-graine
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\columnwidth]{Figures/Misclassified_Examples_FFNN_PCA_Aug.png}
-    \caption{Sample misclassifications by the FFNN with PCA 95\%. The model frequently misclassifies textile as metal due to chromatic similarities.}
+    \caption{Sample misclassifications by the FFNN with PCA 95\%. The model frequently misclassifies textile as metal due to chromatic similarities and asymmetry in training size.}
     \label{fig:FFNN_Failures}
 \end{figure}
 
@@ -544,6 +545,8 @@ This performance disparity validates the fundamental hypothesis of Computer Visi
 A comparative analysis of class-specific fidelity highlights the mechanism of this superiority.
 In the \textit{Vegetation} category, the CNN achieves $\approx 95\%$ accuracy compared to the FFNN's 64.4\%.
 Since both models utilized RGB data, this gap is not spectral but topological.
+This distinction is qualitatively analyzed in Figure \ref{fig:ModelComparisonBar}, which contrasts the prediction pipelines for a specific paper sample.
+While the CNN successfully extracts the high-frequency edge geometry to correctly identify the object, the FFNN—limited by PCA compression—blurs this distinct edge geometry, resulting in a misclassification as Plastic.
 The CNN successfully extracts the high-frequency textural boundaries of leaves that PCA discards as noise.
 Similarly, the dramatic improvement in \textit{Food Organics} (82.9\% CNN vs 51.2\% FFNN) illustrates the advantage of Max-Pooling over PCA.
 While PCA flattens the heterogeneous colors of organic waste into a global average, pooling operations preserve local chromatic clusters, allowing the CNN to identify the mix of colors characteristic of food waste.
@@ -551,7 +554,7 @@ While PCA flattens the heterogeneous colors of organic waste into a global avera
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\columnwidth]{Figures/CNNvsPCA1.png} 
-    \caption{Comparative Prediction Analysis. The CNN correctly identifies the paper sample based on edge geometry. The FFNN (PCA) misclassifies it as plastic, as the dimensionality reduction blurred the fibrous texture into a smooth statistical manifold.}
+    \caption{Comparative Prediction Analysis. The CNN correctly identifies the paper sample by leveraging spatial edge geometry. In contrast, the FFNN (PCA) might misclassify the object as the reduction is blurring the distinct straight edges.}
     \label{fig:ModelComparisonBar}
 \end{figure}
 
@@ -560,23 +563,16 @@ While the dense FFNN with PCA is computationally cheaper per epoch, its performa
 
 
 \section{Future Work}\label{section:futurework}
-While our results show that the CNN is the better model for this task, there are several important steps needed to make this system ready for the real world.
+While our results demonstrate that the CNN architecture provides a robust baseline for waste segregation, several avenues remain for optimizing deployment in real-world infrastructure. 
 
-\begin{itemize}
-    \item \textbf{Hyperparameter Optimization on Augmented Data:} 
-    In this project, we found the best model settings using the original dataset. 
-    However, because the augmented dataset is more complex (containing rotations and flips), the optimal settings might change. 
+First, the hyperparameter optimization in this study was conducted primarily on the original dataset due to computational constraints. 
+Given that the augmented dataset introduces significant geometric variance (rotations and flips), a secondary search on this expanded domain could yield an architecture better tuned to the rotation-invariant feature space. 
 
-    \item \textbf{Transition to Object Detection:} 
-    Currently, our model classifies a single, pre-cropped image. 
-    To be useful in a recycling plant, the system needs to process a video feed of a conveyor belt. 
-    We need to transition to Object Detection models that can find and "box" multiple items at once.
+Second, the current system classifies single, pre-cropped images. 
+To function effectively in a recycling plant, the pipeline must transition to an Object Detection framework (e.g., YOLO or R-CNN) capable of localizing and classifying multiple items simultaneously from a continuous video feed of a conveyor belt. 
 
-    \item \textbf{Data Expansion and Localization:} 
-    Gathering more training data usually improves performance. 
-    Additionally, waste packaging looks different in different countries. 
-    Collecting specific data from the local region where the system will be deployed would help the model recognize local brands and packaging types more accurately.
-\end{itemize}
+Finally, generalization remains a challenge. Waste packaging varies significantly by region. 
+To minimize domain shift, future iterations should incorporate a data expansion strategy that specifically targets local packaging designs, ensuring the model is calibrated to the specific waste stream of the deployment region.
 
 \section{Conclusion}\label{section:conclusion}
 

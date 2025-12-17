@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1766002737.8412 "main.aux" "main.bbl" "main" 1766002741.43642 0
+["bibtex main"] 1766004811.39553 "main.aux" "main.bbl" "main" 1766004815.26662 0
   "./biblio.bib" 1766000717 10627 89ed64c91d445af3ba838b3fa593ac1a ""
-  "./mainNotes.bib" 1766002740 103 48ad29797468f16e2853d8797278d7af ""
+  "./mainNotes.bib" 1766004813 103 48ad29797468f16e2853d8797278d7af ""
   "c:/texlive/2025/texmf-dist/bibtex/bst/revtex4-1/apsrev4-1.bst" 1756400307 71515 e333383ed72bf24aa6de7e8cabb55f84 ""
-  "main.aux" 1766002739 14587 f0d5eecfa8f973a031b1a28fc71d64fa "pdflatex"
+  "main.aux" 1766004813 14625 efc664ab7eebc4edc03d7f2de2d58ea3 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1766002738.25179 "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlaring/Eget Arbeid/Project Work/Project 3/main.tex" "main.pdf" "main" 1766002741.43746 0
+["pdflatex"] 1766004811.85057 "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlaring/Eget Arbeid/Project Work/Project 3/main.tex" "main.pdf" "main" 1766004815.26766 0
   "Figures/CNNvsPCA1.png" 1765967817 281518 c375c318dc859857ef22ee6c90caec7b ""
   "Figures/Confusion_Matrix_CNN_128_Aug.png" 1765905288 108535 15669dbefc180b25064ebe454118e051 ""
   "Figures/Confusion_Matrix_PCA_FFNN_Aug.png" 1765898232 116649 194a61654b800820482105b1d6ca31cd ""
@@ -19,7 +19,7 @@
   "Figures/PCA_Explained_Variance_Ratio.png" 1765899035 37630 df13d0e832d8b25d4916ec212f48f9b4 ""
   "Figures/PCA_Reconstruction.png" 1765895612 186599 e3a0f6d1b19f342d2bc71794a33a8938 ""
   "Figures/Training_struggle_FFNN.png" 1765895190 30661 befb9349eddd4e542ea5a9695cf1b797 ""
-  "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlaring/Eget Arbeid/Project Work/Project 3/main.tex" 1766002733 50163 d412225c09a7ebd06769a581700b8dc9 ""
+  "c:/Users/Anton/Documents/UiO Fag/FYS-STK4155 Anvendt dataanalyse og maskinlaring/Eget Arbeid/Project Work/Project 3/main.tex" 1766004803 50757 374086ecfe4b2e0586fcf963e54c0021 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1756393353 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1756394565 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1756394188 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -214,10 +214,10 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1756401881 5574045 c1864b6d576eca8ff04839113c3d8c41 ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1756402031 3605795 f215791cb7a8c2e83a36828a9428ff78 ""
   "c:/texlive/2025/texmf.cnf" 1756401861 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1766002739 14587 f0d5eecfa8f973a031b1a28fc71d64fa "pdflatex"
-  "main.bbl" 1766002738 14277 377252349388096b5d8f44117da94af4 "bibtex main"
-  "main.out" 1766002740 8253 8fac29d1ed7fba9151aa471a08287621 "pdflatex"
-  "main.tex" 1766002733 50163 d412225c09a7ebd06769a581700b8dc9 ""
+  "main.aux" 1766004813 14625 efc664ab7eebc4edc03d7f2de2d58ea3 "pdflatex"
+  "main.bbl" 1766004811 14277 377252349388096b5d8f44117da94af4 "bibtex main"
+  "main.out" 1766004813 8253 8fac29d1ed7fba9151aa471a08287621 "pdflatex"
+  "main.tex" 1766004803 50757 374086ecfe4b2e0586fcf963e54c0021 ""
   (generated)
   "main.aux"
   "main.log"
