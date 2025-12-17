@@ -1,100 +1,114 @@
 \relax 
-\providecommand\hyper@newdestlabel[2]{}
-\providecommand\babel@aux[2]{}
+\providecommand \babel@aux [2]{\global \let \babel@toc \@gobbletwo }
 \@nameuse{bbl@beforestart}
-\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
-\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
-\global\let\oldcontentsline\contentsline
-\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
-\global\let\oldnewlabel\newlabel
-\gdef\newlabel#1#2{\newlabelxx{#1}#2}
-\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
-\AtEndDocument{\ifx\hyper@anchor\@undefined
-\let\contentsline\oldcontentsline
-\let\newlabel\oldnewlabel
-\fi}
-\fi}
-\global\let\hyper@last\relax 
-\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{realwaste_paper}
+\citation{realwaste_paper}
+\citation{realwaste_uci}
 \newlabel{FirstPage}{{}{1}{}{section*.1}{}}
-\@writefile{toc}{\contentsline {title}{Implementation of a Feed Forward Neural Network, studied on Sparse Regression and MNIST Classification}{1}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {title}{Municipal Solid Waste Segregation: A Comparative Study of Feed-Forward and Convolutional Neural Networks}{1}{section*.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {abstract}{Abstract}{1}{section*.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section*.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {II}Methods}{1}{section*.4}\protected@file@percent }
 \newlabel{section:methods}{{II}{1}{}{section*.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A}Data Preparation}{1}{section*.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}generating more data}{1}{section*.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {B}Logistic Regression}{1}{section*.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {C}FFNN Method}{1}{section*.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Prediction}{1}{section*.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Learning}{1}{section*.10}\protected@file@percent }
-\citation{NeuralNetworks}
-\citation{project1}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Four examples of images in the data set}}{2}{figure.1}\protected@file@percent }
-\newlabel{fig:Training_struggle}{{1}{2}{Four examples of images in the data set}{figure.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces How each Image in the training set was augmented to increase training size}}{2}{figure.2}\protected@file@percent }
-\newlabel{fig:Training_struggle}{{2}{2}{How each Image in the training set was augmented to increase training size}{figure.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces A simple Feed Forward Neural Network (FFNN) architecture with one input layer, one hidden layer, and one output layer. Each neuron in a layer is connected to every neuron in the subsequent layer through weights ($W$) and biases ($b$).}}{2}{figure.3}\protected@file@percent }
-\newlabel{fig:ffnn-arch}{{3}{2}{A simple Feed Forward Neural Network (FFNN) architecture with one input layer, one hidden layer, and one output layer. Each neuron in a layer is connected to every neuron in the subsequent layer through weights ($W$) and biases ($b$)}{figure.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3}Hyperparameters}{2}{section*.11}\protected@file@percent }
-\citation{hastie}
-\citation{project1}
-\citation{hastie}
-\citation{project1}
-\citation{compfys}
-\citation{project1}
+\citation{PCA}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Visualization of the augmentation pipeline. The original image (left) is transformed to create new training samples (right). By decoupling semantic identity from geometric orientation, we force the network to learn rotation-invariant features.}}{2}{figure.1}\protected@file@percent }
+\newlabel{fig:AugmentedTrainingData}{{1}{2}{Visualization of the augmentation pipeline. The original image (left) is transformed to create new training samples (right). By decoupling semantic identity from geometric orientation, we force the network to learn rotation-invariant features}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Data Preparation}{2}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}The RealWaste Dataset and Preprocessing}{2}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {a}Resolution and Information Loss}{2}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Data Splitting and Augmentation Strategy}{2}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3}Dimensionality Reduction: PCA}{2}{section*.9}\protected@file@percent }
 \citation{Goodfellow}
-\@writefile{toc}{\contentsline {subsection}{\numberline {D}Different Building Blocks}{3}{section*.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Cost Functions}{3}{section*.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Activation Functions}{3}{section*.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3}Optimization Algorithms}{3}{section*.15}\protected@file@percent }
-\citation{Goodfellow}
-\citation{Goodfellow}
-\citation{rep2}
-\citation{NeuralNetworks}
-\citation{mehta2023softmax}
+\citation{CNNLeCun}
+\citation{Adam2017}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Neural Network Architectures}{3}{section*.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Feed-Forward Neural Network (FFNN)}{3}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Convolutional Neural Network (CNN)}{3}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {C}Building Blocks}{3}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Cost Function}{3}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Activation Functions}{3}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3}Optimization Algorithms}{3}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4}Evaluation Metrics}{3}{section*.17}\protected@file@percent }
+\citation{Dropout}
 \citation{rep3}
 \citation{numpy}
-\citation{sklearn_api}
+\citation{tensorflow2015-whitepaper,chollet2015keras}
+\citation{omalley2019kerastuner}
 \citation{matplotlib}
-\@writefile{toc}{\contentsline {subsection}{\numberline {E}Image Classification}{4}{section*.16}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Output layer}{4}{section*.17}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Cost Function}{4}{section*.18}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3}Learning}{4}{section*.19}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {F}CNN}{4}{section*.20}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {G}Implementation and Code}{4}{section*.21}\protected@file@percent }
-\citation{rep2}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {a}Recall (Sensitivity)}{4}{section*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {b}Cumulative Gains Curve}{4}{section*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {D}Hyperparameter Optimization}{4}{section*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}CNN Search Space}{4}{section*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}FFNN Search Space}{4}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {E}Implementation and Code}{4}{section*.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Use of AI tools}{4}{section*.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Results and Discussion}{4}{section*.25}\protected@file@percent }
+\newlabel{section:results}{{III}{4}{}{section*.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Dataset Characteristics and Complexity}{5}{section*.26}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Sample images from the RealWaste dataset illustrating the variability of objects against a uniform background.}}{5}{figure.2}\protected@file@percent }
+\newlabel{fig:ExampleImages}{{2}{5}{Sample images from the RealWaste dataset illustrating the variability of objects against a uniform background}{figure.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces The distribution of classes in the RealWaste dataset. The imbalance necessitates the use of class-specific metrics beyond global accuracy.}}{5}{table.1}\protected@file@percent }
+\newlabel{tab:Classdistribution}{{I}{5}{The distribution of classes in the RealWaste dataset. The imbalance necessitates the use of class-specific metrics beyond global accuracy}{table.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Training and Validation loss for FFNN on raw pixels. The lack of convergence illustrates the model's inability to extract features from high-dimensional noise.}}{5}{figure.3}\protected@file@percent }
+\newlabel{fig:Training_struggle}{{3}{5}{Training and Validation loss for FFNN on raw pixels. The lack of convergence illustrates the model's inability to extract features from high-dimensional noise}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Feed-Forward Neural Network (FFNN) Results}{5}{section*.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}The Failure of Raw Pixel Training}{5}{section*.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}PCA Dimensionality Reduction (95\% Variance)}{6}{section*.29}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces PCA Reconstruction (95\% Variance). Global shapes are preserved, but texture is obliterated.}}{6}{figure.4}\protected@file@percent }
+\newlabel{fig:PCA_Reconstruction}{{4}{6}{PCA Reconstruction (95\% Variance). Global shapes are preserved, but texture is obliterated}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3}Analysis on Non-Augmented Data}{6}{section*.30}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4}Analysis of Variance Threshold (95\% vs 99\%)}{6}{section*.31}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces PCA Cumulative Variance (Scree Plot). The curve shows diminishing returns; doubling the components from 95\% to 99\% yields minimal semantic information gain.}}{7}{figure.5}\protected@file@percent }
+\newlabel{fig:PCAVariance}{{5}{7}{PCA Cumulative Variance (Scree Plot). The curve shows diminishing returns; doubling the components from 95\% to 99\% yields minimal semantic information gain}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5}Impact of Image Resolution ($256 \times 256$)}{7}{section*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6}Spectral Analysis: RGB vs. Grayscale}{7}{section*.33}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Summary of Test Set Performance across architectures for PCA.}}{7}{table.2}\protected@file@percent }
+\newlabel{tab:MethodComparisonPCA}{{II}{7}{Summary of Test Set Performance across architectures for PCA}{table.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7}Qualitative Failure Modes}{7}{section*.34}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Confusion Matrix for FFNN (RGB + PCA). Note the distinct asymmetry: the model performs well on classes with unique colors (Vegetation) but fails on classes defined by texture (Textile, Misc Trash).}}{8}{figure.6}\protected@file@percent }
+\newlabel{fig:FFNN_Confusion}{{6}{8}{Confusion Matrix for FFNN (RGB + PCA). Note the distinct asymmetry: the model performs well on classes with unique colors (Vegetation) but fails on classes defined by texture (Textile, Misc Trash)}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Sample misclassifications by the FFNN with PCA 95\%. The model frequently misclassifies textile as metal due to chromatic similarities.}}{8}{figure.7}\protected@file@percent }
+\newlabel{fig:FFNN_Failures}{{7}{8}{Sample misclassifications by the FFNN with PCA 95\%. The model frequently misclassifies textile as metal due to chromatic similarities}{figure.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C}Convolutional Neural Network (CNN) Results}{8}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Impact of Data Augmentation}{8}{section*.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}CNN Spectral Analysis (RGB vs. Grayscale)}{9}{section*.37}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3}Resolution Scaling and Small Images}{9}{section*.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4}Qualitative Error Analysis and Failure Modes}{9}{section*.39}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Confusion Matrix for the Augmented CNN. The pronounced diagonal dominance illustrates high classification fidelity, while off-diagonal elements highlight persisting texture-based ambiguities.}}{10}{figure.8}\protected@file@percent }
+\newlabel{fig:CNN_Augmented_Confusion}{{8}{10}{Confusion Matrix for the Augmented CNN. The pronounced diagonal dominance illustrates high classification fidelity, while off-diagonal elements highlight persisting texture-based ambiguities}{figure.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Analysis of False Positives. The model misclassifies a translucent plastic bottle as metal (Right). This error illustrates the reliance on specular reflection cues; the geometric shape of plastic mimics the crushed metallic surfaces, overriding the spectral features.}}{10}{figure.9}\protected@file@percent }
+\newlabel{fig:CNN_Failures}{{9}{10}{Analysis of False Positives. The model misclassifies a translucent plastic bottle as metal (Right). This error illustrates the reliance on specular reflection cues; the geometric shape of plastic mimics the crushed metallic surfaces, overriding the spectral features}{figure.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D}Comparison of Methods}{10}{section*.40}\protected@file@percent }
+\citation{realwaste_paper}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Summary of Test Set Performance across architectures.}}{11}{table.3}\protected@file@percent }
+\newlabel{tab:MethodComparison}{{III}{11}{Summary of Test Set Performance across architectures}{table.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Comparative Prediction Analysis. The CNN correctly identifies the paper sample based on edge geometry. The FFNN (PCA) misclassifies it as plastic, as the dimensionality reduction blurred the fibrous texture into a smooth statistical manifold.}}{11}{figure.10}\protected@file@percent }
+\newlabel{fig:ModelComparisonBar}{{10}{11}{Comparative Prediction Analysis. The CNN correctly identifies the paper sample based on edge geometry. The FFNN (PCA) misclassifies it as plastic, as the dimensionality reduction blurred the fibrous texture into a smooth statistical manifold}{figure.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Future Work}{11}{section*.41}\protected@file@percent }
+\newlabel{section:futurework}{{IV}{11}{}{section*.41}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{11}{section*.42}\protected@file@percent }
+\newlabel{section:conclusion}{{V}{11}{}{section*.42}{}}
 \bibdata{mainNotes,biblio}
-\bibcite{NeuralNetworks}{{1}{2015}{{Nielsen}}{{}}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}FFNN Implementation}{5}{section*.22}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Testing and Comparison}{5}{section*.23}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {H}Use of AI tools}{5}{section*.24}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {III}Results and Discussion}{5}{section*.25}\protected@file@percent }
-\newlabel{section:results}{{III}{5}{}{section*.25}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A}Logistic Regression Results}{5}{section*.26}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Heat map showing how it predictes vs each group}{5}{section*.27}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {B}FFNN Regression Results}{5}{section*.28}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {C}CNN Regression Results}{5}{section*.29}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {D}Comparison of Methods}{5}{section*.30}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Future Work}{5}{section*.31}\protected@file@percent }
-\newlabel{section:futurework}{{IV}{5}{}{section*.31}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{5}{section*.32}\protected@file@percent }
-\newlabel{section:conclusion}{{V}{5}{}{section*.32}{}}
-\bibcite{project1}{{2}{2025{}}{{Torgersen}}{{}}}
-\bibcite{hastie}{{3}{2009}{{Hastie\ \emph  {et~al.}}}{{Hastie, R.Tibshirani,\ and\ J.Friedman}}}
-\bibcite{compfys}{{4}{2015}{{Hjorth-Jensen}}{{}}}
-\bibcite{Goodfellow}{{5}{2016}{{Goodfellow\ \emph  {et~al.}}}{{Goodfellow, Bengio,\ and\ Courville}}}
-\bibcite{rep2}{{6}{2025{}}{{Torgersen}}{{}}}
-\bibcite{mehta2023softmax}{{7}{2023}{{Mehta}}{{}}}
-\bibcite{numpy}{{8}{2020}{{Harris\ \emph  {et~al.}}}{{Harris, Millman, van~der Walt, Gommers, Virtanen, Cournapeau, Wieser, Taylor, Berg, Smith, Kern, Picus, Hoyer, van Kerkwijk, Brett, Haldane, del R{\'{i}}o, Wiebe, Peterson, G{\'{e}}rard-Marchant, Sheppard, Reddy, Weckesser, Abbasi, Gohlke,\ and\ Oliphant}}}
-\bibcite{sklearn_api}{{9}{2013}{{Buitinck\ \emph  {et~al.}}}{{Buitinck, Louppe, Blondel, Pedregosa, Mueller, Grisel, Niculae, Prettenhofer, Gramfort, Grobler, Layton, VanderPlas, Joly, Holt,\ and\ Varoquaux}}}
-\bibcite{matplotlib}{{10}{2007}{{Hunter}}{{}}}
+\bibcite{realwaste_paper}{{1}{2023{}}{{Single\ \emph  {et~al.}}}{{Single, Iranmanesh,\ and\ Raad}}}
+\bibcite{realwaste_uci}{{2}{2023{}}{{Single\ \emph  {et~al.}}}{{Single, Iranmanesh,\ and\ Raad}}}
+\bibcite{PCA}{{3}{1993}{{Maćkiewicz\ and\ Ratajczak}}{{}}}
+\bibcite{Goodfellow}{{4}{2016}{{Goodfellow\ \emph  {et~al.}}}{{Goodfellow, Bengio,\ and\ Courville}}}
+\bibcite{CNNLeCun}{{5}{1998}{{LeCun\ \emph  {et~al.}}}{{LeCun, Bottou, Bengio,\ and\ Haffner}}}
+\bibcite{Adam2017}{{6}{2017}{{Kingma\ and\ Ba}}{{}}}
+\bibcite{Dropout}{{7}{2014}{{Srivastava\ \emph  {et~al.}}}{{Srivastava, Hinton, Krizhevsky, Sutskever,\ and\ Salakhutdinov}}}
+\bibcite{rep3}{{8}{2025}{{Torgersen}}{{}}}
+\bibcite{numpy}{{9}{2020}{{Harris\ \emph  {et~al.}}}{{Harris, Millman, van~der Walt, Gommers, Virtanen, Cournapeau, Wieser, Taylor, Berg, Smith, Kern, Picus, Hoyer, van Kerkwijk, Brett, Haldane, del R{\'{i}}o, Wiebe, Peterson, G{\'{e}}rard-Marchant, Sheppard, Reddy, Weckesser, Abbasi, Gohlke,\ and\ Oliphant}}}
+\bibcite{tensorflow2015-whitepaper}{{10}{2015}{{Abadi\ \emph  {et~al.}}}{{Abadi, Agarwal, Barham, Brevdo, Chen, Citro, Corrado, Davis, Dean, Devin, Ghemawat, Goodfellow, Harp, Irving, Isard, Jia, Jozefowicz, Kaiser, Kudlur, Levenberg, Man\'{e}, Monga, Moore, Murray, Olah, Schuster, Shlens, Steiner, Sutskever, Talwar, Tucker, Vanhoucke, Vasudevan, Vi\'{e}gas, Vinyals, Warden, Wattenberg, Wicke, Yu,\ and\ Zheng}}}
+\bibcite{chollet2015keras}{{11}{2015}{{Chollet\ \emph  {et~al.}}}{{Chollet \emph  {et~al.}}}}
+\bibcite{omalley2019kerastuner}{{12}{2019}{{O'Malley\ \emph  {et~al.}}}{{O'Malley, Bursztein, Long, Chollet, Jin, Invernizzi \emph  {et~al.}}}}
+\bibcite{matplotlib}{{13}{2007}{{Hunter}}{{}}}
 \bibstyle{apsrev4-1}
 \citation{REVTEX41Control}
 \citation{apsrev41Control}
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{6}{section*.33}\protected@file@percent }
-\newlabel{LastBibItem}{{10}{6}{}{section*.33}{}}
-\newlabel{LastPage}{{}{6}{}{}{}}
-\gdef \@abspage@last{6}
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{12}{section*.43}\protected@file@percent }
+\newlabel{LastBibItem}{{13}{12}{}{section*.43}{}}
+\newlabel{LastPage}{{}{12}{}{}{}}
+\gdef \@abspage@last{12}

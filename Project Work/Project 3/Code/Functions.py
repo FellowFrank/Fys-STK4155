@@ -54,7 +54,9 @@ def load_realwaste_dataset(data_dir, img_size=(128, 128), test_size=0.2, random_
             continue
             
         class_names.append(class_name)
-        image_files = list(class_path.glob('*.jpg')) + list(class_path.glob('*.png'))
+
+        # Utilizing the sorted function to ensure consistent order
+        image_files = sorted(list(class_path.glob('*.jpg')) + list(class_path.glob('*.png')))
         
         print(f"Loading {len(image_files)} images from {class_name}...")
         for img_path in image_files:
@@ -163,3 +165,107 @@ def augment_training_data(X_train, y_train):
     
     print(f"Augmentation complete. Final training set size: {len(X_aug)}")
     return X_aug, y_aug
+
+import tensorflow as tf
+from tensorflow.keras import layers, models, callbacks, regularizers
+
+def build_ffnn_model_PCA_optimal(input_shape, num_classes):
+    """
+    Builds a Feed-Forward Neural Network (Dense layers only).
+    """
+    model = models.Sequential([
+        # If the input shape hasen't been flattened yet
+        layers.Flatten(input_shape=input_shape),
+
+        # HIDDEN LAYER 1
+        # High neuron count needed to capture complex patterns from raw pixels
+        layers.Dense(1000, activation='sigmoid', kernel_regularizer=regularizers.l2(0.0001)),
+
+        # HIDDEN LAYER 2
+        layers.Dense(700, activation='sigmoid', kernel_regularizer=regularizers.l2(0.0001)),
+
+
+        # HIDDEN LAYER 3
+        layers.Dense(500, activation='sigmoid', kernel_regularizer=regularizers.l2(0.0001)),
+
+     
+        # OUTPUT LAYER
+        layers.Dense(num_classes, activation='softmax')
+    ])
+    return model
+
+def build_best_cnn_model(input_shape=(128, 128, 3)):
+    """
+    Builds the CNN model using the fixed 'Best Hyperparameters' found during tuning.
+    """
+    num_classes = 9 
+
+    model = models.Sequential()
+    model.add(layers.Input(shape=input_shape))
+
+    # --- Convolutional Blocks ---
+    
+    # Block 1: Fixed to Kernel Size 3, Filters 64, Activation ReLU
+    model.add(layers.Conv2D(
+        filters=64,
+        kernel_size=(3, 3),
+        padding='same',
+        activation='relu'
+    ))
+    model.add(layers.MaxPooling2D((2, 2)))
+
+    # Block 2: Fixed to Filters 64
+    model.add(layers.Conv2D(
+        filters=64,
+        kernel_size=(3, 3),
+        padding='same',
+        activation='relu'
+    ))
+    model.add(layers.MaxPooling2D((2, 2)))
+
+    # Block 3: Fixed to Filters 128
+    model.add(layers.Conv2D(
+        filters=128,
+        kernel_size=(3, 3),
+        padding='same',
+        activation='relu'
+    ))
+    model.add(layers.MaxPooling2D((2, 2)))
+
+    # Block 4: 'Use Block 4' was True, Filters 192
+    model.add(layers.Conv2D(
+        filters=192,
+        kernel_size=(3, 3),
+        padding='same',
+        activation='relu'
+    ))
+    model.add(layers.MaxPooling2D((2, 2)))
+
+    # --- Classification Head ---
+    model.add(layers.Flatten())
+    
+    # Dense Layer: Fixed to 256 units
+    model.add(layers.Dense(
+        units=256,
+        activation='relu'
+    ))
+    
+
+
+    # Dropout: Fixed to 0.5
+    model.add(layers.Dropout(rate=0.5))
+    
+    # Output Layer
+    model.add(layers.Dense(num_classes, activation='softmax'))
+
+    # --- Compilation ---
+    # Optimizer: Adam, Learning Rate: 0.0005
+    opt = tf.keras.optimizers.Adam(learning_rate=0.0005)
+    
+    model.compile(
+        optimizer=opt,
+        loss='sparse_categorical_crossentropy',
+        metrics=['accuracy']
+    )
+    
+    return model

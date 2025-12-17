@@ -11,9 +11,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: mainNotes.bib
 Database file #2: biblio.bib
-Warning--entry type for "mehta2023softmax" isn't style-file defined
---line 104 of file biblio.bib
-Warning--I didn't find a database entry for "rep3"
 control{REVTEX41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
 control{apsrev41Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
 Warning--jnrlst (dependency: not reversed) set 1
@@ -26,45 +23,45 @@ Control: production of article title (-1) disabled
 Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
-You've used 12 entries,
+You've used 15 entries,
             5847 wiz_defined-function locations,
-            1670 strings with 17119 characters,
-and the built_in function-call counts, 12475 in all, are:
-= -- 631
-> -- 419
-< -- 108
-+ -- 138
-- -- 125
-* -- 2044
-:= -- 1154
-add.period$ -- 13
-call.type$ -- 12
-change.case$ -- 44
-chr.to.int$ -- 19
-cite$ -- 12
-duplicate$ -- 1197
-empty$ -- 884
-format.name$ -- 230
-if$ -- 2434
+            1700 strings with 18083 characters,
+and the built_in function-call counts, 17665 in all, are:
+= -- 777
+> -- 753
+< -- 148
++ -- 232
+- -- 217
+* -- 3171
+:= -- 1554
+add.period$ -- 14
+call.type$ -- 15
+change.case$ -- 55
+chr.to.int$ -- 22
+cite$ -- 15
+duplicate$ -- 1643
+empty$ -- 1173
+format.name$ -- 436
+if$ -- 3434
 int.to.chr$ -- 2
-int.to.str$ -- 19
-missing$ -- 148
-newline$ -- 82
-num.names$ -- 30
-pop$ -- 460
+int.to.str$ -- 22
+missing$ -- 195
+newline$ -- 91
+num.names$ -- 39
+pop$ -- 624
 preamble$ -- 1
-purify$ -- 50
+purify$ -- 65
 quote$ -- 0
-skip$ -- 413
+skip$ -- 528
 stack$ -- 0
-substring$ -- 258
-swap$ -- 1146
-text.length$ -- 54
+substring$ -- 186
+swap$ -- 1710
+text.length$ -- 97
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 171
+type$ -- 253
 warning$ -- 1
-while$ -- 39
+while$ -- 35
 width$ -- 0
-write$ -- 127
-(There were 3 warnings)
+write$ -- 147
+(There was 1 warning)

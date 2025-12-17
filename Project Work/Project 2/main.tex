@@ -484,23 +484,25 @@ Therefore, to obtain a true, unbiased measure of generalization, we adopted a tw
 The best unregularized model, table \ref{tab:hyperparameters_l0}, achieved a final test MSE of -2.834 on the original sparse test set.
 This test score is significantly higher than the best analytical OLS solution from our previous work (-1.997).
 
-
 \begin{table}[htbp]
-    \caption{Best hyperparameters found for the FFNN regression task without regularization}
-    \label{tab:hyperparameters_l0}
+    \caption{The distribution of classes in the Thrash dataset.}
+    \label{tab:Classdistribution}
     \begin{ruledtabular} % This replaces \centering and adds the lines
-    \begin{tabular}{l r}
+    \begin{tabular}{l c r}
         % No \hline\hline needed - ruledtabular does it.
-        \textbf{Parameter} & \textbf{Value} \\
+        \textbf{Class} & \textbf{Count} & \textbf{Percentage}\\
         \colrule % This is the revtex4 replacement for \midrule or \hline
-        Hidden layers & 2 \\
-        Nodes per layer & 10 \\
-        Activation function & LeakyReLU \\
-        Learning rate & 0.1 \\
-        Batch size & 5 \\
-        Optimizer & RMSprop \\
+        Cardboard & 461 & \\
+        Food Organics & 411 & \\
+        Glass & 420 & \\
+        Metal & 790 & \\
+        Miscellaneous Trash & 495 & \\
+        Paper& 500 &\\
+        Plastic & 921 & \\
+        Textile Trash & 318 & \\
+        Vegetation & 436 & \\
         \colrule
-        \textbf{Final Cost} & \textbf{-2.834}
+        \textbf{Total} & \textbf{4752} & \textbf{100\%}
     \end{tabular}
     \end{ruledtabular}
 \end{table}

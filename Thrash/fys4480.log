@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.28)  10 DEC 2025 11:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.28)  16 DEC 2025 09:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -809,15 +809,15 @@ Dictionary: translator-theorem-dictionary, Language: English
 [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 49.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 47.
  (c:/texlive/2025/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
@@ -825,6 +825,13 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 [3
 
 ]
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 68.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 68.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 68.
+
 
 [4
 
@@ -833,10 +840,16 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 [5
 
 ]
+<fys4480-Pairing.png, id=126, 770.88pt x 420.82219pt>
+File: fys4480-Pairing.png Graphic file (type png)
+<use fys4480-Pairing.png>
+Package pdftex.def Info: fys4480-Pairing.png  used on input line 91.
+(pdftex.def)             Requested size: 260.00905pt x 141.93466pt.
+
 
 [6
 
-]
+ <./fys4480-Pairing.png>]
 
 [7
 
@@ -885,14 +898,27 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 [18
 
 ]
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 309.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <7> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 309.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 309.
+
 
 [19
 
 ]
+<diagrams.png, id=234, 455.45157pt x 216.05719pt>
+File: diagrams.png Graphic file (type png)
+<use diagrams.png>
+Package pdftex.def Info: diagrams.png  used on input line 318.
+(pdftex.def)             Requested size: 260.00905pt x 123.34508pt.
+
 
 [20
 
-]
+ <./diagrams.png>]
 
 [21
 
@@ -909,6 +935,10 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 [24
 
 ]
+Overfull \vbox (4.92342pt too high) detected at line 448
+ []
+
+
 
 [25
 
@@ -933,8 +963,25 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 [30
 
 ]
-Overfull \hbox (58.53578pt too wide) in paragraph at lines 331--331
- [] 
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <9> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 564.
+
+Underfull \hbox (badness 10000) in paragraph at lines 564--564
+[]\OT1/cmss/m/n/9 Computationally cheap
+ []
+
+
+Underfull \hbox (badness 1348) in paragraph at lines 564--564
+\OT1/cmss/m/n/9 ($\OT1/mathkerncmss/m/sl/9 O\OT1/cmss/m/n/9 (\OT1/mathkerncmss/m/sl/9 N[]\OT1/cmss/m/n/9 )$). Pro-vides the or-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 564--564
+[]\OT1/cmss/m/n/9 Systematically im-prov-able.
+ []
+
+
+Overfull \vbox (18.44176pt too high) detected at line 564
  []
 
 
@@ -946,6 +993,24 @@ Overfull \hbox (58.53578pt too wide) in paragraph at lines 331--331
 [32
 
 ]
+
+[33
+
+]
+
+[34
+
+]
+<MBPT2.png, id=360, 619.56468pt x 240.14719pt>
+File: MBPT2.png Graphic file (type png)
+<use MBPT2.png>
+Package pdftex.def Info: MBPT2.png  used on input line 625.
+(pdftex.def)             Requested size: 260.00905pt x 100.7805pt.
+
+
+[35
+
+ <./MBPT2.png>]
 \tf@nav=\write6
 \openout6 = `fys4480.nav'.
 
@@ -961,21 +1026,21 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
 Package rerunfilecheck Info: File `fys4480.out' has not changed.
-(rerunfilecheck)             Checksum: 3C31410C1CEA6F89A147E9A1D1574511;1246.
+(rerunfilecheck)             Checksum: B1B487A535731E6392990AFB4B4430B1;1329.
  ) 
 Here is how much of TeX's memory you used:
- 28038 strings out of 467800
- 572799 string characters out of 5436061
- 970348 words of memory out of 5000000
- 56049 multiletter control sequences out of 15000+600000
- 639094 words of font info for 84 fonts, out of 8000000 for 9000
+ 28186 strings out of 467800
+ 576200 string characters out of 5436061
+ 973500 words of memory out of 5000000
+ 56182 multiletter control sequences out of 15000+600000
+ 642517 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,484b,603s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on fys4480.pdf (32 pages, 181594 bytes).
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on fys4480.pdf (35 pages, 545462 bytes).
 PDF statistics:
- 385 PDF objects out of 1000 (max. 8388607)
- 274 compressed objects within 3 object streams
- 72 named destinations out of 1000 (max. 500000)
- 147 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 466 PDF objects out of 1000 (max. 8388607)
+ 324 compressed objects within 4 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
